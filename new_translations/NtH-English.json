@@ -1,15 +1,16 @@
 import {
-  SocialMediaTranslation,
-  CookieTranslation,
-  PhishingTranslation,
-  PhotosTranslation,
-  PasswordTranslation,
+  Scene1Translation,
+  Scene2Translation,
+  Scene3Translation,
+  Scene4Translation,
+  Scene5Translation,
 } from "../../types/translations/Scenes";
 
-const socialMedia: SocialMediaTranslation = {
+const scene1: Scene1Translation = {
   prologue: {
     bedroom:
-      "<T>[Your bedroom, bathed in soft evening light. Your phone buzzes — Max is messaging the group again. You wonder what he has discovered this time....]</T>",
+      "<T>[Your bedroom, bathed in soft evening light. Your phone buzzes — Max is messaging the group again. You wonder what he has discovered this time.
+...]</T>",
     innerDialog:
       "<T>Max always finds the coolest stuff first. I should see what he's excited about now.</T>",
   },
@@ -47,8 +48,8 @@ const socialMedia: SocialMediaTranslation = {
     youHave: "You found",
     objectsFound: "of the objects!",
     all: "all",
-    title: "Minigame: Hidden Objects",
-    description:
+    miniGameIntroTitle: "Minigame: Hidden Objects",
+    miniGameIntroDescription:
       "Find all the objects you shouldn't post on InstaVibe. Remove them from the picture before time runs out and the picture is being published!",
     miniGameGiveUp: "Give up",
     tutorial: [
@@ -64,7 +65,7 @@ const socialMedia: SocialMediaTranslation = {
       {
         title: "Time limit",
         message:
-          "Watch the countdown timer. If you can't find any more objects, you can also press the \"Give up\" button.",
+          'Watch the countdown timer. If you can't find any more objects, you can also press the "Give up" button.',
       },
     ],
   },
@@ -87,7 +88,7 @@ const socialMedia: SocialMediaTranslation = {
         {
           text: "Only your friends can see your posts.",
           description:
-            'If you only want your friends to see your posts, you have to set your profile to "private".',
+            "If you only want your friends to see your posts, you have to set your profile to "private".",
         },
         {
           text: "Only your family can see your posts.",
@@ -418,7 +419,7 @@ const socialMedia: SocialMediaTranslation = {
   ],
 };
 
-const cookie: CookieTranslation = {
+const scene2: Scene2Translation = {
   intro: {
     buttonTextAcceptCookies: "Accept all cookies",
     buttonTextManageCookies: "Manage cookies",
@@ -727,7 +728,7 @@ const cookie: CookieTranslation = {
   ],
 };
 
-const phishing: PhishingTranslation = {
+const scene3: Scene3Translation = {
   prologue: {
     bedroom:
       "<T>[The next morning: You're getting ready for school when you receive an InstaVibe notification. After yesterday's setup, you're curious who might be reaching out...]</T>",
@@ -1241,7 +1242,7 @@ const phishing: PhishingTranslation = {
   ],
 };
 
-const photos: PhotosTranslation = {
+const scene4: Scene4Translation = {
   prologue: {},
   intro: {
     initialMessage:
@@ -1299,8 +1300,8 @@ const photos: PhotosTranslation = {
     ],
   },
   miniGame: {
-    title: "To post or not to post?",
-    description:
+    miniGameTitle: "To post or not to post?",
+    tutorial:
       "You’ve seen that not every picture belongs on the internet. In this game, you decide: Press the right button to post or the left button to not post.",
     allCorrect: "Great job! You did everything right!",
     minimumReached: "Very good! You answered most of them correctly!",
@@ -1560,7 +1561,7 @@ const photos: PhotosTranslation = {
   ],
 };
 
-const password: PasswordTranslation = {
+const scene5: Scene5Translation = {
   prologue: {
     classroom:
       "<T>[Computer lab. You take your seat next to your classmates, curious about today's lesson. Mr. Müller looks like he has something interesting planned...]</T>",
@@ -1862,10 +1863,10 @@ const password: PasswordTranslation = {
 };
 
 export const scenes = {
-  socialMedia,
-  cookie,
-  phishing,
-  photos,
-  password,
+  scene1,
+  scene2,
+  scene3,
+  scene4,
+  scene5,
 };
 
