@@ -27,5 +27,11 @@ export const LANGUAGES = {
     name: "Italiano",
     svg: COUNTRIES_SVG.IT
   },
+  CS: {
+    code: "CS",
+    name: "Čeština",
+    svg: COUNTRIES_SVG.CZ
+  },
+
 
 };

@@ -1,0 +1,1862 @@
+import {
+  SocialMediaTranslation,
+  CookieTranslation,
+  PhishingTranslation,
+  PhotosTranslation,
+  PasswordTranslation,
+} from "../../types/translations/Scenes";
+
+const socialMedia: SocialMediaTranslation = {
+  prologue: {
+    bedroom:
+      "<T>[Jsi ve svém pokoji, zalitém jemným večerním světlem. Telefon zavibruje — Max zase píše do skupiny. Přemýšlíš, co asi objevil tentokrát.\n...]</T>",
+    innerDialog:
+      "<T>Max vždycky jako první objeví ty nejzajímavější věci. Copak ho nadchlo tentokrát?</T>",
+  },
+  intro: {
+    chatGroupName: "Školní skupina",
+    chat1: {
+      characterName: "Max",
+      dialog:
+        "Lidi! Ta nová sociální síť InstaVibe je boží! Fakt se MUSÍTE přidat, bude to obrovský hit! 🔥🔥🔥",
+    },
+    chat2: {
+      characterName: "Lea",
+      dialog:
+        "Další nová platforma? Maxe, sotva stíhám HoloSnap 😅 Jsi si jistý, že to za to stojí?",
+    },
+    chat3: {
+      characterName: "Timo",
+      dialog: "Když to Max tak vychvaluje, tak se to stejně brzo rozjede 😄 Máš odkaz?",
+    },
+    chat4: {
+      characterName: "Max",
+      dialog:
+        "Už ho mám! Věř mi — InstaVibe má úplně jinou energii než ostatní. Tady je odkaz!",
+    },
+    player1: {
+      dialog:
+        "<B>[Zamyslíš se...]</B>\nInstaVibe… říkají o něm samé dobré věci, ale raději opatrně. Jen do toho nakouknu, než půjdu spát.",
+    },
+    player2: {
+      dialog:
+        "<B>[Po stažení InstaVibe]</B>\nTak jo, uvidíme, proč je kolem toho takový poprask. Jdu to omrknout — ale Maxovu radu o bezpečném chování na internetu mám pořád na paměti.",
+    },
+  },
+  miniGame: {
+    youHave: "Našel jsi",
+    objectsFound: "předmětů!",
+    all: "všechny",
+    title: "Mini-hra: Ukryté předměty",
+    description:
+      "Najdi všechny předměty, které by se na InstaVibe neměly objevit. Odstraň je z obrázku dřív, než vyprší čas a snímek se zveřejní!",
+    miniGameGiveUp: "Vzdát hru",
+    tutorial: [
+      {
+        title: "Hledej předměty",
+        message:
+          "Klikni nebo klepni na předmět, který najdeš. Pokud je to správně, zmizí a ozve se zvuk.",
+      },
+      {
+        title: "Skóre",
+        message: "Počet nalezených předmětů najdeš v pravém horním rohu.",
+      },
+      {
+        title: "Časový limit",
+        message:
+          "Sleduj odpočítávání času. Pokud už nemůžeš najít žádné další předměty, můžeš také stisknout tlačítko „Vzdát hru",
+      },
+    ],
+  },
+  quiz: [
+    {
+      question:
+        "Jakmile máš InstaVibe nainstalovaný — co vlastně znamená, když je tvůj profil „veřejný?",
+      answers: [
+        {
+          text: "Tvoje příspěvky vidíš jen ty.",
+          description:
+            "Pokud máš profil veřejný, tvoje příspěvky nevidíš jen ty, ale úplně každý — i cizí lidé.",
+        },
+        {
+          text: "Kdokoli na internetu může vidět tvoje příspěvky.",
+          description:
+            "Veřejný profil znamená, že i lidé, které neznáš, mohou vidět všechno, co zveřejníš: fotky, videa i texty.",
+          isCorrect: true,
+        },
+        {
+          text: "Tvoje příspěvky vidí jen tvoji přátelé.",
+          description:
+            "Pokud chceš, aby tvoje příspěvky viděli jen přátelé, musíš si profil nastavit na „soukromý.",
+        },
+        {
+          text: "Tvoje příspěvky vidí jen tvoje rodina.",
+          description:
+            "S veřejným profilem tvoje příspěvky nevidí jen rodina — ale úplně každý uživatel internetu.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Chceš si na InstaVibe napsat parádní bio — proč by v něm neměly být osobní údaje?",
+      answers: [
+        {
+          text: "Pro ostatní je to nuda.",
+          description:
+            "Jestli je to zajímavé, nebo ne, není podstatné — jde o bezpečí, ne o zábavu.",
+        },
+        {
+          text: "Cizí lidé by tyto informace mohli zneužít.",
+          description:
+            "Když si do bio napíšeš třeba věk, školu nebo místo, kde bydlíš, mohou tyto údaje cizí lidé zneužít — například k manipulaci nebo posílání nebezpečných zpráv šitých na míru.",
+          isCorrect: true,
+        },
+        {
+          text: "Bio ve skutečnosti nikdo nečte.",
+          description:
+            "Mnoho lidí si bio opravdu prohlíží, zvlášť když získáš nové sledující. Cizí uživatelé ho často čtou jako první.",
+        },
+        {
+          text: "Nemůžeš používat emodži.",
+          description:
+            "Emodži do bio klidně patří — v tom problém není. Nebezpečí vzniká až tehdy, když je tam příliš mnoho osobních údajů.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Když zveřejníš svůj první InstaVibe, jak můžeš ochránit své fotky před těmi, co na ně nemají co koukat?",
+      answers: [
+        {
+          text: "Vypneš sdílení polohy.",
+          description:
+            "Vypnutí sdílení polohy je rozumná volba, ale přímo to nezabrání tomu, aby si tvoje fotky prohlíželi lidé bez oprávnění.",
+        },
+        {
+          text: "Změníš nastavení soukromí",
+          description:
+            "Když si správně nastavíš soukromí (například přepneš profil na „soukromý nebo vybereš, kdo může tvoje příspěvky vidět), uvidí tvoje fotky jen vybrané osoby.",
+          isCorrect: true,
+        },
+        {
+          text: "Přidáš si spoustu přátel.",
+          description:
+            "Čím víc lidí si přidáš, tím větší je riziko, že někdo tvoje fotky zneužije nebo nasdílí dál.",
+        },
+        {
+          text: "Olajkuješ každý příspěvek",
+          description: "Lajkování nijak nechrání tvoje vlastní fotky.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Max ti ukázal podezřelý profil — jak poznat, že je falešný?",
+      answers: [
+        {
+          text: "Je u něj symbol ověřeno",
+          description:
+            "Symbol ověřeno obvykle znamená, že je profil skutečný — falešné účty ji téměř nikdy nemají.",
+        },
+        {
+          text: "Má hodně fotek a skutečné přátele.",
+          description:
+            "Spousta skutečných přátel a příspěvků spíš naznačuje, že profil je pravý.",
+        },
+        {
+          text: "Má jen minimum informací, neznámé fotky a téměř žádné příspěvky.",
+          description:
+            "Falešné profily často působí prázdně, používají ilustrační nebo cizí fotky a nemají žádný skutečný obsah.",
+          isCorrect: true,
+        },
+        {
+          text: "Má divné jméno",
+          description: "Samotné divné jméno nic nevypovídá o tom, jestli je profil skutečný, nebo falešný.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Při procházení InstaVibe — jak si můžeš opravdu zajistit ochranu soukromí?",
+      answers: [
+        {
+          text: "Zveřejníš úplně všechno veřejně",
+          description: "Pokud je všechno veřejné, uvidí celý obsah i cizí lidé — a to není bezpečné.",
+        },
+        {
+          text: "Nastavíš si příspěvky tak, aby byly viditelné jen pro přátele.",
+          description:
+            "Pokud nastavíš viditelnost příspěvků pouze pro přátele, chráníš svá data a neukazuješ je cizím lidem.",
+          isCorrect: true,
+        },
+        {
+          text: "Olajkuješ každý příspěvek",
+          description: "Lajkování nijak nesouvisí s ochranou vlastních údajů.",
+        },
+        {
+          text: "Pošleš svoji adresu cizím lidem",
+          description:
+            "Nikdy neposílej osobní údaje, jako je adresa, cizím lidem — je to velmi nebezpečné.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Uvažuješ, že zveřejníš Maxovu zprávu — proč je to bez jeho souhlasu špatný nápad?",
+      answers: [
+        {
+          text: "Nikoho to nezajímá.",
+          description:
+            "Nejde o to, jestli to někoho zajímá, ale o soukromí a respekt.",
+        },
+        {
+          text: "Protože to zpomaluje telefon.",
+          description: "Screenshot telefon nezpomalí, o to tady nejde.",
+        },
+        {
+          text: "Protože je to nefér a často i zakázané.",
+          description:
+            "Soukromé zprávy jsou důvěrné — zveřejnění bez souhlasu je nefér a může mít i právní následky.",
+          isCorrect: true,
+        },
+        {
+          text: "Protože by to mělo méně lajků.",
+          description: "Lajky nemají s právem na soukromí nic společného.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Které tvrzení je ve skutečnosti pravdivé, pokud jde o zacházení s fotkami ostatních na InstaVibe?",
+      answers: [
+        {
+          text: "Fotky kohokoli můžeš zveřejnit bez problémů.",
+          description:
+            "Každý člověk má právo na své vlastní fotky — takové fotky není dovoleno jen tak zveřejňovat.",
+        },
+        {
+          text: "Potřebuješ souhlas lidí, kteří jsou na fotce.",
+          description:
+            "Než fotku zveřejníš, musíš mít souhlas všech, kdo na ní jsou — je to férové a často i právně nutné.",
+          isCorrect: true,
+        },
+        {
+          text: "Vždycky můžeš zveřejňovat fotky přátel.",
+          description:
+            "Tvoji přátelé mají také právo na soukromí a mohou rozhodnout, zda se fotka má nebo nemá zveřejnit online.",
+        },
+        {
+          text: "Dokud nikoho v příspěvku neoznačíš, je dovoleno všechno.",
+          description:
+            "To, jestli někoho označíš nebo ne, nemění nic na tom, že se musíš nejdřív zeptat na svolení.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Přijde ti podivná zpráva od cizího člověka – jak máš reagovat?",
+      answers: [
+        {
+          text: "Ignorovat ji a nedělat nic.",
+          description: "Ignorování často nepomůže, zpráva tam zůstane a může se to ještě zhoršit.",
+        },
+        {
+          text: "Sdílet a přeposlat ji.",
+          description: "Přeposílání jen šíří ještě víc nenávisti nebo rizika.",
+        },
+        {
+          text: "Zablokovat a nahlásit ji.",
+          description:
+            "Nejlepší je danou osobu hned zablokovat a zprávu nahlásit poskytovateli – tak se proti takovým uživatelům postupuje nejúčinněji.",
+          isCorrect: true,
+        },
+        {
+          text: "Vrátit jim to podobnou urážkou",
+          description:
+            "Reagovat urážkami všechno jen zhorší a může ti to přivodit problémy.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Cizí člověk ti pošle žádost o přátelství na InstaVibe – proč je důležité dávat si na to pozor?",
+      answers: [
+        {
+          text: "Protože jinak budeš mít příliš mnoho přátel.",
+          description: "Nejde o to, kolik máš přátel, ale o bezpečí.",
+        },
+        {
+          text: "Protože by cizí lidé mohli slídit v tvých osobních údajích.",
+          description:
+            "Když dáš cizím lidem přístup ke svému profilu, uvidí tvoje osobní údaje a třeba je i zneužijí.",
+          isCorrect: true,
+        },
+        {
+          text: "Protože by se ti jinak vybila baterka.",
+          description:
+            "Tvoji kamarádi nemají žádný vliv na baterii tvého telefonu. Jde o bezpečnost, ne o baterii.",
+        },
+        {
+          text: "Protože je to trapné.",
+          description:
+            "Není vůbec trapné ignorovat žádosti o přátelství, které nechceš přijmout. Jde o tvoje soukromí a ochranu.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Uvažuješ o tom, že do profilu přidáš svou polohu – co by se tím mohlo stát?",
+      answers: [
+        {
+          text: "Tvoje baterie se bude nabíjet rychleji.",
+          description: "Informace o poloze nemá žádný vliv na rychlost nabíjení baterie.",
+        },
+        {
+          text: "Cizí lidé tě mohou najít nebo sledovat.",
+          description:
+            "Když zveřejníš svou skutečnou polohu, mohou zjistit, kde se nacházíš, a třeba tě i sledovat nebo kontaktovat nepříjemným způsobem.",
+          isCorrect: true,
+        },
+        {
+          text: "Dostaneš dárek.",
+          description: "Sdílení polohy ti žádné dárky nepřinese – může tě naopak ohrozit.",
+        },
+        {
+          text: "Tvůj profil bude smazán.",
+          description:
+            "Tvůj profil smazán nebude, ale sdílení polohy může ohrozit tvoji bezpečnost.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Když si nastavíš profil na InstaVibe – proč tam není dobré uvádět své telefonní číslo?",
+      answers: [
+        {
+          text: "Protože to nikoho nezajímá.",
+          description:
+            "Nejde o to, jestli to někoho zajímá nebo ne. Důležité je tvoje soukromí a bezpečnost.",
+        },
+        {
+          text: "Protože by tě cizí lidé mohli obtěžovat nebo podvést.",
+          description:
+            "Když svoje telefonní číslo zveřejníš veřejně, mohou ti cizí lidé volat, obtěžovat tě nebo tě dokonce podvést",
+          isCorrect: true,
+        },
+        {
+          text: "Protože dostaneš méně lajků.",
+          description: "Počet lajků nemá s tvým telefonním číslem nic společného.",
+        },
+        {
+          text: "Protože se automaticky smaže.",
+          description:
+            "Tvoje telefonní číslo se automaticky nesmaže, ale někdo ho může zneužít.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Chceš svůj profil trochu oživit – jaké informace by bylo lepší nesdílet?",
+      answers: [
+        {
+          text: "Tvé oblíbené jídlo.",
+          description:
+            "Tvoje oblíbené jídlo není žádná citlivá informace a nepředstavuje žádné nebezpečí.",
+        },
+        {
+          text: "Tvou adresu.",
+          description:
+            "Na sociálních sítích by se adresa nikdy neměla zveřejňovat, protože ji mohou vidět cizí lidé a může to ohrozit bezpečí.",
+          isCorrect: true,
+        },
+        {
+          text: "Fotku tvého psa.",
+          description:
+            "Fotka tvého psa je úplně v pořádku, pokud na ní nejsou vidět žádné soukromé informace.",
+        },
+        {
+          text: "Západ slunce.",
+          description: "Fotka západu slunce je bez problémů a nijak nezasahuje do tvého soukromí",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Plánuješ nový příspěvek – kterou fotku můžeš bez obav zveřejnit?",
+      answers: [
+        {
+          text: "Tvé oblíbené jídlo.",
+          description:
+            "Tvoje oblíbené jídlo není žádná citlivá informace a nepředstavuje žádné nebezpečí.",
+        },
+        {
+          text: "Tvou adresu",
+          description:
+            "Na sociálních sítích by se adresa nikdy neměla zveřejňovat, protože ji mohou vidět cizí lidé a může to ohrozit tvoje bezpečí.",
+        },
+        {
+          text: "Fotku tvého psa.",
+          description:
+            "Fotka tvého psa je úplně v pořádku, pokud na ní nejsou vidět žádné soukromé informace.",
+        },
+        {
+          text: "Západ slunce.",
+          description: "Fotka západu slunce je bez problémů a nijak nezasahuje do tvého soukromí.",
+          isCorrect: true,
+        },
+      ],
+      timeLimit: 30,
+    },
+  ],
+};
+
+const cookie: CookieTranslation = {
+  intro: {
+    buttonTextAcceptCookies: "Přijmout všechny cookies",
+    buttonTextManageCookies: "Spravovat cookies",
+    cookieInfo1:
+      "My a vybrané třetí strany používáme cookies nebo podobné technologie, jak je popsáno v Zásadách používání cookies. Kliknutím na tlačítko ‚Přijmout' můžeš s jejich použitím souhlasit.",
+    player1: {
+      dialog:
+        "Hmm… proč bych měl přijímat všechny cookies? Raději si je chci spravovat a podívat se, které nejsou nutné.",
+    },
+    hint: {
+      dialog: "Ještě nemůžu pokračovat. Je potřeba aktivovat něco, co web vyžaduje.",
+    },
+    cookies: {
+      title: "Chceš sušenku?",
+      essentialTitle: "Nezbytné:",
+      nonEssentialTitle: "Nepodstatné:",
+      essential: {
+        login: "Login",
+        security: "Zabezpečení",
+        language: "Jazyk",
+        system: "Systém",
+      },
+      nonEssential: {
+        tracking: "Sledování",
+        advertising: "Reklama",
+        marketing: "Marketing",
+        thirdParty: "Služby třetích stran",
+        social: "Sociální sítě",
+        remarketing: "Remarketing",
+        analytics: "Analytika",
+      },
+      cookieInfo2:
+        "Zde můžeš spravovat své cookies. Některé jsou nezbytné a nelze je vypnout.",
+      cookieInfo3: "Ještě nemůžu pokračovat. Je potřeba vypnout jeden nebo více cookies.",
+      buttonTextContinue: "Pokračovat",
+    },
+  },
+  miniGame: {
+    title: "Vykrajovátko na sušenky",
+    description: "Znič všechny špatné cookies!",
+    goodCookieTexts: ["Relace", "Košík", "Zabezpečení", "Jazyk", "Systém"],
+    badCookieTexts: [
+      "Sledování",
+      "Reklama",
+      "Marketing",
+      "Služby třetích stran",
+      "Sociální sítě",
+      "Remarketing",
+      "Analytika",
+    ],
+    tutorial: [
+      {
+        title: "Vykrajovátko na sušenky",
+        message: "Přejeď po obrazovce a znič všechny špatné cookies.",
+      },
+      {
+        title: "Čas běží",
+        message: "Mysli na časový limit.",
+      },
+      {
+        title: "Skóre",
+        message:
+          "Počet zničených cookies vidíš na svém skóre. Pozor, když zničíš dobré cookie, získáš záporné body.",
+      },
+    ],
+  },
+  quiz: [
+    {
+      question: "K čemu se na internetu používají cookies?",
+      answers: [
+        {
+          text: "Aby si webové stránky mohly něco pamatovat (např. přihlášení, košík).",
+          description:
+            "Cookies ukládají informace, díky kterým tě stránky poznají — třeba aby tě nechaly přihlášeného nebo aby v košíku zůstaly uložené položky.",
+          isCorrect: true,
+        },
+        {
+          text: "Aby počítač běžel rychleji.",
+          description: "Cookies nezlepšují výkon hardwaru tvého počítače.",
+        },
+        {
+          text: "Abychom získali více bodů ve videohrách.",
+          description: "Cookies nijak neovlivňují tvoje herní skóre.",
+        },
+        {
+          text: "Abychom automaticky dostávali aktualizace.",
+          description: "Aktualizace nejsou řízené cookies.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co jsou to sledovací cookies?",
+      answers: [
+        {
+          text: "Cookies, které sledují tvoji přesnou polohu.",
+          description: "Sledovací cookies obvykle ukládají informace o tom, jak procházíš web, ne tvoji přesnou polohu.",
+        },
+        {
+          text: "Cookies, které sledují, jaké stránky navštěvuješ, aby ti mohly zobrazovat reklamy na míru.",
+          description: "Sledovací cookies zaznamenávají tvoji aktivitu na webu, aby ti mohly přizpůsobit reklamu.",
+          isCorrect: true,
+        },
+        {
+          text: "Cookies, které ukládají tvoje heslo.",
+          description: "Hesla se ve sledovacích cookies neukládají.",
+        },
+        {
+          text: "Cookies, které chrání před viry.",
+          description: "Cookies nechrání před škodlivým softwarem.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Proč se tě InstaVibe při prvním otevření ptá, jestli chceš přijmout cookies?",
+      answers: [
+        {
+          text: "Aby bylo možné získat více lajků.",
+          description: "Lajky nemají s povolením cookies nic společného.",
+        },
+        {
+          text: "Protože jinak aplikace neví, jestli se ti InstaVibe líbí.",
+          description: "Výzvy k povolení cookies nesouvisí s tím, zda se někomu líbí jiné aplikace.",
+        },
+        {
+          text: "Protože mnoho zemí má zákony, které tě chrání.",
+          description: "Zákony jako GDPR vyžadují souhlas, aby každý mohl rozhodovat o tom, jak budou jeho data používána.",
+          isCorrect: true,
+        },
+        {
+          text: "Aby se ti nezhroutil telefon.",
+          description: "Stabilita telefonu na cookies nezávisí.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co by bylo na InstaVibe těžší bez cookies?",
+      answers: [
+        {
+          text: "Zůstat přihlášený a otevřít si rovnou svůj profil.",
+          description:
+            "Bez cookies by bylo nutné přihlašovat se mnohem častěji, protože si stránka nepamatuje relaci.",
+          isCorrect: true,
+        },
+        {
+          text: "Upravovat fotky pomocí filtrů.",
+          description: "Filtry nejsou na cookies závislé.",
+        },
+        {
+          text: "Nahrávat videa",
+          description: "Nahrávání funguje bez ohledu na cookies.",
+        },
+        {
+          text: "Posílat zprávy",
+          description: "Posílání zpráv obvykle nevyžaduje cookies.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Které cookies jsou užitečné?",
+      answers: [
+        {
+          text: "Přihlášení, Sledování, Analytika, Systém",
+          description: "Ne všechny z nich jsou stejně užitečné nebo nezbytné.",
+        },
+        {
+          text: "Systém, Přihlášení, Reklama",
+          description: "Reklama není potřebná pro základní funkce.",
+        },
+        {
+          text: "Jazyk, Systém, Zabezpečení, Přihlášení",
+          description:
+            "Tyto kategorie pomáhají s nastavením jazyka, zabezpečením a přihlášením — jsou tedy užitečné.",
+          isCorrect: true,
+        },
+        {
+          text: "Žádná z odpovědí není správná.",
+          description: "Správná odpověď je mezi nimi.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "K čemu InstaVibe potřebuje systémové cookies?",
+      answers: [
+        {
+          text: "Aby bylo možné získat více lajků.",
+          description: "Lajky nemají se systémovými cookies nic společného.",
+        },
+        {
+          text: "Aby se ti zobrazovaly reklamy na boty.",
+          description: "To je úkol marketingových cookies, ne systémových.",
+        },
+        {
+          text: "Aby tvůj telefon běžel rychleji.",
+          description: "Systémové cookies nemají vliv na výkon zařízení.",
+        },
+        {
+          text: "Aby aplikace rozpoznala, že je uživatel přihlášen, a mohla načíst jeho fotky.",
+          description:
+            "Nezbytné/systémové cookies podporují základní funkce, jako je stav relace a načítání obsahu.",
+          isCorrect: true,
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co se stane, když vypneš systémové cookies InstaVibe?",
+      answers: [
+        {
+          text: "Aplikace nebude správně fungovat.",
+          description:
+            "Bez nezbytných cookies nemusí základní funkce, jako je přihlášení nebo načítání stránek, správně fungovat.",
+          isCorrect: true,
+        },
+        {
+          text: "Uvidíš méně reklam.",
+          description: "To se týká hlavně marketingových cookies, ne systémových.",
+        },
+        {
+          text: "Dostaneš více lajků.",
+          description: "Cookies neovlivňují počet lajků.",
+        },
+        {
+          text: "Můžeš dál přidávat příspěvky, ale bez filtrů.",
+          description: "Filtry nejsou závislé na systémových cookies.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Proč jsou analytické cookies důležité pro InstaVibe?",
+      answers: [
+        {
+          text: "Aby tvoji přátelé mohli rychleji lajkovat.",
+          description: "Lajky analytické cookies neovlivňují.",
+        },
+        {
+          text: "Aby aplikace věděla, které funkce jsou oblíbené, a mohla je vylepšovat.",
+          description:
+            "Analytické cookies ukazují, které části aplikace se používají, což pomáhá týmu aplikaci vylepšovat.",
+          isCorrect: true,
+        },
+        {
+          text: "Aby měl telefon více úložného prostoru.",
+          description: "Cookies nezvyšují úložný prostor zařízení.",
+        },
+        {
+          text: "Aby uživatel automaticky získával sledující.",
+          description: "Analytika nevede k získávání dalších sledujících.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co dělají marketingové cookies na InstaVibe?",
+      answers: [
+        {
+          text: "Způsobují, že jsou tvoje videa populárnější.",
+          description: "Popularitu cookies neovlivňují.",
+        },
+        {
+          text: "Ukládají informace o tom, jaké filtry používáš.",
+          description: "To spadá spíše do oblasti nastavení nebo funkcí, ne marketingu.",
+        },
+        {
+          text: "Zajišťují, že profil zůstane soukromý.",
+          description: "Nastavení soukromí nejsou závislá na marketingových cookies.",
+        },
+        {
+          text: "Zobrazují reklamy související s tím, co si prohlížíš (např. sportovní oblečení, pokud navštěvuješ mnoho sportovních stránek).",
+          description: "Marketingové cookies personalizují reklamu na základě toho, jakým způsobem uživatel prochází web.",
+          isCorrect: true,
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Jaký typ cookies používá InstaVibe k tomu, aby zjistil, které funkce se používají nejčastěji (např. Stories, Reels, zprávy)",
+      answers: [
+        {
+          text: "Čokoládové cookies",
+          description: "Ty jsou sice chutné, ale to jsme neměli na mysli.",
+        },
+        {
+          text: "Marketingové cookies",
+          description: "Marketingové cookies jsou hlavně pro marketingovou personalizaci.",
+        },
+        {
+          text: "Analytické cookies",
+          description:
+            "Analytické cookies měří využití a pomáhají zjistit, které funkce jsou oblíbené.",
+          isCorrect: true,
+        },
+        {
+          text: "Systémové cookies",
+          description: "Systémové cookies slouží k základním funkcím, ne k analytice.",
+        },
+      ],
+      timeLimit: 30,
+    },
+  ],
+};
+
+const phishing: PhishingTranslation = {
+  prologue: {
+    bedroom:
+      "<T>[Další ráno: Chystáš se do školy, když ti přijde upozornění z InstaVibe. Po včerejším nastavování profilu chceš vědět, kdo se to asi ozývá…]</T>",
+  },
+  intro: {
+    player1: {
+      dialog:
+        "Někdo mi už píše na InstaVibe? To bylo rychlé… zajímalo by mě, jestli je to někdo z mých přátel.",
+    },
+    chat1: {
+      characterName: "Jonas M. (10B)",
+      dialog:
+        "Ahoj! Viděl jsem, že už máš taky InstaVibe – vítej! Organizuju školní akci a potřebuju seznam třídy s kontaktními údaji. Můžeš mi ho poslat? Moc by mi to pomohlo!",
+    },
+    player2: {
+      dialog:
+        "Jonas z 9B? Myslím, že jsme se vlastně nikdy nepotkali… Na někoho, koho neznám, to působí až moc přímo. Mám mu věřit?",
+    },
+  },
+  miniGame: {
+    title: "Pomoz rybě uniknout phishingu",
+    description: `Not everything on the internet is real - this also applies underwater!
+                  Baits with messages fall into the sea. Navigate the diver to the fishing hooks by clicking, read the
+                  messages, and decide: Is it phishing or not?`,
+    hint: "Každé špatné rozhodnutí ohrozí tvoji rybu – tak pozor!",
+    startButton: "Pojďme na to!",
+    legit: "Skutečný",
+    phishing: "Phishing",
+    gameOver: "Konec hry",
+    success:
+      "Skvělá práce! Podařilo se ti ochránit rybu před nebezpečnými návnadami. Přesně tak funguje i ochrana před phishingem v reálném světě – stačí dávat pozor.",
+    failure:
+      "Ale ne! Ryba snědla příliš mnoho nebezpečných zpráv a nepřežila to. Stejně jako na internetu – jeden špatný klik může napáchat velké škody.",
+    phishingMessages: [
+      {
+        type: "email",
+        sender: "support@instavibe.com",
+        text: "Tvůj účet byl pozastaven kvůli podezřelé aktivitě. Pro jeho odblokování se prosím přihlas zde.",
+        isPhishing: true,
+      },
+      {
+        type: "email",
+        sender: "prize@streamfest.io",
+        text: "Gratulujeme! Získáváš 3 měsíce streamování zdarma. Aktivuj si je hned.",
+        isPhishing: true,
+      },
+      {
+        type: "email",
+        sender: "update@gameworld.io",
+        text: "Je potřeba nová aktualizace. Pro pokračování ve hře si ji stáhni zde.",
+        isPhishing: true,
+      },
+      {
+        type: "email",
+        sender: "verification@instavibe-support.com",
+        text: "Ověř svůj účet na InstaVibe teď, jinak bude deaktivován.",
+        isPhishing: true,
+      },
+      {
+        type: "sms",
+        sender: "+49 1521 4455667",
+        text: "Ahoj, to jsem já ze školy. Pošleš mi svoje přihlašovací údaje k InstaVibe? Potřebuji něco zkontrolovat.",
+        isPhishing: true,
+      },
+      {
+        type: "sms",
+        sender: "+43 660 9876543",
+        text: "Tvůj balíček se nepodařilo doručit. Potvrď svou adresu zde.",
+        isPhishing: true,
+      },
+      {
+        type: "sms",
+        sender: "+41 76 123 4567",
+        text: "Získáváš výhru v soutěži! Převzít ji můžeš hned teď.",
+        isPhishing: true,
+      },
+      {
+        type: "sms",
+        sender: "+31 612345678",
+        text: "Byl zjištěn neoprávněný přístup k tvému účtu. Zabezpeč účet hned teď.",
+        isPhishing: true,
+      },
+      {
+        type: "sms",
+        sender: "+33 612 345 678",
+        text: "Faktura nebyla uhrazena. Proveď platbu prostřednictvím tohoto odkazu.",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@instavibe_giveaway",
+        text: "Patříš mezi naše největší fanoušky! Získej exkluzivní InstaVibe merch. Stačí vyplnit tento formulář.",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@teachersgroup_official",
+        text: "Pošleš mi znovu odpovědi na test? Ztratily se mi. Tady je odkaz.",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@free_gamecoins",
+        text: "Zdarma mince do tvé oblíbené hry – exkluzivně pro uživatele InstaVibe!",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@instavibe_support_admin",
+        text: "Zadej své přihlašovací údaje, aby nedošlo ke ztrátě přístupu.",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@event_official",
+        text: "Vstupenky na koncert zdarma! Jen pro prvních 100 lidí – pospěš si!",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@instavibe_warning",
+        text: "Tvůj účet byl nahlášen. Stížnost si můžeš zobrazit zde.",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@brand_support_fake",
+        text: "Pro potvrzení tvého posledního příspěvku zadej heslo zde.",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@randomuser324",
+        text: "Hej, někdo používá tvoje fotky na InstaVibe. Podívej se na to!",
+        isPhishing: true,
+      },
+      {
+        type: "chat",
+        sender: "@instavibe.alert",
+        text: "Kvůli vysoké zátěži je potřeba se znovu přihlásit. Klikni sem.",
+        isPhishing: true,
+      },
+      {
+        type: "email",
+        sender: "support@instavibe.com",
+        text: "Registrace byla úspěšná. Vítej na InstaVibe!",
+        isPhishing: false,
+      },
+      {
+        type: "email",
+        sender: "info@instavibe.com",
+        text: "Poslali jsme ti potvrzovací e-mail. Potvrď prosím svou registraci.",
+        isPhishing: false,
+      },
+      {
+        type: "sms",
+        sender: "+49 1521 4455667",
+        text: "Tvé heslo bylo úspěšně změněno. Teď se můžeš přihlásit.",
+        isPhishing: false,
+      },
+      {
+        type: "sms",
+        sender: "+43 660 9876543",
+        text: "Poslali jsme nové vydání newsletteru. Podívej se na něj!",
+        isPhishing: false,
+      },
+      {
+        type: "chat",
+        sender: "@instavibe_support",
+        text: "Jak ti můžeme pomoct? Pokud máš nějaké otázky, neváhej nás kontaktovat.",
+        isPhishing: false,
+      },
+      {
+        type: "chat",
+        sender: "@instavibe_team",
+        text: "Nejnovější novinky na InstaVibe. Podívej se na nové funkce!",
+        isPhishing: false,
+      },
+    ],
+    tutorial: [
+      {
+        title: "Plavání",
+        message: "Naviguj a podrž šipku, aby ses dostal na vybrané místo, nebo použij klávesy se šipkami.",
+      },
+      {
+        title: "Phishingové obálky",
+        message: "Plav kolem obálky a otevři ji.",
+      },
+      {
+        title: "Přečit si zprávu",
+        message: "Rozhodni, jestli je to návnada, nebo ne.",
+      },
+      {
+        title: "Špatná volba",
+        message: "Špatná volba rybě ublíží.",
+      },
+      {
+        title: "Správná volba",
+        message: "Správná volba rybu uzdraví.",
+      },
+      {
+        title: "Zdraví ryby",
+        message: "Cílem je udržet rybu naživu.",
+      },
+    ],
+  },
+  quiz: [
+    {
+      question: "Při procházení e-mailů se objeví podezřelá zpráva – může to být phishingový pokus? Ale co vlastně phishing je?",
+      answers: [
+        {
+          text: "Online hra",
+          description: "Phishing není hra, ale podvodná metoda.",
+        },
+        {
+          text: "Pokus získat osobní údaje",
+          description:
+            "Při phishingu se podvodníci snaží získat důvěrné údaje, jako jsou hesla, informace o účtu nebo přístupové údaje, a to prostřednictvím falešných e-mailů, webových stránek nebo zpráv.",
+          isCorrect: true,
+        },
+        {
+          text: "Hudebný styl",
+          description: "Phishing nemá nic do činění s hudbou.",
+        },
+        {
+          text: "Antivirový program",
+          description:
+            "Antivirový program chrání před viry, ale někdy dokáže odhalit i phishingové pokusy. Phishing je však sám o sobě typem podvodu.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Max si nebyl jistý e-mailem – jak mohl poznat, že šlo o phishing?",
+      answers: [
+        {
+          text: "Přišel z oficiální e-mailové adresy.",
+          description: "To není známka phishingu, oficiálně vypadající adresy působí důvěryhodně.",
+        },
+        {
+          text: "Přišel z neobvyklé nebo nesprávné adresy odesílatele.",
+          description: "Neobvyklí nebo pochybní odesílatelé jsou silnou známkou phishingu.",
+          isCorrect: true,
+        },
+        {
+          text: "Předmět obsahuje barevné smajlíky.",
+          description: "Smajlíky samy o sobě na phishing neukazují.",
+        },
+        {
+          text: "Obsahuje přátelské oslovení.",
+          description: "Přátelská oslovení se používají i v běžných e-mailech.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Zpráva působí naléhavě – co podvodníci při phishingu často píšou, aby tě přinutili rychle reagovat?",
+      answers: [
+        {
+          text: "Pochválí tě za tvoje obezřetné chování",
+          description: "Pochvala se k vytváření nátlaku používá jen zřídka.",
+        },
+        {
+          text: "Výhrožují zablokováním účtu",
+          description: "Výhrůžky, jako je zablokování účtu, vytvářejí stres a svádějí ke kliknutí.",
+          isCorrect: true,
+        },
+        {
+          text: "Slevový kupón",
+          description: "Kupóny mají přilákat tvoji pozornost, ale obvykle nevytvářejí žádný akutní nátlak.",
+        },
+        {
+          text: "Vtipný obrázek kočky",
+          description: "Vtipné obrázky jsou neškodné a nejsou typickým nástrojem phishingu.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Které z těchto znaků NEukazují na phishingový e-mail?",
+      answers: [
+        {
+          text: "Nečekaný e-mail s odkazy",
+          description: "Nečekané e-maily s odkazy jsou pro phishing typické.",
+        },
+        {
+          text: "Žádost o tvoje heslo",
+          description: "Phishingové e-maily často žádají o hesla.",
+        },
+        {
+          text: "Pravopisné chyby a podivné formulace",
+          description: "Gramatické chyby a podivné formulace jsou běžným znakem.",
+        },
+        {
+          text: "Zpráva od tvého nejlepšího kamaráda",
+          description: "Zprávy od skutečných přátel nejsou typickým znakem phishingu.",
+          isCorrect: true,
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Phishingový e-mail žádá o informace – po jakých údajích podvodníci obvykle jdou?",
+      answers: [
+        {
+          text: "Název tvé oblíbené písně",
+          description: "Tvoje preference podvodníky nezajímají.",
+        },
+        {
+          text: "Tvé bankovní údaje a hesla",
+          description: "Bankovní údaje a hesla jsou hlavním cílem phishingu.",
+          isCorrect: true,
+        },
+        {
+          text: "Tvé oblíbené jídlo",
+          description: "Tvé oblíbené jídlo nemá pro podvodníky cenu.",
+        },
+        {
+          text: "Tvé úspěchy ve sportu",
+          description: "Úspěchy ve sportu nemají pro podvodníky cenu.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Dostaneš e-mail, který působí podezřele – jak nejlépe zareagovat?",
+      answers: [
+        {
+          text: "Kliknout na odkaz a zkontrolovat",
+          description: "Kliknutí na odkaz může být nebezpečné.",
+        },
+        {
+          text: "Smazat nebo nahlásit zprávu",
+          description: "Nejlepší je zprávu rovnou smazat nebo nahlásit.",
+          isCorrect: true,
+        },
+        {
+          text: "Rychle odpovědět",
+          description: "Odpověď dává podvodníkům zpětnou vazbu.",
+        },
+        {
+          text: "Ignorovat zprávu",
+          description: "Ignorování nepomůže, lepší je zprávu nahlásit nebo smazat.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "E-mail zmiňuje „InstaVibe – proč podvodníci často používají známé názvy?",
+      answers: [
+        {
+          text: "Protože to zní vtipněji",
+          description: "Je jim jedno, jestli ti to připadá vtipné, nebo ne.",
+        },
+        {
+          text: "Aby zpráva působila důvěryhodně",
+          description: "Známé názvy působí důvěryhodně a vytvářejí falešný pocit bezpečí.",
+          isCorrect: true,
+        },
+        {
+          text: "K inzerci",
+          description: "Inzerce není cílem phishingu.",
+        },
+        {
+          text: "Protože tím mají větší dosah",
+          description: "Dosah v tomhle případě nehraje žádnou roli.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Které z následujících tvrzení je správné?",
+      answers: [
+        {
+          text: "Osobní údaje by se nikdy neměly posílat e-mailem.",
+          description: "Osobní údaje by v e-mailech nikdy neměly být uváděny.",
+          isCorrect: true,
+        },
+        {
+          text: "Hesla lze sdílet.",
+          description: "Hesla by se nikdy sdílet neměla.",
+        },
+        {
+          text: "Každý odkaz na internetu je bezpečný.",
+          description: "Ne každý odkaz je bezpečný – mnoho z nich je nebezpečných.",
+        },
+        {
+          text: "Vždy by ses měl přihlásit přes ‚Registrovat se nyní'.",
+          description: "Tlačítka ‚Registrovat se nyní' v e-mailech mohou být phishingové pasti.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co se může stát, když klikneš na phishingový odkaz?",
+      answers: [
+        {
+          text: "Pustí se tvoje oblíbená písnička.",
+          description: "Ne, tvoje oblíbená písnička se pravděpodobně nepustí.",
+        },
+        {
+          text: "Tvoje data budou ukradena.",
+          description: "Ano, tvoje data mohou být přímo ukradena.",
+          isCorrect: true,
+        },
+        {
+          text: "Vyhraješ chytrý telefon.",
+          description: "Přísliby výher jsou obvykle podvod.",
+        },
+        {
+          text: "Nic – moje data jsou v bezpečí.",
+          description: "Phishingové odkazy jsou téměř vždy nebezpečné.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Která zpráva působí podezřele?",
+      answers: [
+        {
+          text: "Ahoj, jak se máš?",
+          description: "Působí normálně a neškodně.",
+        },
+        {
+          text: "Získal jsi 1 000 eur – klikni sem!",
+          description: "Přísliby výher s odkazem jsou obvykle podvod.",
+          isCorrect: true,
+        },
+        {
+          text: "Sejdeme se v 15:00.",
+          description: "Úplně běžná domluvená schůzka.",
+        },
+        {
+          text: "Hodně štěstí u písemky.",
+          description: "Tohle působí jako přátelská zpráva, nic podezřelého.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Ve hře ses setkal s mnoha phishingovými zprávami – chodí opravdu jen e-mailem?",
+      answers: [
+        {
+          text: "Ano",
+          description: "Phishing se šíří také prostřednictvím SMS, sociálních sítí a dalších platforem.",
+        },
+        {
+          text: "Ne",
+          description: "Phishing může přijít různými kanály.",
+          isCorrect: true,
+        },
+        {
+          text: "Jen na mobilních telefonech",
+          description: "Phishing se může objevit jak na mobilech, tak na počítačích.",
+        },
+        {
+          text: "Jenom v noci",
+          description: "Na denní době nezáleží.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Pokud si nejsi jistý, jestli je zpráva pravá, měl bys...",
+      answers: [
+        {
+          text: "Pro jistotu poskytnout své údaje.",
+          description: "Osobní údaje nikdy nesdělovat.",
+        },
+        {
+          text: "Zeptat se někoho nebo navštívit oficiální web.",
+          description: "Vždy si to ověř dotazem nebo návštěvou oficiálních stránek.",
+          isCorrect: true,
+        },
+        {
+          text: "Přeposlat zprávu.",
+          description: "Přeposlání pouze zvyšuje riziko.",
+        },
+        {
+          text: "Dát zprávě lajk.",
+          description: "Lajkování nezabrání phishingu.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co se často stane, když klikneš na phishingový odkaz?",
+      answers: [
+        {
+          text: "Jsi přesměrován na falešnou webovou stránku.",
+          description: "Dostaneš se na falešnou stránku, která může ukrást tvoje data.",
+          isCorrect: true,
+        },
+        {
+          text: "Dostaneš dárek.",
+          description: "Phishingové nabídky nikdy nejsou skutečné dárky.",
+        },
+        {
+          text: "Vyhodí tě z internetu.",
+          description: "Ve skutečnosti tě z internetu nikdo nevyhodí, ale tvoje data mohou být ukradena.",
+        },
+        {
+          text: "Vyhraješ zájezd.",
+          description: "Falešné odměny, jako například zájezdy, jsou častým phishingovým trikem.",
+        },
+      ],
+      timeLimit: 30,
+    },
+  ],
+};
+
+const photos: PhotosTranslation = {
+  prologue: {},
+  intro: {
+    initialMessage:
+      "Hej, asi jsi taky viděl ten trapný obrázek se mnou… mohl bys mi prosím pomoct?",
+    notificationTitle: "Zpráva od Maxe",
+    overlayTitle: "Max tě potřebuje!",
+    overlayPrompt: "Vyber si, jak se zachováš:",
+    header: {
+      avatarLabel: "S4",
+      profileName: "CyberCareers",
+      subtitle: "Sponzorováno • Scéna 4",
+    },
+    feedActions: {
+      like: "Like",
+      chat: "Chat",
+      share: "Sdílet",
+    },
+    commentsLabel: "Komentáře",
+    actions: [
+      {
+        id: "ignorovat",
+        label: "Neudělat nic a nevšímat si to",
+        response: "Ignorování to nevyřeší. Připadám si v tom úplně opuštěně.",
+        isCorrect: false,
+      },
+      {
+        id: "konfrontovat_veřejně",
+        label: "Veřejně okomentovat a říct tomu, kdo to zveřejnil, aby to smazal",
+        response:
+          "To by mohlo jen přitáhnout ještě větší pozornost a situace by se mohla vyhrotit. Nechci to zhoršit.",
+        isCorrect: false,
+      },
+      {
+        id: "jenom_nahlásit",
+        label: "Nahlásit fotku poskytovateli aplikace, aniž bych to Maxovi řekl",
+        response:
+          "Nahlášení je dobrý nápad, ale přál bych si, abys to se mnou nejdřív probral. Je pro mě důležité, abys stál při mně.",
+        isCorrect: false,
+      },
+      {
+        id: "pomoc_a_podpora",
+        label: "Zeptat se Maxe, jak se cítí, a nabídnout mu pomoc s nahlášením",
+        response:
+          "Děkuju, že ses nejdřív zeptal. Moc to pro mě znamená. Pojďme to nahlásit společně.",
+        isCorrect: true,
+      },
+    ],
+  },
+  miniGame: {
+    title: "Zveřejnit, či nezveřejnit?",
+    description:
+      "Je zřejmé, že ne každá fotka patří na internet. V téhle hře rozhoduje hráč: stiskni pravé tlačítko pro zveřejnění nebo levé tlačítko pro nezveřejnění.",
+    allCorrect: "Výborně! Máš všechno správně!",
+    minimumReached: "Výborně! Většinu odpovědí máš správně!",
+    insufficient: "Není to špatné, ale pořád je prostor pro zlepšení!",
+    post: "Zveřejnit",
+    notPost: "Nezveřejnit",
+    couldPost: "Tento obrázek můžeš zveřejnit.",
+    shouldNotPost: "Tento obrázek by neměl být zveřejněn.",
+  },
+  quiz: [
+    {
+      question:
+        "Co je první věc, kterou by bylo dobré udělat, když Max zveřejní na InstaVibe tvoji fotku, která se ti nelíbí?",
+      answers: [
+        {
+          text: "Hned nahlásit fotku na InstaVibe.",
+          description:
+            "Nahlášení může pomoct – ale nejdřív je lepší zkusit vyřešit situaci přímo s osobou, která fotku zveřejnila.",
+        },
+        {
+          text: "Urážet Maxe v dalších komentářích.",
+          description:
+            "Urážky situaci jen vyhrotí a rozhodně nezpůsobí, že by fotka zmizela rychleji.",
+        },
+        {
+          text: "Zdvořile požádat Maxe v soukromé zprávě o smazání fotky.",
+          description:
+            "Správně. Klidná a přátelská soukromá zpráva bývá většinou nejrychlejším a nejohleduplnějším řešením.",
+          isCorrect: true,
+        },
+        {
+          text: "Nedělat nic – je to přece kamarád.",
+          description:
+            "Pokud je ti to nepříjemné, máš právo to říct – přátelství je založené na respektu.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Máš vtipnou fotku Tima, jak zakopnul. Můžeš ji na InstaVibe zveřejnit bez jeho souhlasu?",
+      answers: [
+        {
+          text: "Ano, je to vtipné – a to je jediné, na čem záleží!",
+          description: "To, že je něco vtipné, neomlouvá zveřejnění bez souhlasu a nenarušuje právo člověka na soukromí.",
+        },
+        {
+          text: "Jen pokud ho neoznačíš.",
+          description: "I bez označení jde pořád o jeho fotku – musí s tím souhlasit.",
+        },
+        {
+          text: "Ne, každý má právo rozhodovat o tom, jak bude jeho podoba použita.",
+          description:
+            "Správně. Před zveřejněním fotek, na kterých lze lidi poznat, je potřeba mít jejich souhlas.",
+          isCorrect: true,
+        },
+        {
+          text: "Ano, ale jen pro blízké přátele.",
+          description: "Soukromí platí i mezi známými – nejdřív je potřeba se zeptat.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Požádáš Maxe, aby fotku smazal, on ale nereaguje. Jaký je další nejrozumnější krok?",
+      answers: [
+        {
+          text: "Nabourat se mu do účtu a smazat to.",
+          description: "Hackování je nezákonné a situaci jen zhorší.",
+        },
+        {
+          text: "Na oplátku zveřejnit nějakou jeho trapnou fotku.",
+          description: "Msta přináší další problémy a zároveň porušuje jeho práva.",
+        },
+        {
+          text: "Nahlásit fotku na InstaVibe, protože byla zveřejněna bez tvého souhlasu.",
+          description:
+            "Správně. Když přímý kontakt nepomůže, je možné využít nástroje platformy, které poskytují ochranu.",
+          isCorrect: true,
+        },
+        {
+          text: "Smazat si účet.",
+          description:
+            "Smazání účtu problém nevyřeší – nejprve je lepší využít dostupné možnosti.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Kterou z následujících fotek je možné zveřejnit na InstaVibe, aniž by bylo potřeba něčí svolení?",
+      answers: [
+        {
+          text: "Skupinová fotka celé třídy.",
+          description: "Na skupinových fotkách je víc lidí – před zveřejněním je potřeba jejich souhlas.",
+        },
+        {
+          text: "Cizí člověk v cool tričku.",
+          description: "I cizí lidé mají právo na soukromí a ochranu osobnosti.",
+        },
+        {
+          text: "Západ slunce u jezera.",
+          description: "Správně. Fotky přírody či krajiny, na kterých nejsou rozeznatelní lidé, jsou naprosto v pořádku.",
+          isCorrect: true,
+        },
+        {
+          text: "Tvůj malý bratr při hře.",
+          description: "U fotek dětí je nutná zvláštní opatrnost a souhlas rodičů.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Někdo nahrál tvoji fotku na falešný profil a píše o tobě ošklivé věci. Jaký by měl být další krok?",
+      answers: [
+        {
+          text: "Napsat na ten profil zprávu a urazit autora.",
+          description: "Oplácet urážkami může situaci vyhrotit a obrátit se proti tobě.",
+        },
+        {
+          text: "Hned nahlásit profil a promluvit si s rodičem nebo učitelem.",
+          description: "Správně. Je dobré využít nástroje pro nahlášení a mít podporu dospělých, kterým důvěřuješ.",
+          isCorrect: true,
+        },
+        {
+          text: "Nedělat nic – samo to přestane.",
+          description: "U takových problémů se při ignorování často situace ještě zhorší.",
+        },
+        {
+          text: "Požádat kamarády, aby tu osobu také uráželi.",
+          description: "Hromadné napadání situaci jen dál eskaluje a porušuje pravidla platformy.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Chceš zveřejnit fotku svého vysvědčení, protože z něj máš radost. Proč by to ale mohl být špatný nápad?",
+      answers: [
+        {
+          text: "Ostatní by mohli žárlit na tvoje známky.",
+          description: "Žárlivost není hlavní problém – jde o zveřejnění osobních údajů.",
+        },
+        {
+          text: "Vysvědčení je nudné a pravděpodobně nedostane žádné lajky.",
+          description: "Lajky nejsou důležité – důležité je tvoje soukromí.",
+        },
+        {
+          text: "Jsou na něm osobní údaje, jako celé jméno, datum narození nebo název školy.",
+          description: "Správně. Tyto informace by se neměly zveřejňovat, protože mohou být snadno zneužity.",
+          isCorrect: true,
+        },
+        {
+          text: "Škola to přísně zakazuje.",
+          description: "Taková pravidla existovat mohou, ale hlavním důvodem je ochrana osobních údajů.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "'Právo na vlastní podobu' znamená, že…",
+      answers: [
+        {
+          text: "… je dovoleno zveřejňovat jen profesionální fotky sebe sama.",
+          description: "Ne – jde o souhlas, ne o kvalitu fotky.",
+        },
+        {
+          text: "… každý má právo rozhodovat o tom, zda mohou být jeho fotky zveřejněny.",
+          description: "Správně. Ke zveřejnění rozeznatelných fotek je potřeba souhlas.",
+          isCorrect: true,
+        },
+        {
+          text: "… člověk může požadovat peníze za každou fotku, kterou pořídí.",
+          description: "To s tímto právem nijak nesouvisí.",
+        },
+        {
+          text: "… člověk má právo nakreslit si obrázek jaký chce.",
+          description: "Kreslení je něco úplně jiného – toto právo se týká zveřejňování fotografií lidí.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Na Leině párty byla pořízena fotka, kde je někdo v pozadí v trapné situaci. Měl bys ji zveřejnit?",
+      answers: [
+        {
+          text: "Ano, je to vtipné a všichni se zasmějí.",
+          description: "To, co je vtipné pro tebe, může být pro někoho jiného zraňující – respekt je na prvním místě.",
+        },
+        {
+          text: "Ne, mohlo by to člověka v pozadí zesměšnit nebo mu ublížit.",
+          description: "Správně. Není dobré zveřejňovat cizí trapné momenty.",
+          isCorrect: true,
+        },
+        {
+          text: "Ano, ale jen pokud osoba není jasně vidět.",
+          description: "I když je fotka rozmazaná, lidé mohou být stále rozeznatelní nebo se mohou cítit dotčení.",
+        },
+        {
+          text: "Možná, ale přidej nějaký vtipný filtr.",
+          description: "Filtr problém se soukromím neřeší.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Nahlášení obrázku na InstaVibe nepřineslo žádnou reakci. Na koho je možné se obrátit mimo aplikaci?",
+      answers: [
+        {
+          text: "Na nikoho – nedá se dělat nic dalšího.",
+          description: "Vždy existují lidé, na které je možné se obrátit o pomoc.",
+        },
+        {
+          text: "Na své sledující, aby na dotyčného zatlačili.",
+          description: "Vyvolávání nátlaku nebo davové reakce může situaci jen zhoršit a porušuje pravidla.",
+        },
+        {
+          text: "Na výrobce telefonu.",
+          description: "Ten nemůže pomoci s problémy týkajícími se obsahu na platformě.",
+        },
+        {
+          text: "Na rodiče, učitele nebo poradenské služby.",
+          description: "Správně. Dospělí, kterým se dá věřit, nebo odborné služby mohou pomoci podniknout další kroky.",
+          isCorrect: true,
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Proč je dobrý nápad vypnout při zveřejňování fotek na InstaVibe automatické přidávání polohy (geotagging)?",
+      answers: [
+        {
+          text: "Protože to zlepšuje kvalitu fotky.",
+          description: "Kvalitu obrázku umístěním polohy neovlivníš.",
+        },
+        {
+          text: "Protože jinak dostaneš méně lajků.",
+          description: "Lajky s geotagy nijak nesouvisí.",
+        },
+        {
+          text: "Protože cizí lidé mohou zjistit, kde se obvykle pohybuješ.",
+          description: "Správně. Opakující se místa (domov, škola) mohou ohrozit tvoje bezpečí.",
+          isCorrect: true,
+        },
+        {
+          text: "Protože to šetří baterii telefonu.",
+          description: "O baterii tu nejde – hlavní je soukromí a bezpečí.",
+        },
+      ],
+      timeLimit: 30,
+    },
+  ],
+};
+
+const password: PasswordTranslation = {
+  prologue: {
+    classroom:
+      "<T>[Počítačová učebna. Sedíš na svém místě vedle ostatních a přemýšlíš, co vás dnes čeká. Pan Müller vypadá, že má v plánu něco opravdu zajímavého…]</T>",
+  },
+  intro: {
+    herrMueller1:
+      "<B>Pan Müller:</B>\nTak dobře, dneska to vezmeme trochu jinak! Škola zavádí nový e-mailový systém. Každý z vás dostane svou vlastní školní e-mailovou adresu.",
+    herrMueller2:
+      "(Píše na klávesnici a projektor promítá úvodní stránku systému. Nakloníš se dopředu, zvědavě sleduješ.)",
+    herrMueller3:
+      "<B>Pan Müller:</B>\nPřejděte na mail.school-net.com a přihlaste se pomocí dočasného hesla. A první věc – MUSÍTE si vytvořit silné a bezpečné heslo. Pamatujte na to, co jsme si říkali o bezpečnosti na internetu!",
+    player1:
+      "<B>[Když otevřeš uvedenou adresu, objeví se hláška: 'Vítejte ve SchoolMail – nastavte nové heslo.']</B>\nPo všem, co už o online bezpečnosti víš, je jasné, že tohle heslo musí být opravdu silné…",
+  },
+  miniGame: {
+    title: "Drčič hesel",
+    description: "Zjisti, co dělá heslo silným a která jsou naopak nebezpečná.",
+    hint: "Ale nezapomeň: Silné heslo samo o sobě nezaručuje úplné bezpečí!",
+    endScreenScore: "Tvé konečné skóre:",
+    tutorial: [
+      {
+        title: "Ovladače",
+        message: "Naváděj pilový kotouč na hesla pomocí myši, dotyku nebo klávesnice a rozsekni je (←/A doleva, →/D doprava).",
+      },
+      {
+        title: "Hesla",
+        message: "Veď pilový kotouč k heslům a rozsekni je – ale jen ta slabá!",
+      },
+      {
+        title: "Body",
+        message: "Neznič silná hesla, jinak přijdeš o body!",
+      },
+    ],
+  },
+  quiz: [
+    {
+      question:
+        "Pan Müller zadal úkol vytvořit pro školní e-mail nové, bezpečné heslo. Co vlastně dělá heslo opravdu bezpečným?",
+      answers: [
+        {
+          text: "Tvé křestní jméno a rok narození.",
+          description:
+            "Heslo složené z křestního jména a roku narození se dá velmi snadno uhodnout. Vyhýbej se osobním údajům!",
+        },
+        {
+          text: "Alespoň 8 znaků, velká a malá písmena, číslice a speciální znaky.",
+          description:
+            "Bezpečné heslo má mít alespoň 8 znaků a obsahovat kombinaci velkých a malých písmen, čísel a speciálních znaků. Takové heslo je mnohem těžší prolomit.",
+          isCorrect: true,
+        },
+        {
+          text: "'123456'",
+          description:
+            "'123456' je jedno z nejběžnějších a zároveň nejslabších hesel. Dá se prolomit během pár vteřin.",
+        },
+        {
+          text: "Jméno tvého domácího mazlíčka.",
+          description:
+            "Jméno domácího mazlíčka se dá snadno uhodnout, zvlášť pokud tě někdo zná. Vyhýbej se jednoduchým názvům a osobním informacím.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Teď máš bezpečné heslo pro školní e-mail i pro InstaVibe. Jak často by se měla takto důležitá hesla měnit?",
+      answers: [
+        {
+          text: "Nikdy",
+          description:
+            "Když hesla nikdy neměníš, účet se při případné krádeži dat stává snadným cílem.",
+        },
+        {
+          text: "Jen když máš nový telefon.",
+          description:
+            "Nový telefon automaticky neznamená, že musíš měnit heslo – důležité je chránit účet, pokud existuje podezření na zneužití nebo únik dat.",
+        },
+        {
+          text: "Pravidelně a při podezření na zneužití.",
+          description:
+            "Pravidelná změna hesel a okamžitá změna při podezření na zneužití chrání tvoje účty před útočníky.",
+          isCorrect: true,
+        },
+        {
+          text: "Kdykoli máš špatnou náladu.",
+          description: "Nálada nemá s bezpečností hesel vůbec nic společného.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co je to správce hesel?",
+      answers: [
+        {
+          text: "Program, který přehrává hudbu.",
+          description: "Hudební programy nemají s hesly nic společného.",
+        },
+        {
+          text: "Hra do mobilu.",
+          description: "Správce hesel není hra, ale nástroj pro zvýšení bezpečnosti.",
+        },
+        {
+          text: "Program, který bezpečně ukládá hesla.",
+          description:
+            "Správce hesel pomáhá bezpečně ukládat všechna hesla a pamatovat si je – stačí si zapamatovat jedno hlavní heslo.",
+          isCorrect: true,
+        },
+        {
+          text: "Složka na stole",
+          description:
+            "Složka na stole by byla velmi nezabezpečená a nemá žádné ochranné funkce skutečného správce hesel.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Které z následujících hesel je nejbezpečnější?",
+      answers: [
+        {
+          text: "Fotbal123",
+          description:
+            "Obsahuje sice písmena i čísla, ale dá se snadno uhodnout, zvlášť když někdo ví, že fandíš fotbalu.",
+        },
+        {
+          text: "H@u$M@u$2025!",
+          description:
+            "Toto heslo je dlouhé, kreativní a obsahuje velká i malá písmena, číslice a speciální znaky – přesně to, co heslo dělá těžko prolomitelným.",
+          isCorrect: true,
+        },
+        {
+          text: "987654321",
+          description:
+            "Jednoduchá číselná řada a jedno z nejběžnějších hesel – velmi nebezpečné.",
+        },
+        {
+          text: "Ahoj",
+          description: "Jednoduché slovo bez čísel a speciálních znaků se dá snadno uhodnout.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Jak si můžeš zapamatovat bezpečné heslo?",
+      answers: [
+        {
+          text: "Vůbec nijak – stejné heslo můžeš používat všude.",
+          description:
+            "Používat jedno heslo pro všechno je velmi nebezpečné a může snadno vést ke krádeži dat.",
+        },
+        {
+          text: "Tím, že si vytvoříš větu a vezmeš první písmeno z každého slova.",
+          description:
+            "Věta ti pomůže vytvořit originální a bezpečné heslo, které si snadno zapamatuješ, např. „Můj pes miluje 3 velké kosti!",
+          isCorrect: true,
+        },
+        {
+          text: "Tím, že si ho napíšeš na lístek a přilepíš na monitor.",
+          description: "Heslo na viditelném lístku se dá velmi snadno ukrást.",
+        },
+        {
+          text: "Používáním výhradně čísel",
+          description:
+            "Bezpečné heslo má obsahovat čísla, písmena i speciální znaky, ne jen číslice.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Proč jsou speciální znaky v hesle důležité?",
+      answers: [
+        {
+          text: "Usnadňují zapamatování.",
+          description:
+            "Speciální znaky často heslo trochu zkomplikují, ale ne nutně usnadní zapamatování.",
+        },
+        {
+          text: "Zvyšují bezpečnost, protože existuje více možností.",
+          description:
+            "Speciální znaky vytvářejí mnohem více možných kombinací – díky tomu je heslo výrazně těžší prolomit.",
+          isCorrect: true,
+        },
+        {
+          text: "Vypadají hezky.",
+          description: "Vzhled je vedlejší – rozhodující je bezpečnost.",
+        },
+        {
+          text: "Zkracují délku hesla.",
+          description:
+            "Speciální znaky heslo nezkracují, jen ho dělají silnějším.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Které z následujících tvrzení je správné?",
+      answers: [
+        {
+          text: "Bezpečné heslo by mělo být co nejkratší.",
+          description:
+            "Krátká hesla se mnohem snáz uhodnou nebo prolomí – čím delší, tím lepší!",
+        },
+        {
+          text: "Hesla by se měla sdílet s kamarády.",
+          description: "Hesla jsou soukromá a nesmí se sdílet, ani s kamarády.",
+        },
+        {
+          text: "Heslo by mělo být co nejdelší a nejsložitější.",
+          description:
+            "Dlouhé a složité heslo s písmeny, číslicemi a speciálními znaky je výrazně bezpečnější.",
+          isCorrect: true,
+        },
+        {
+          text: "Heslo nepotřebuje velká písmena.",
+          description:
+            "Velká písmena zvyšují bezpečnost, protože rozšiřují počet možných kombinací.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Představ si, že spolužák nahlédne přes tvoje rameno a dozví se heslo k tvému školnímu e-mailu. Co by s ním mohl udělat?",
+      answers: [
+        {
+          text: "Může se za tebe vydávat a zneužít tvoje data.",
+          description:
+            "Kdo zná tvoje heslo, může převzít účet, posílat zprávy, nakupovat nebo krást soukromé informace.",
+          isCorrect: true,
+        },
+        {
+          text: "Může ti upéct dort.",
+          description: "Tvoje heslo nemá s pečením dortů nic společného.",
+        },
+        {
+          text: "Může smazat tvoje heslo.",
+          description:
+            "Samotná znalost hesla nestačí k tomu, aby ho jen tak „smazal – problém je v tom, že získá přístup k účtu.",
+        },
+        {
+          text: "Může ti zavolat.",
+          description: "Heslo nijak nesouvisí s telefonními hovory.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question: "Když už si heslo někam zapíšeš, kde by mělo být uložené?",
+      answers: [
+        {
+          text: "Přímo vedle počítače.",
+          description:
+            "Heslo ponechané na očích vedle počítače může kdokoli snadno najít a ukrást.",
+        },
+        {
+          text: "Ve veřejném chatu.",
+          description: "Ve veřejném chatu může heslo vidět spousta lidí – to je velmi nebezpečné.",
+        },
+        {
+          text: "Na bezpečném místě, které znáš jen ty.",
+          description:
+            "Když si heslo zapíšeš, ulož ho na tajné a bezpečné místo, které znáš jen ty, například do zamčeného šuplíku nebo do šifrovaného dokumentu.",
+          isCorrect: true,
+        },
+        {
+          text: "Na sociální sítě.",
+          description: "Hesla se nikdy nesmí zveřejňovat – to by byla otevřená pozvánka pro hackery.",
+        },
+      ],
+      timeLimit: 30,
+    },
+    {
+      question:
+        "Tvůj nový školní e-mail i InstaVibe nabízejí dvoufázové ověřování (2FA). Jaká je jeho největší výhoda?",
+      answers: [
+        {
+          text: "Už nepotřebuješ heslo.",
+          description: "Heslo pořád potřebuješ, jen je k tomu navíc vyžadováno potvrzení.",
+        },
+        {
+          text: "Existuje druhá vrstva zabezpečení navíc k heslu.",
+          description:
+            "Dvoufázové ověřování poskytuje dvojitou ochranu – například kombinaci hesla a kódu, který přijde na telefon.",
+          isCorrect: true,
+        },
+        {
+          text: "Automaticky se tím prodlouží heslo.",
+          description:
+            "Délka hesla zůstává stejná – jen se přidává další krok ověření.",
+        },
+        {
+          text: "Dostaneš každý den nové heslo.",
+          description:
+            "Heslo zůstává stejné, mění se jen ověřovací kód při každém přihlášení.",
+        },
+      ],
+      timeLimit: 30,
+    },
+  ],
+};
+
+export const scenes = {
+  socialMedia,
+  cookie,
+  phishing,
+  photos,
+  password,
+};
