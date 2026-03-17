@@ -1,16 +1,15 @@
 import {
-  Scene1Translation,
-  Scene2Translation,
-  Scene3Translation,
-  Scene4Translation,
-  Scene5Translation,
+  SocialMediaTranslation,
+  CookieTranslation,
+  PhishingTranslation,
+  PhotosTranslation,
+  PasswordTranslation,
 } from "../../types/translations/Scenes";
 
-const scene1: Scene1Translation = {
+const socialMedia: SocialMediaTranslation = {
   prologue: {
     bedroom:
-      "<T>[Tu habitación, bañada por la suave luz del atardecer. Tu teléfono vibra: Max está enviando mensajes al grupo otra vez. Te preguntas qué habrá descubierto esta vez.
-...]</T>",
+      "<T>[Tu habitación, bañada por la suave luz del atardecer. Tu teléfono vibra: Max está enviando mensajes al grupo otra vez. Te preguntas qué habrá descubierto esta vez...]</T>",
     innerDialog:
       "<T>Max siempre encuentra las cosas más geniales primero. Debería ver lo que le entusiasma ahora.</T>",
   },
@@ -19,7 +18,7 @@ const scene1: Scene1Translation = {
     chat1: {
       characterName: "Max",
       dialog:
-      "¡Chicos! ¡La nueva plataforma de redes sociales InstaVibe es increíble! 🔥🔥🔥",
+        "¡Chicos! ¡La nueva plataforma de redes sociales InstaVibe es increíble! 🔥🔥🔥",
     },
     chat2: {
       characterName: "Lea",
@@ -28,74 +27,74 @@ const scene1: Scene1Translation = {
     },
     chat3: {
       characterName: "Timo",
-      dialog:: "Si Max lo está promocionando, sabes que va a explotar de todos modos 😄 ¿Tienes un link?",
+      dialog:
+        "Si Max lo está promocionando, sabes que va a explotar de todos modos 😄 ¿Tienes un link?",
     },
     chat4: {
       characterName: "Max",
       dialog:
-        "¡Ya lo tengo! Créeme, InstaVibe lo tiene¡Una energía completamente diferente! ¡Aquí está el enlace!",
+        "¡Ya lo tengo! Créeme, InstaVibe lo tiene. ¡Una energía completamente diferente! ¡Aquí está el enlace!",
     },
     player1: {
       dialog:
-        "<B>[You pause, thoughtful mood...]</B>\nInstaVibe... I've heard good things, but I should be careful. I’ll just have a quick look before going to bed.",
+        "<B>[Pausa, pensativa...]</B>\nInstaVibe... He oído cosas buenas, pero debería tener cuidado. Echaré un vistazo rápido antes de acostarme.",
     },
     player2: {
       dialog:
-        "<B>[Pausa, pensativa...]</B>\nInstaVibe... He oído cosas buenas, pero debería tener cuidado.Echaré un vistazo rápido antes de acostarme.",
+        "<B>[Pausa, pensativa...]</B>\nInstaVibe... He oído cosas buenas, pero debería tener cuidado. Echaré un vistazo rápido antes de acostarme.",
     },
   },
   miniGame: {
     youHave: "Tu tienes",
     objectsFound: "objetos encontrados!",
     all: "todos",
-    miniGameIntroTitle: "Minijuego: Objetos Escondidos",
-    miniGameIntroDescription:
-      "Encuentra todos los objetos que no debes post en InstaVibe. ¡Elimínalos de la foto antes de que se acabe el tiempo y se publique!",
+    title: "Minijuego: Objetos Escondidos",
+    description:
+      "Encuentra todos los objetos que no debes publicar en InstaVibe. ¡Elimínalos de la foto antes de que se acabe el tiempo y se publique!",
     miniGameGiveUp: "Renuncia",
     tutorial: [
       {
         title: "Encuentra objetos",
         message:
-          "Click en el objeto que hayas encontrado. Si es correcto, desaparecerá y oirás un sonido."",
+          "Click en el objeto que hayas encontrado. Si es correcto, desaparecerá y oirás un sonido.",
       },
       {
         title: "Puntuación",
-        message: "En la esquina superior derecha, verás cuántos objetos ya has encontrado.",
+        message:
+          "En la esquina superior derecha, verás cuántos objetos ya has encontrado.",
       },
       {
         title: "Límite de tiempo",
         message:
-          '"Observa la cuenta regresiva. Si no encuentras más objetos, también puedes presionar el botón "Renunciar"',
+          'Observa la cuenta regresiva. Si no encuentras más objetos, también puedes presionar el botón "Renunciar".',
       },
     ],
   },
   quiz: [
     {
       question:
-        "Una vez que hayas instalado InstaVibe, ¿qué significa realmente que tu perfil sea "público"?",
+        'Una vez que hayas instalado InstaVibe, ¿qué significa realmente que tu perfil sea "público"?',
       answers: [
         {
           text: "Solo tu puedes ver tus publicaciones",
           description:
-            "Si tu perfil es
-público, no solo tú, sino todos pueden ver tus publicaciones, incluso desconocidos",
+            "Si tu perfil es público, no solo tú, sino todos pueden ver tus publicaciones, incluso desconocidos.",
         },
         {
           text: "Cualquiera en internet puede ver tus publicaciones",
           description:
-            "Un perfil público significa que cualquiera, incluso las personas que tú sigues, puedo ver todo lo que publicas: fotos, videos, textos.",
-          isCorrect: correcto,
+            "Un perfil público significa que cualquiera, incluso las personas que no sigues, puede ver todo lo que publicas: fotos, videos, textos.",
+          isCorrect: true,
         },
         {
           text: "Solo tus amigos pueden ver tus publicaciones",
           description:
-            "Si solo quieres que tus amigos vean tus publicaciones, debes configurar tu perfil como "privado".",
+            'Si solo quieres que tus amigos vean tus publicaciones, debes configurar tu perfil como "privado".',
         },
         {
           text: "Solo tus familiares pueden ver tus publicaciones",
           description:
-            "Con un perfil público, no solo tu familia sino realmente
-"Cualquier usuario de Internet puede ver su contenido.",
+            "Con un perfil público, no solo tu familia sino cualquier usuario de Internet puede ver su contenido.",
         },
       ],
       timeLimit: 30,
@@ -112,10 +111,8 @@ público, no solo tú, sino todos pueden ver tus publicaciones, incluso desconoc
         {
           text: "Extraños podrían hacer mal uso de esta información",
           description:
-            "Si,por ejemplo, escribes tu edad, escuela o lugar de residencia en tu biografía,
-extraños pueden usar esta información para hacerte daño; por ejemplo, para manipularte o
-enviarte mensajes específicos y peligrosos.", 
-        itscorrect: verdadero, 
+            "Si, por ejemplo, escribes tu edad, escuela o lugar de residencia en tu biografía, extraños pueden usar esta información para hacerte daño; por ejemplo, para manipularte o enviarte mensajes específicos y peligrosos.",
+          isCorrect: true,
         },
         {
           text: "Nadie realmente lee la biografía",
@@ -125,7 +122,7 @@ enviarte mensajes específicos y peligrosos.",
         {
           text: "No puedes usar emoticonos",
           description:
-            "Puedes usar emojis en la BIOS, ese no es el problema.El peligro radica en incluir demasiada información personal"",
+            "Puedes usar emojis en la BIOS, ese no es el problema. El peligro radica en incluir demasiada información personal.",
         },
       ],
       timeLimit: 30,
@@ -142,17 +139,16 @@ enviarte mensajes específicos y peligrosos.",
         {
           text: "Ajusta tu configuración de privacidad",
           description:
-            'Si ajusta correctamente su configuración de privacidad, por ejemplo, configura tu perfil como "privado" o elige quién puede ver tus publicaciones.
-Solo las personas seleccionadas pueden ver tus fotos.',
-          isCorrect: verdadero,
+            'Si ajusta correctamente su configuración de privacidad, por ejemplo, configura tu perfil como "privado" o elige quién puede ver tus publicaciones. Solo las personas seleccionadas pueden ver tus fotos.',
+          isCorrect: true,
         },
         {
-          text: "Agrega muchos amigos,
+          text: "Agrega muchos amigos",
           description:
-            Cuantas más personas agregues, mayor será el riesgo de que alguien haga un mal uso o comparta tus fotos.",
+            "Cuantas más personas agregues, mayor será el riesgo de que alguien haga un mal uso o comparta tus fotos.",
         },
         {
-          text: "Me gusta cada publicación,
+          text: "Me gusta cada publicación",
           description: "Dar me gusta no protege tus propias fotos de ninguna manera.",
         },
       ],
@@ -162,40 +158,42 @@ Solo las personas seleccionadas pueden ver tus fotos.',
       question: "Max te señaló un perfil sospechoso. ¿Cómo puedes saber si es falso?",
       answers: [
         {
-          text: "Tiene una marca de verificación verificada.,
+          text: "Tiene una marca de verificación verificada.",
           description:
-            "Una marca de verificación generalmente significa que el perfil es real; los perfiles falsos casi nunca tienen tal cosa.",
+            "Una marca de verificación generalmente significa que el perfil es real; los perfiles falsos casi nunca tienen tal cosa.",
         },
         {
           text: "Tiene muchas fotos y amigos reales.",
           description:
-            "Es más probable que tener muchos amigos y publicaciones reales sea señal de un perfil real".
+            "Es más probable que tener muchos amigos y publicaciones reales sea señal de un perfil real.",
         },
         {
           text: "Tiene muy poca información, desconocida, imágenes y casi ninguna publicación",
           description:
             "Los perfiles falsos a menudo parecen vacíos, utilizan fotos de archivo o de otras personas y no tienen contenido real.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Tiene un nombre gracioso",
-          description: "Un nombre gracioso por sí solo no dice nada sobre si un perfil es genuino o falso.",
+          description:
+            "Un nombre gracioso por sí solo no dice nada sobre si un perfil es genuino o falso.",
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-        "¿Cómo puedo asegurarme de que mi privacidad esté realmente protegida mientras navego por InstaVibe?".,
+        "¿Cómo puedo asegurarme de que mi privacidad esté realmente protegida mientras navego por InstaVibe?",
       answers: [
         {
           text: "Publica todo públicamente",
-          description: "Si todo es público, desconocidos también podrán ver todo tu contenido; eso no es seguro,
+          description:
+            "Si todo es público, desconocidos también podrán ver todo tu contenido; eso no es seguro.",
         },
         {
-          text: "Haz que tus publicaciones sean visibles solo para tus amigos",,
+          text: "Haz que tus publicaciones sean visibles solo para tus amigos",
           description:
-            "Si haces que tus publicaciones sean visibles solo para tus amigos, Proteja sus datos y evite exponerlos a extraños".,
+            "Si haces que tus publicaciones sean visibles solo para tus amigos, protege sus datos y evita exponerlos a extraños.",
           isCorrect: true,
         },
         {
@@ -217,7 +215,7 @@ Solo las personas seleccionadas pueden ver tus fotos.',
         {
           text: "Porque nadie está interesado",
           description:
-            "No se trata de si alguien esta interesado o no, sino de privacidad y respeto,
+            "No se trata de si alguien esta interesado o no, sino de privacidad y respeto.",
         },
         {
           text: "Porque ralentiza el telefono movil",
@@ -226,12 +224,12 @@ Solo las personas seleccionadas pueden ver tus fotos.',
         {
           text: "Porque es injusto y a menudo está prohibido",
           description:
-            "Los mensajes privados son confidenciales; publicarlos sin consentimientoes injusto e incluso puede tener consecuencias legales".
-          isCorrect: verdadero,
+            "Los mensajes privados son confidenciales; publicarlos sin consentimiento es injusto e incluso puede tener consecuencias legales.",
+          isCorrect: true,
         },
         {
           text: "Porque recibe menos me gusta",
-          description: "Los me gusta no tienen nada que ver con el derecho a la privacidad."
+          description: "Los me gusta no tienen nada que ver con el derecho a la privacidad.",
         },
       ],
       timeLimit: 30,
@@ -243,22 +241,24 @@ Solo las personas seleccionadas pueden ver tus fotos.',
         {
           text: "Puedes publicar fotos de todos sin ningún problema.",
           description:
-            "Toda persona tiene derecho a su propia imagen: eres tú "No se permite publicar fotos como esa.",
+            "Toda persona tiene derecho a su propia imagen: no se permite publicar fotos sin permiso.",
         },
         {
           text: "Necesitas el permiso de las personas que aparecen en la foto.",
           description:
-            "Antes de publicar una imagen, debes obtener el consentimiento de todas las personas que aparecen en ella; esto es justo y, a menudo,legalmente obligatorio".
-          isCorrect: verdadero,
+            "Antes de publicar una imagen, debes obtener el consentimiento de todas las personas que aparecen en ella; esto es justo y, a menudo, legalmente obligatorio.",
+          isCorrect: true,
         },
         {
           text: "Siempre puedes publicar fotos de amigos.",
           description:
-"Tus amigos también tienen derecho a la privacidad y pueden decidir si una foto debe publicarse en línea o no."        },
+            "Tus amigos también tienen derecho a la privacidad y pueden decidir si una foto debe publicarse en línea o no.",
+        },
         {
           text: "Siempre y cuando no etiquetes a nadie, todo está permitido.",
           description:
-"Que alguien esté etiquetado o no no cambia el hecho de que primero hay que pedir permiso."        },
+            "Que alguien esté etiquetado o no no cambia el hecho de que primero hay que pedir permiso.",
+        },
       ],
       timeLimit: 30,
     },
@@ -276,18 +276,20 @@ Solo las personas seleccionadas pueden ver tus fotos.',
         {
           text: "Bloquearlo y reportarlo",
           description:
-            "Es mejor bloquear a la persona inmediatamente y reportar el mensaje al proveedor; así es como se toman medidas efectivas contra dichos usuarios.",
-          isCorrect: verdadero,
+            "Es mejor bloquear a la persona inmediatamente y reportar el mensaje al proveedor; así es como se toman medidas efectivas contra dichos usuarios.",
+          isCorrect: true,
         },
         {
           text: "Insúltalos de vuelta",
           description:
-"Responder con insultos lo empeora todo y puede"También te meterá en problemas.",        },
+            "Responder con insultos lo empeora todo y también te puede meter en problemas.",
+        },
       ],
       timeLimit: 30,
     },
     {
-      question: "Un extraño te envía una solicitud de amistad en InstaVibe – ¿Por qué deberías ser cauteloso?,
+      question:
+        "Un extraño te envía una solicitud de amistad en InstaVibe – ¿Por qué deberías ser cauteloso?",
       answers: [
         {
           text: "Porque de lo contrario, tendrás demasiados amigos",
@@ -297,24 +299,25 @@ Solo las personas seleccionadas pueden ver tus fotos.',
           text: "Porque desconocidos podrían espiar tu información",
           description:
             "Si les das acceso a tu perfil a desconocidos, podrán ver tus datos personales y tal vez incluso hacer mal uso de ellos.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Porque de lo contrario se te agotará la batería",
           description:
-"Tus amigos no tienen ninguna influencia sobre la batería de tu teléfono. Se trata de seguridad, no de la batería.",        },
+            "Tus amigos no tienen ninguna influencia sobre la batería de tu teléfono. Se trata de seguridad, no de la batería.",
+        },
         {
           text: "Porque es vergonzoso",
           description:
-            "No es vergonzoso ignorar las solicitudes de amistad que no conoces.Se trata de tu privacidad y protección."",
+            "No es vergonzoso ignorar las solicitudes de amistad que no conoces. Se trata de tu privacidad y protección.",
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-"¿Estás pensando en compartir tu ubicación en tu perfil? ¿Qué podría pasar si lo haces?",
-answers: [
+        "¿Estás pensando en compartir tu ubicación en tu perfil? ¿Qué podría pasar si lo haces?",
+      answers: [
         {
           text: "Tu batería se carga más rápido.",
           description: "La ubicación no tiene influencia en la velocidad de carga de su batería.",
@@ -322,35 +325,35 @@ answers: [
         {
           text: "Los desconocidos podrían encontrarte o seguirte.",
           description:
-            "Si compartes tu ubicación real, los desconocidos pueden descubrir donde estás y tal vez incluso seguirte o contactarte de forma incómoda.",.",
-          isCorrect: verdadero,
+            "Si compartes tu ubicación real, los desconocidos pueden descubrir donde estás y tal vez incluso seguirte o contactarte de forma incómoda.",
+          isCorrect: true,
         },
         {
           text: "Recibirás un regalo.",
-          description: "Compartir tu ubicación no trae regalos - Puede ponerte en peligro.",        },
+          description: "Compartir tu ubicación no trae regalos - puede ponerte en peligro.",
+        },
         {
           text: "Tu perfil será eliminado.",
           description:
-            "Tu perfil no será eliminado, pero compartir la ubicación puede poner en peligro su",
+            "Tu perfil no será eliminado, pero compartir la ubicación puede poner en peligro tu seguridad.",
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-        "Después de configurar tu perfil de InstaVibe, ¿por qué no deberías publicar allí tu número de
-teléfono?",
+        "Después de configurar tu perfil de InstaVibe, ¿por qué no deberías publicar allí tu número de teléfono?",
       answers: [
         {
           text: "Porque a nadie le interesa",
           description:
-            "No se trata de si a alguien le interesa o no, La privacidad y la seguridad son cruciales."
+            "No se trata de si a alguien le interesa o no. La privacidad y la seguridad son cruciales.",
         },
         {
           text: "Porque desconocidos podrían acosarte o engañarte",
           description:
-            "Si muestras públicamente tu número de teléfono, desconocidos podrían llamarte, acosarte o incluso engañarte.", 
-          isCorrect: verdadero,
+            "Si muestras públicamente tu número de teléfono, desconocidos podrían llamarte, acosarte o incluso engañarte.",
+          isCorrect: true,
         },
         {
           text: "Porque recibirás menos me gusta",
@@ -359,14 +362,13 @@ teléfono?",
         {
           text: "Porque se eliminará automáticamente",
           description:
-            "Su número de teléfono no se eliminará automáticamente, pero otros pueden usarlo indebidamente",
+            "Su número de teléfono no se eliminará automáticamente, pero otros pueden usarlo indebidamente.",
         },
       ],
       timeLimit: 30,
     },
     {
-      question:
-        "¿Quieres darle vida a tu perfil? ¿Qué información preferirías NO compartir?,
+      question: "¿Quieres darle vida a tu perfil? ¿Qué información preferirías NO compartir?",
       answers: [
         {
           text: "Tu comida favorita",
@@ -377,7 +379,7 @@ teléfono?",
           text: "Tu dirección",
           description:
             "Nunca debes compartir tu dirección en las redes sociales ya que los extraños pueden verlo y podría poner en peligro su seguridad.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Una foto de tu perro",
@@ -386,7 +388,8 @@ teléfono?",
         },
         {
           text: "Una puesta de sol",
-          description: "Una foto de una puesta de sol no es problemática y no afecta tu privacidad.",
+          description:
+            "Una foto de una puesta de sol no es problemática y no afecta tu privacidad.",
         },
       ],
       timeLimit: 30,
@@ -397,12 +400,13 @@ teléfono?",
         {
           text: "Tu comida favorita",
           description:
-           "Tu comida favorita no es información confidencial y no representa ningún peligro.",
+            "Tu comida favorita no es información confidencial y no representa ningún peligro.",
         },
         {
           text: "Tu dirección",
           description:
-"Nunca debes compartir tu dirección en las redes sociales ya que los extraños pueden verlo, lo que podría poner en peligro su seguridad.",        },
+            "Nunca debes compartir tu dirección en las redes sociales ya que los extraños pueden verlo, lo que podría poner en peligro su seguridad.",
+        },
         {
           text: "Una foto de tu perro",
           description:
@@ -410,8 +414,9 @@ teléfono?",
         },
         {
           text: "Una puesta de sol",
-          description: "Una foto de una puesta de sol no supone ningún problema y no afecta a tu privacidad.", 
-          isCorrect: verdadero,
+          description:
+            "Una foto de una puesta de sol no supone ningún problema y no afecta a tu privacidad.",
+          isCorrect: true,
         },
       ],
       timeLimit: 30,
@@ -419,16 +424,15 @@ teléfono?",
   ],
 };
 
-const scene2: Scene2Translation = {
+const cookie: CookieTranslation = {
   intro: {
     buttonTextAcceptCookies: "Aceptar todas las cookies",
     buttonTextManageCookies: "Administrar cookies",
     cookieInfo1:
-      "Nosotros y terceros seleccionados utilizamos cookies o tecnologías similares, como se describe en
-la Política de Cookies. Puede aceptar el uso de dichas tecnologías haciendo clic en el botón "Aceptar"."
+      'Nosotros y terceros seleccionados utilizamos cookies o tecnologías similares, como se describe en la Política de Cookies. Puede aceptar el uso de dichas tecnologías haciendo clic en el botón "Aceptar".',
     player1: {
       dialog:
-       "Hmm...¿por qué debería aceptar estas cookies? Prefiero gestionarlas y ver cuáles no son necesarias.",
+        "Hmm...¿por qué debería aceptar estas cookies? Prefiero gestionarlas y ver cuáles no son necesarias.",
     },
     hint: {
       dialog: "No puedo continuar todavía. Es necesario activar algo que el sitio web requiere.",
@@ -453,7 +457,7 @@ la Política de Cookies. Puede aceptar el uso de dichas tecnologías haciendo cl
         analytics: "Analyticas",
       },
       cookieInfo2:
-        "Puede administrar sus cookies aquí.Algunas son esenciales y No se puede desactivar",
+        "Puede administrar sus cookies aquí. Algunas son esenciales y no se pueden desactivar.",
       cookieInfo3: "Todavía no puedo continuar. Una o más cookies aún deben desactivarse.",
       buttonTextContinue: "Continúa",
     },
@@ -492,14 +496,15 @@ la Política de Cookies. Puede aceptar el uso de dichas tecnologías haciendo cl
       question: "¿Para qué se utilizan las cookies en Internet?",
       answers: [
         {
-          text: Para que los sitios web puedan recordar cosas (por ejemplo, inicio de sesión, carrito..",
+          text: "Para que los sitios web puedan recordar cosas (por ejemplo, inicio de sesión, carrito...)",
           description:
-            "Las cookies almacenan información para que los sitios web puedan reconocerlo como mantener la sesión iniciada o guardar artículos en su carrito.,
-          isCorrect: verdadero,
+            "Las cookies almacenan información para que los sitios web puedan reconocerlo, como mantener la sesión iniciada o guardar artículos en su carrito.",
+          isCorrect: true,
         },
         {
           text: "Para que su computadora funcione más rápido",
-          description: "Las cookies no mejoran el rendimiento del hardware de su computadora.",
+          description:
+            "Las cookies no mejoran el rendimiento del hardware de su computadora.",
         },
         {
           text: "Para obtener más puntos en los videojuegos",
@@ -507,22 +512,24 @@ la Política de Cookies. Puede aceptar el uso de dichas tecnologías haciendo cl
         },
         {
           text: "Para obtener actualizaciones automáticamente",
-          description: "Las actualizaciones no están controladas por cookies.",,
+          description: "Las actualizaciones no están controladas por cookies.",
         },
       ],
       timeLimit: 30,
     },
     {
-      question: ""¿Qué son las cookies de seguimiento?",
+      question: "¿Qué son las cookies de seguimiento?",
       answers: [
         {
           text: "Cookies que rastrean tu ubicación exacta",
-          description: "Las cookies de seguimiento generalmente guardan información de navegación, no ubicación precisa".,
+          description:
+            "Las cookies de seguimiento generalmente guardan información de navegación, no ubicación precisa.",
         },
         {
-          text: ""Cookies que rastrean qué sitios web visitas anuncios personalizados",
-          description: Las cookies de seguimiento registran sus actividades de navegación para personalizar la publicidad.",
-          isCorrect: verdadero,
+          text: "Cookies que rastrean qué sitios web visitas para anuncios personalizados",
+          description:
+            "Las cookies de seguimiento registran sus actividades de navegación para personalizar la publicidad.",
+          isCorrect: true,
         },
         {
           text: "Cookies que almacenan tu contraseña",
@@ -536,7 +543,8 @@ la Política de Cookies. Puede aceptar el uso de dichas tecnologías haciendo cl
       timeLimit: 30,
     },
     {
-      question: "¿Por qué InstaVibe te pide que aceptes las cookies la primera vez que lo abres?"
+      question:
+        "¿Por qué InstaVibe te pide que aceptes las cookies la primera vez que lo abres?",
       answers: [
         {
           text: "Así obtienes más me gusta",
@@ -544,16 +552,18 @@ la Política de Cookies. Puede aceptar el uso de dichas tecnologías haciendo cl
         },
         {
           text: "Porque de lo contrario la aplicación no sabe si te gusta InstaVibe",
-          description: "Las solicitudes de cookies no se refieren a tus preferencias para otras aplicaciones.",
+          description:
+            "Las solicitudes de cookies no se refieren a tus preferencias para otras aplicaciones.",
         },
         {
           text: "Porque muchos países tienen leyes que te protegen",
-          description: "Leyes como el RGPD requieren consentimiento para que puedas tener control sobre tus datos.",
-          isCorrect: verdadero,
+          description:
+            "Leyes como el RGPD requieren consentimiento para que puedas tener control sobre tus datos.",
+          isCorrect: true,
         },
         {
           text: "Para que tu teléfono no se bloquee",
-          description: "La estabilidad del teléfono no depende de las cookies."
+          description: "La estabilidad del teléfono no depende de las cookies.",
         },
       ],
       timeLimit: 30,
@@ -563,9 +573,8 @@ la Política de Cookies. Puede aceptar el uso de dichas tecnologías haciendo cl
       answers: [
         {
           text: "Mantener la sesión iniciada y abrir tu perfil directamente",
-          description:
-"Mantener la sesión iniciada y abrir tu perfil directamente",
-isCorrect: verdadero,
+          description: "Mantener la sesión iniciada y abrir tu perfil directamente.",
+          isCorrect: true,
         },
         {
           text: "Edición de fotos con filtros",
@@ -587,17 +596,17 @@ isCorrect: verdadero,
       answers: [
         {
           text: "Inicio de sesión, seguimiento, análisis, sistema",
-          description: "No todos son igualmente útiles o necesario.",
+          description: "No todos son igualmente útiles o necesarios.",
         },
         {
           text: "Sistema, Inicio de sesión, Publicidad",
-          description: "No se requiere publicidad para proporcionar funciones principales",
+          description: "No se requiere publicidad para proporcionar funciones principales.",
         },
         {
           text: "Idioma, Sistema, Seguridad, Inicio de sesión",
           description:
-            "Estas categorías ayudan con la configuración del idioma, la seguridad,y el inicio de sesión: son útiles",
-          isCorrect: verdadero,
+            "Estas categorías ayudan con la configuración del idioma, la seguridad, y el inicio de sesión: son útiles.",
+          isCorrect: true,
         },
         {
           text: "Ninguna de las respuestas es correcta",
@@ -611,11 +620,11 @@ isCorrect: verdadero,
       answers: [
         {
           text: "Así obtienes más me gusta",
-          description: ""Los me gusta no tienen nada que ver con las cookies del sistema.",
+          description: "Los me gusta no tienen nada que ver con las cookies del sistema.",
         },
         {
           text: "Entonces ves anuncios de zapatos",
-          description: "Esa es la función de las cookies de marketing, no cookies del sistema.,
+          description: "Esa es la función de las cookies de marketing, no cookies del sistema.",
         },
         {
           text: "Para que tu teléfono funcione más rápido",
@@ -624,8 +633,8 @@ isCorrect: verdadero,
         {
           text: "Para que la aplicación sepa que has iniciado sesión y pueda cargar tus fotos",
           description:
-            ""Las cookies necesarias/del sistema respaldan funciones básicas como estado de la sesión y cargando contenido.",
-          isCorrect: verdadero,
+            "Las cookies necesarias/del sistema respaldan funciones básicas como estado de la sesión y cargando contenido.",
+          isCorrect: true,
         },
       ],
       timeLimit: 30,
@@ -637,11 +646,12 @@ isCorrect: verdadero,
           text: "La aplicación no funcionará correctamente.",
           description:
             "Sin las cookies necesarias, las funciones principales como el inicio de sesión o la carga de páginas pueden dejar de funcionar correctamente.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Verás menos anuncios.",
-          description: "Esto se refiere principalmente a las cookies de marketing, no cookies del sistema.",",
+          description:
+            "Esto se refiere principalmente a las cookies de marketing, no cookies del sistema.",
         },
         {
           text: "Recibirás más me gusta.",
@@ -664,12 +674,12 @@ isCorrect: verdadero,
         {
           text: "Para que la aplicación sepa qué funciones son populares y pueda mejorarlas",
           description:
-           "Las cookies de análisis muestran qué áreas se utilizan, lo que ayuda al equipo a mejorar la aplicación.",
-          isCorrect: verdadero,
+            "Las cookies de análisis muestran qué áreas se utilizan, lo que ayuda al equipo a mejorar la aplicación.",
+          isCorrect: true,
         },
         {
           text: "Para que tu teléfono tenga más almacenamiento",
-          description: "Las cookies no aumentan el almacenamiento del dispositivo",
+          description: "Las cookies no aumentan el almacenamiento del dispositivo.",
         },
         {
           text: "Así que automáticamente obtienes seguidores",
@@ -687,41 +697,44 @@ isCorrect: verdadero,
         },
         {
           text: "Almacenan los filtros que usas.",
-          description: "Eso es más un tema de configuración/funciones, no marketing", 
+          description: "Eso es más un tema de configuración/funciones, no marketing.",
         },
         {
           text: "Garantizan que tu perfil se mantenga privado.",
-          description: "La configuración de privacidad es independiente de las cookies de marketing",
+          description:
+            "La configuración de privacidad es independiente de las cookies de marketing.",
         },
         {
-          text: "Muestran anuncios relacionados con lo que ves (por ejemplo, ropa deportiva si visitas muchas páginas de deportes)"
-          description: "Las cookies de marketing personalizan la publicidad basado en su comportamiento de navegació.",
-          isCorrect: verdadero,
+          text: "Muestran anuncios relacionados con lo que ves (por ejemplo, ropa deportiva si visitas muchas páginas de deportes)",
+          description:
+            "Las cookies de marketing personalizan la publicidad basado en su comportamiento de navegación.",
+          isCorrect: true,
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-        ""¿Qué tipo de cookies utiliza InstaVibe para ver qué funciones se utilizan con más frecuencia (por ejemplo, Historias, Reels, mensajes)?",
+        "¿Qué tipo de cookies utiliza InstaVibe para ver qué funciones se utilizan con más frecuencia (por ejemplo, Historias, Reels, mensajes)?",
       answers: [
         {
           text: "Galletas de chocolate",
-          description: "Sabrosas, pero no lo que queremos decir",
+          description: "Sabrosas, pero no lo que queremos decir.",
         },
         {
           text: "Cookies de marketing",
-          description: ""Las cookies de marketing son principalmente para personalizar".",
+          description: "Las cookies de marketing son principalmente para personalizar.",
         },
         {
           text: "Cookies de analisis",
           description:
-            "Las cookies de análisis miden el uso y ayudan a comprender ¿Qué características son populares?",
-          isCorrect: verdadero,
+            "Las cookies de análisis miden el uso y ayudan a comprender qué características son populares.",
+          isCorrect: true,
         },
         {
           text: "Cookies de sistemas",
-          description: ""Las cookies del sistema son para funciones básicas, no para fines comerciales,
+          description:
+            "Las cookies del sistema son para funciones básicas, no para fines comerciales.",
         },
       ],
       timeLimit: 30,
@@ -729,7 +742,7 @@ isCorrect: verdadero,
   ],
 };
 
-const scene3: Scene3Translation = {
+const phishing: PhishingTranslation = {
   prologue: {
     bedroom:
       "<T>[A la mañana siguiente: Te estás preparando para la escuela cuando recibes una notificación de InstaVibe. Después de la configuración de ayer, tienes curiosidad por saber quién podría estar contactándote...]</T>",
@@ -737,62 +750,60 @@ const scene3: Scene3Translation = {
   intro: {
     player1: {
       dialog:
-        ¿Alguien ya me está enviando mensajes por InstaVibe? ¡Qué rápido! Me pregunto si será
-alguno de mis amigos",
+        "¿Alguien ya me está enviando mensajes por InstaVibe? ¡Qué rápido! Me pregunto si será alguno de mis amigos",
     },
     chat1: {
       characterName: "Jonas M. (10B)",
       dialog:
-        "¡Hola! Vi que te acabas de unir a InstaVibe. ¡Bienvenido!Estoy organizando un evento escolar y necesito la lista de clases con la información de contacto. ¿Te importaría compartirla? ¡Me sería de gran ayuda!",
+        "¡Hola! Vi que te acabas de unir a InstaVibe. ¡Bienvenido! Estoy organizando un evento escolar y necesito la lista de clases con la información de contacto. ¿Te importaría compartirla? ¡Me sería de gran ayuda!",
     },
     player2: {
       dialog:
-        "Jonas de 10B? No creo que nos conozcamos... Esto...Parece demasiado directo para alguien que no conozco, ¿Debería confiar en él?",
+        "Jonas de 10B? No creo que nos conozcamos... Esto... Parece demasiado directo para alguien que no conozco, ¿Debería confiar en él?",
     },
   },
   miniGame: {
     title: "¡Salven a los peces! ¡Detecten el phishing!",
-    description: `No todo lo que hay en Internet es real: ¡esto también se aplica bajo el agua!Los cebos con mensajes caen al mar. El buceador busca a los anzuelos de pesca haciendo clic, lea el mensajes y decide: ¿es phishing o no?
+    description: `No todo lo que hay en Internet es real: ¡esto también se aplica bajo el agua! Los cebos con mensajes caen al mar. El buceador busca a los anzuelos de pesca haciendo clic, lea los mensajes y decide: ¿es phishing o no?`,
     hint: "Cada decisión equivocada pone a tus peces en peligro, ¡así que ten cuidado!",
-    startButton: "¿Vamos"!",
+    startButton: "¡Vamos!",
     legit: "Real",
     phishing: "Phishing",
     gameOver: "Game over",
     success:
-      "¡Bien hecho! Has ayudado a los peces a evitar cebos peligrosos y a mantenerse a salvo. Así es
-como te proteges del phishing en la vida real: manteniéndote alerta.",
+      "¡Bien hecho! Has ayudado a los peces a evitar cebos peligrosos y a mantenerse a salvo. Así es como te proteges del phishing en la vida real: manteniéndote alerta.",
     failure:
-      ""¡Oh, no! El pez se comió demasiados mensajes peligrosos y no sobrevivió. Al igual que en internet, un clic erróneo puede causar un gran daño.",
+      "¡Oh, no! El pez se comió demasiados mensajes peligrosos y no sobrevivió. Al igual que en internet, un clic erróneo puede causar un gran daño.",
     phishingMessages: [
       {
         type: "email",
         sender: "support@instavibe.com",
         text: "Su cuenta ha sido suspendida debido a actividades sospechosas. Inicie sesión aquí para desbloquearla",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "email",
         sender: "premio@streamfest.io",
-        text: "¡Felicitaciones! Has ganado 3 meses de premios gratis. Reclámalo ahora".
-        isPhishing: verdadero,
+        text: "¡Felicitaciones! Has ganado 3 meses de premios gratis. Reclámalo ahora",
+        isPhishing: true,
       },
       {
         type: "email",
         sender: "update@gameworld.io",
         text: "Se requiere una nueva actualización. Descárgala aquí para seguir jugando.",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "email",
         sender: "verificacion@instavibe-support.com",
         text: "Verifique su cuenta de InstaVibe ahora, o será desactivado.",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "sms",
         sender: "+49 1521 4455667",
         text: "Hola, soy yo, de la escuela. ¿Puedes enviarme tu información de acceso a InstaVibe? Necesito comprobar algo",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "sms",
@@ -803,91 +814,91 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
       {
         type: "sms",
         sender: "+41 76 123 4567",
-        text: ""¡Has ganado un premio en un concurso! Reclama tu premio",
+        text: "¡Has ganado un premio en un concurso! Reclama tu premio",
         isPhishing: true,
       },
       {
         type: "sms",
         sender: "+31 612345678",
-        text: "Se detectó acceso no autorizado a su cuenta. Asegura tu cuenta ahora,
-        isPhishing: verdadero,
+        text: "Se detectó acceso no autorizado a su cuenta. Asegura tu cuenta ahora",
+        isPhishing: true,
       },
       {
         type: "sms",
         sender: "+33 612 345 678",
         text: "Factura no pagada. Realizar el pago a través de este enlace",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@instavibe_giveaway",
-        text: "¡Eres uno de nuestros mejores fans! ¡Gana productos exclusivos de InstaVibe ahora! Solo completa este formulario.,
-        isPhishing: verdadero,
+        text: "¡Eres uno de nuestros mejores fans! ¡Gana productos exclusivos de InstaVibe ahora! Solo completa este formulario.",
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@grupoprofesores_oficial",
-        text: ""¿Puedes enviarme las respuestas del examen nuevamente? Las perdí.Aquí está el enlace.",
-        isPhishing: verdadero,
+        text: "¿Puedes enviarme las respuestas del examen nuevamente? Las perdí. Aquí está el enlace.",
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@gratis_gamecoins",
         text: "¡Monedas gratis para tu juego favorito - exclusivamente para usuarios de InstaVibe!",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@instavibe_support_admin",
         text: "Ingrese sus datos de inicio de sesión para evitar perder el acceso.",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@evento_oficial",
         text: "¡Entradas gratis para el concierto! Solo para los primeros 100 - ¡Date prisa!",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@instavibe_warning",
-        text: "Su cuenta ha sido reportada. Ver queja aquí "
-        isPhishing: verdadero,
+        text: "Su cuenta ha sido reportada. Ver queja aquí",
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@brand_support_fake",
         text: "Para confirmar tu última publicación: Introduce tu contraseña aquí",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@randomuser324",
-        text: Oye, alguien está usando tus fotos en InstaVibe.¡Mira esto!",
-        isPhishing: verdadero,
+        text: "Oye, alguien está usando tus fotos en InstaVibe. ¡Mira esto!",
+        isPhishing: true,
       },
       {
         type: "chat",
         sender: "@instavibe.alerta",
         text: "Debido a la alta demanda, debe iniciar sesión nuevamente. Haga clic aquí",
-        isPhishing: verdadero,
+        isPhishing: true,
       },
       {
         type: "email",
         sender: "support@instavibe.com",
         text: "Su registro se ha realizado correctamente. ¡Bienvenido a InstaVibe!",
-        isPhishing: verdadero,
+        isPhishing: false,
       },
       {
         type: "email",
         sender: "info@instavibe.com",
-        text: "Le hemos enviado un correo electrónico de confirmación. Por favor, confirme".
-        isPhishing: verdadero,
+        text: "Le hemos enviado un correo electrónico de confirmación. Por favor, confirme",
+        isPhishing: false,
       },
       {
         type: "sms",
         sender: "+49 1521 4455667",
-        text: "Su contraseña ha sido cambiada exitosamente. Puede Inicia sesión ahora.",",
+        text: "Su contraseña ha sido cambiada exitosamente. Puede iniciar sesión ahora.",
         isPhishing: false,
       },
       {
@@ -899,7 +910,7 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
       {
         type: "chat",
         sender: "@instavibe_support",
-        text: ¿Cómo podemos ayudarte? Si tienes alguna pregunta, no dudes en contactarnos,
+        text: "¿Cómo podemos ayudarte? Si tienes alguna pregunta, no dudes en contactarnos",
         isPhishing: false,
       },
       {
@@ -912,11 +923,12 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
     tutorial: [
       {
         title: "Nadando",
-        message: "Navega y mantén presionada la flecha para nadar hasta el lugar deseado o usa las teclas de flecha."
+        message:
+          "Navega y mantén presionada la flecha para nadar hasta el lugar deseado o usa las teclas de flecha.",
       },
       {
-        title: "Sobres de Phishing ",
-        message: "Nade cerca de un sobre para abrirlo",",
+        title: "Sobres de Phishing",
+        message: "Nade cerca de un sobre para abrirlo.",
       },
       {
         title: "Lee el mensaje",
@@ -924,11 +936,11 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
       },
       {
         title: "Mala elección",
-        message: "Las malas decisiones dañarán a los peces".
+        message: "Las malas decisiones dañarán a los peces.",
       },
       {
-        title: "Bueana elección",
-        message: "Las decisiones correctas curarán a los peces".
+        title: "Buena elección",
+        message: "Las decisiones correctas curarán a los peces.",
       },
       {
         title: "Salud de los peces",
@@ -938,17 +950,18 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
   },
   quiz: [
     {
-      question: "Al revisar su correo electrónico, aparece un mensaje sospechoso. ¿Podría ser un intento de phishing? Pero ¿qué es el phishing?".",
+      question:
+        "Al revisar su correo electrónico, aparece un mensaje sospechoso. ¿Podría ser un intento de phishing? Pero ¿qué es el phishing?",
       answers: [
         {
           text: "Un juego online",
-          description: "El phishing no es un juego, es una estafa".
+          description: "El phishing no es un juego, es una estafa.",
         },
         {
           text: "El intento de obtener datos personales",
           description:
             "En el phishing, los estafadores intentan obtener datos confidenciales como contraseñas, detalles de cuentas o datos de acceso a través de correos electrónicos, sitios web o mensajes falsos.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Un genero de música",
@@ -957,7 +970,7 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         {
           text: "Un programa antivirus",
           description:
-            "Un programa antivirus protege contra virus, pero a veces también detecta intentos de phishing. Sin embargo, el phishing en sí mismo es un tipo de estafa.,
+            "Un programa antivirus protege contra virus, pero a veces también detecta intentos de phishing. Sin embargo, el phishing en sí mismo es un tipo de estafa.",
         },
       ],
       timeLimit: 30,
@@ -966,28 +979,30 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
       question: "Max no estaba seguro de un correo electrónico. ¿Cómo pudo reconocer que era phishing?",
       answers: [
         {
-          text: "roviene de una dirección de correo electrónico oficial.",
-          description: "No es una señal de phishing, las direcciones que parecen oficiales parecen confiables.",
+          text: "Proviene de una dirección de correo electrónico oficial.",
+          description:
+            "No es una señal de phishing, las direcciones que parecen oficiales parecen confiables.",
         },
         {
           text: "Proviene de una dirección de remitente inusual o incorrecta.",
           description: "Los remitentes inusuales o defectuosos son una fuerte indicación de phishing.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "El asunto contiene emoticonos coloridos.",
           description: "Los emoticonos por sí solos no indican phishing.",
         },
         {
-          text: "It includes a friendly greeting.",
-          description: "Los saludos amistosos también se utilizan en el lenguaje en emails genuinos.",
+          text: "Incluye un saludo amistoso.",
+          description:
+            "Los saludos amistosos también se utilizan en emails genuinos.",
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-        " El mensaje parece urgente. ¿Qué suelen escribir los estafadores de phishing para presionarte a reaccionar?"",
+        "El mensaje parece urgente. ¿Qué suelen escribir los estafadores de phishing para presionarte a reaccionar?",
       answers: [
         {
           text: "Elogio por su comportamiento seguro",
@@ -995,16 +1010,19 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         },
         {
           text: "Una amenaza de suspender su cuenta",
-          description: "Las amenazas como la suspensión de la cuenta crean estrés y tentación de hacer clic.",
-          isCorrect: verdadero,
+          description:
+            "Las amenazas como la suspensión de la cuenta crean estrés y tentación de hacer clic.",
+          isCorrect: true,
         },
         {
           text: "Un código de cupón",
-          description: "Los cupones están destinados a atraerte, pero por lo general No aplique presión aguda.",
+          description:
+            "Los cupones están destinados a atraerte, pero por lo general no aplican presión aguda.",
         },
         {
           text: "Una imagen divertida de un gato",
-          description: "Las imágenes divertidas son inofensivas y no son una herramienta típica de phishing",
+          description:
+            "Las imágenes divertidas son inofensivas y no son una herramienta típica de phishing.",
         },
       ],
       timeLimit: 30,
@@ -1027,13 +1045,14 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         {
           text: "Mensaje de tu mejor amigo",
           description: "Los mensajes de amigos reales no son una señal típica de phishing.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
       ],
       timeLimit: 30,
     },
     {
-      question: "El correo electrónico de phishing solicita información, ¿ que datos suelen buscar los estafadores después?",
+      question:
+        "El correo electrónico de phishing solicita información, ¿qué datos suelen buscar los estafadores después?",
       answers: [
         {
           text: "tu canción favorita",
@@ -1042,7 +1061,7 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         {
           text: "Sus datos bancarios y contraseñas",
           description: "Los datos bancarios y las contraseñas son el principal objetivo del phishing.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "tu comida favorita",
@@ -1065,7 +1084,7 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         {
           text: "Eliminar o reportar el mensaje",
           description: "Lo mejor es eliminarlo o reportarlo directamente.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Responder rapido",
@@ -1079,16 +1098,17 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
       timeLimit: 30,
     },
     {
-      question: "El correo electrónico menciona "InstaVibe". ¿Por qué los estafadores suelen usar nombres conocidos?",
+      question: 'El correo electrónico menciona "InstaVibe". ¿Por qué los estafadores suelen usar nombres conocidos?',
       answers: [
         {
           text: "Porque suena más gracioso",
-          description: "No les importa si lo encuentras gracioso o no".
+          description: "No les importa si lo encuentras gracioso o no.",
         },
         {
           text: "Así confías más en el mensaje",
-          description: "Los nombres familiares parecen confiables y crean una falsa sensación de seguridad.",
-          isCorrect: verdadero,
+          description:
+            "Los nombres familiares parecen confiables y crean una falsa sensación de seguridad.",
+          isCorrect: true,
         },
         {
           text: "Para publicitar",
@@ -1106,20 +1126,21 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
       answers: [
         {
           text: "Nunca debes enviar datos personales por correo electrónico.",
-          description: "Los datos personales nunca deben incluirse en correos electronicos",
-          isCorrect: verdadero,
+          description: "Los datos personales nunca deben incluirse en correos electronicos.",
+          isCorrect: true,
         },
         {
           text: "Las contraseñas pueden compartirse",
-          description: "Las contraseñas nunca deben compartirse",
+          description: "Las contraseñas nunca deben compartirse.",
         },
         {
           text: "Todos los enlaces en Internet son seguros.",
-          description: "No todos los enlaces son seguros; muchos de ellos son peligrosos."
+          description: "No todos los enlaces son seguros; muchos de ellos son peligrosos.",
         },
         {
           text: "Siempre debes hacer clic en 'Registrarse ahora'.",
-          description: "Los botones 'Registrarse ahora' en los correos electrónicos pueden ser trampas de phishing.,
+          description:
+            "Los botones 'Registrarse ahora' en los correos electrónicos pueden ser trampas de phishing.",
         },
       ],
       timeLimit: 30,
@@ -1134,7 +1155,7 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         {
           text: "Sus datos serán robados.",
           description: "Sí, sus datos podrían ser robados directamente.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Ganarás un teléfono inteligente.",
@@ -1152,20 +1173,20 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
       answers: [
         {
           text: "Hola, ¿que tal?",
-          description: "Parecel normal e inofensivo",
+          description: "Parece normal e inofensivo.",
         },
         {
           text: "¡Has ganado 1,000 euros - haz click aquí!",
-          description: "Promesas de premios con un enlace son estafas muy comunes",
-          isCorrect: verdadero,
+          description: "Promesas de premios con un enlace son estafas muy comunes.",
+          isCorrect: true,
         },
         {
           text: "Nos vemos a las 3 p.m.",
-          description: "Una cita completamente ligitima",
+          description: "Una cita completamente legítima.",
         },
         {
           text: "Buena suerte con el examen",
-          description: "Parece un mensaje amigable, no sospechoso",
+          description: "Parece un mensaje amigable, no sospechoso.",
         },
       ],
       timeLimit: 30,
@@ -1181,11 +1202,11 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         {
           text: "No",
           description: "El phishing puede llegar a través de muchos canales.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Solo en teléfonos móviles",
-          description: "El phishing puede ocurrir tanto en teléfonos móviles como en PC.,
+          description: "El phishing puede ocurrir tanto en teléfonos móviles como en PC.",
         },
         {
           text: "Solo de noche",
@@ -1195,7 +1216,7 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
       timeLimit: 30,
     },
     {
-      question: "Si no está seguro de si un mensaje es auténtico,deberías...",
+      question: "Si no está seguro de si un mensaje es auténtico, deberías...",
       answers: [
         {
           text: "Proporcione sus datos para estar seguro.",
@@ -1203,8 +1224,9 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         },
         {
           text: "Pregunte a alguien o visite el sitio web oficial.",
-          description: "Siempre verifique preguntando primero o visitando el sitio oficial usted mismo.",
-          isCorrect: verdadero,
+          description:
+            "Siempre verifique preguntando primero o visitando el sitio oficial usted mismo.",
+          isCorrect: true,
         },
         {
           text: "Reenviar el mensaje.",
@@ -1223,19 +1245,20 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
         {
           text: "Se le redirige a un sitio web falso.",
           description: "Se le lleva a una página falsa que puede robar sus datos.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Recibirás un regalo.",
-          description: "Las ofertas de phishing nunca son legítimas",
+          description: "Las ofertas de phishing nunca son legítimas.",
         },
         {
           text: "Estás fuera de internet.",
-          description: "En realidad no estás fuera de internet, pero tus datos podrían ser robados.",
+          description:
+            "En realidad no estás fuera de internet, pero tus datos podrían ser robados.",
         },
         {
           text: "Ganas un viaje.",
-          description: "Los premios falsos como los viajes suelen ser una estafa de phishing",
+          description: "Los premios falsos como los viajes suelen ser una estafa de phishing.",
         },
       ],
       timeLimit: 30,
@@ -1243,7 +1266,7 @@ como te proteges del phishing en la vida real: manteniéndote alerta.",
   ],
 };
 
-const scene4: Scene4Translation = {
+const photos: PhotosTranslation = {
   prologue: {},
   intro: {
     initialMessage:
@@ -1275,37 +1298,37 @@ const scene4: Scene4Translation = {
         id: "ignorar",
         label: "No hagas nada e ignoralo",
         response: "Ignorarlo no hará que desaparezca. Me siento solo con ello.",
-        isCorrect: falso,
+        isCorrect: false,
       },
       {
         id: "confront_publicly",
         label: "Comenta públicamente y dile al autor que lo borre",
         response:
           "Eso podría atraer más atención y la situación podría empeorar. No quiero empeorar las cosas.",
-        isCorrect: falso,
+        isCorrect: false,
       },
       {
         id: "report_alone",
-        label: "Reportar la foto al proveedor de la aplicación sin avisarlea Max",
+        label: "Reportar la foto al proveedor de la aplicación sin avisarle a Max",
         response:
-         "Eso podría atraer más atención y la situación podría empeorar No quiero empeorar las cosas.",
-        isCorrect: falso,
+          "Eso podría atraer más atención y la situación podría empeorar. No quiero empeorar las cosas.",
+        isCorrect: false,
       },
       {
         id: "support_and_act",
-        label: "Pregúntale a Max cómo se siente y ofrécete a ayudarlo a informar".
+        label: "Pregúntale a Max cómo se siente y ofrécete a ayudarlo a informar",
         response:
           "Gracias por consultarme primero. Significa mucho para mí. Reportémoslo juntos.",
-        isCorrect: verdadero,
+        isCorrect: true,
       },
     ],
   },
   miniGame: {
-    miniGameTitle: "¿Publicar o no publicar?",
-    tutorial:
-     "Has visto que no todas las imágenes pertenecen a Internet. En este juego, tú decides: pulsa el botón derecho para publicar o el botón izquierdo para no publicar.",
+    title: "¿Publicar o no publicar?",
+    description:
+      "Has visto que no todas las imágenes pertenecen a Internet. En este juego, tú decides: pulsa el botón derecho para publicar o el botón izquierdo para no publicar.",
     allCorrect: "¡Buen trabajo! ¡Lo hiciste todo bien!",
-    minimumReached: "¡Muy bien! Respondiste la mayoría de las preguntas."
+    minimumReached: "¡Muy bien! Respondiste la mayoría de las preguntas.",
     insufficient: "¡No está mal, pero aún hay margen de mejora!",
     post: "Publicar",
     notPost: "No publicar",
@@ -1315,7 +1338,7 @@ const scene4: Scene4Translation = {
   quiz: [
     {
       question:
-        ¿Qué es lo primero que debes hacer si tu amigo Max publica una foto tuya que no te gusta en InstaVibe?",
+        "¿Qué es lo primero que debes hacer si tu amigo Max publica una foto tuya que no te gusta en InstaVibe?",
       answers: [
         {
           text: "Reportar la foto a InstaVibe inmediatamente",
@@ -1325,18 +1348,18 @@ const scene4: Scene4Translation = {
         {
           text: "Insulta a Max en los comentarios",
           description:
-            "Los insultos solo empeoran la situación y no harán que la foto se elimine más rápido",
+            "Los insultos solo empeoran la situación y no harán que la foto se elimine más rápido.",
         },
         {
-          text: "Pídele amablemente a Max en un mensaje privado que elimine la foto ",
+          text: "Pídele amablemente a Max en un mensaje privado que elimine la foto",
           description:
-            Correcto: Un mensaje privado tranquilo y amistoso suele ser...la solución más rápida y respetuosa.",
-          isCorrect: verdadero,
+            "Correcto: Un mensaje privado tranquilo y amistoso suele ser la solución más rápida y respetuosa.",
+          isCorrect: true,
         },
         {
           text: "No hagas nada, es tu amigo",
           description:
-            "Si te sientes incómodo, tienes derecho a hablar; las amistades se basan en el respeto.",
+            "Si te sientes incómodo, tienes derecho a hablar; las amistades se basan en el respeto.",
         },
       ],
       timeLimit: 30,
@@ -1351,38 +1374,39 @@ const scene4: Scene4Translation = {
         },
         {
           text: "Solo si no lo etiquetas",
-          description: ""Incluso sin etiqueta, sigue siendo su imagen – debe estar de acuerdo",
+          description:
+            "Incluso sin etiqueta, sigue siendo su imagen – debe estar de acuerdo.",
         },
         {
           text: "No, cada uno tiene 'derecho a su propia imagen'.",
           description:
             "Correcto: Necesitas permiso antes de publicar fotos de personas identificables.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Sí, pero solo para amigos cercanos",
-          description: "La privacidad aún se aplica en tu círculo privado; pregunta primero.",
+          description: "La privacidad aún se aplica en tu círculo privado; pregunta primero.",
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-        "Le pediste a Max que borrara tu foto, pero no responde. ¿Cuál es el siguiente paso, el más sensato?"
+        "Le pediste a Max que borrara tu foto, pero no responde. ¿Cuál es el siguiente paso, el más sensato?",
       answers: [
         {
           text: "Hackear su contraseña y eliminarla usted mismo",
-          description: "Hackear es ilegal y hace que todo sea más seguro",
+          description: "Hackear es ilegal y hace que todo sea más complicado.",
         },
         {
           text: "Publicar una foto vergonzosa de él para vengarse de él",
-          description: "La venganza crea más problemas y también viola sus derechos",
+          description: "La venganza crea más problemas y también viola sus derechos.",
         },
         {
-          text: "Reportando la foto a InstaVibe ya que ha sido publicado sin su consentimiento,
+          text: "Reportando la foto a InstaVibe ya que ha sido publicado sin su consentimiento",
           description:
-           "Correcto: Si el contacto directo falla, utilice las herramientas de denuncia de la plataforma para protegerse.",
-          isCorrect: verdadero,
+            "Correcto: Si el contacto directo falla, utilice las herramientas de denuncia de la plataforma para protegerse.",
+          isCorrect: true,
         },
         {
           text: "Eliminando tu cuenta",
@@ -1398,7 +1422,8 @@ const scene4: Scene4Translation = {
       answers: [
         {
           text: "Una foto grupal de toda tu clase",
-          description: "Las fotos grupales involucran a varias personas:Necesitamos su consentimiento primero.",
+          description:
+            "Las fotos grupales involucran a varias personas: necesitamos su consentimiento primero.",
         },
         {
           text: "Un extraño con una camisa genial",
@@ -1406,36 +1431,40 @@ const scene4: Scene4Translation = {
         },
         {
           text: "Un atardecer junto al lago",
-          description: "Correcto: Las fotos de naturaleza o paisajes que no muestran personas identificables están perfectamente bien.",
-          isCorrect: verdadero,
+          description:
+            "Correcto: Las fotos de naturaleza o paisajes que no muestran personas identificables están perfectamente bien.",
+          isCorrect: true,
         },
         {
           text: "Tu hermanito jugando",
-          description: "Las fotografías de niños requieren precaución adicional y el consentimiento de los padres."
+          description:
+            "Las fotografías de niños requieren precaución adicional y el consentimiento de los padres.",
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-        "Alguien subió una foto tuya a un perfil falso y está escribiendo cosas malas. ¿Qué deberías hacer?"",
+        "Alguien subió una foto tuya a un perfil falso y está escribiendo cosas malas. ¿Qué deberías hacer?",
       answers: [
         {
           text: "Escríbele al perfil y devuélvele el insulto",
-          description: "Insultar de vuelta puede empeorar la situación",
+          description: "Insultar de vuelta puede empeorar la situación.",
         },
         {
           text: "Reporta el perfil inmediatamente y habla con un padre",
-          description: "Correcto: Obtenga apoyo de adultos de confianza y utilice herramientas de denuncia.",
-          isCorrect: verdadero,
+          description:
+            "Correcto: Obtenga apoyo de adultos de confianza y utilice herramientas de denuncia.",
+          isCorrect: true,
         },
         {
           text: "No hagas nada, se detendrá solo.",
-          description: "Problemas como este a menudo empeoran si se ignoran."
+          description: "Problemas como este a menudo empeoran si se ignoran.",
         },
         {
           text: "Pídeles a tus amigos que también insulten a esa persona",
-          description: "El acoso coordinado puede agravar la situación y violar las reglas de la plataforma",
+          description:
+            "El acoso coordinado puede agravar la situación y violar las reglas de la plataforma.",
         },
       ],
       timeLimit: 30,
@@ -1446,20 +1475,23 @@ const scene4: Scene4Translation = {
       answers: [
         {
           text: "Los demás podrían ponerse celosos de tus notas.",
-          description: "Los celos no son el problema principal, sino la exposición de datos personales",
+          description:
+            "Los celos no son el problema principal, sino la exposición de datos personales.",
         },
         {
           text: "Los informes escolares son aburridos y probablemente no llegarán a buen puerto",
-          description:"Los "me gusta" no importan, tu privacidad sí.",
+          description: "Los 'me gusta' no importan, tu privacidad sí.",
         },
         {
           text: "Muestra datos privados como tu nombre completo, fecha de nacimiento y nombre de la escuela.",
-          description: "Correcto: Esos detalles pueden usarse incorrectamente si se comparte publicamente ",
-          isCorrect: verdadero,
+          description:
+            "Correcto: Esos detalles pueden usarse incorrectamente si se comparte públicamente.",
+          isCorrect: true,
         },
         {
           text: "La escuela lo prohíbe estrictamente.",
-          description: "Pueden existir normas al respecto, pero la protección de los datos personales es la razón principal."
+          description:
+            "Pueden existir normas al respecto, pero la protección de los datos personales es la razón principal.",
         },
       ],
       timeLimit: 30,
@@ -1469,19 +1501,19 @@ const scene4: Scene4Translation = {
       answers: [
         {
           text: "...solo puedes publicar fotos profesionales tuyas.",
-          description: "No, se trata del consentimiento, no de la calidad de la foto",
+          description: "No, se trata del consentimiento, no de la calidad de la foto.",
         },
         {
           text: "…en general, cada persona tiene derecho a decidir si se pueden publicar imágenes de ella.",
-          description: "Correcto: La publicación de fotos identificables requiere permiso",
-          isCorrect: verdadero,
+          description: "Correcto: La publicación de fotos identificables requiere permiso.",
+          isCorrect: true,
         },
         {
           text: "…puedes cobrar dinero por cada foto que tomes.",
           description: "Eso no tiene nada que ver con este derecho.",
         },
         {
-          text: "...tienes derecho a dibujar cualquier imagen que quieras desear.",
+          text: "...tienes derecho a dibujar cualquier imagen que quieras.",
           description: "Dibujar es otra historia: lo correcto es publicar fotos de personas.",
         },
       ],
@@ -1493,16 +1525,17 @@ const scene4: Scene4Translation = {
       answers: [
         {
           text: "Sí, es divertido y todos se reirán.",
-          description: "Lo gracioso para ti puede ser hiriente para ellos. El respeto es lo primero",
+          description: "Lo gracioso para ti puede ser hiriente para ellos. El respeto es lo primero.",
         },
         {
           text: "No, podría avergonzar y herir a la persona en segundo plano.",
-          description: "Correcto: No expongas el momento incómodo de otra persona",
-          isCorrect: verdadero,
+          description: "Correcto: No expongas el momento incómodo de otra persona.",
+          isCorrect: true,
         },
         {
           text: "Sí, pero solo si la persona no es claramente visible",
-          description: "Incluso si la foto está borrosa, las personas aún podrían ser identificables o sentirse expuestas.",
+          description:
+            "Incluso si la foto está borrosa, las personas aún podrían ser identificables o sentirse expuestas.",
         },
         {
           text: "Tal vez, pero agrega un filtro divertido",
@@ -1513,7 +1546,7 @@ const scene4: Scene4Translation = {
     },
     {
       question:
-        "Reportaste una imagen en InstaVibe pero no pasa nada. ¿Quién? ¿Puedes contactar fuera de la aplicación?,
+        "Reportaste una imagen en InstaVibe pero no pasa nada. ¿A quién puedes contactar fuera de la aplicación?",
       answers: [
         {
           text: "Nadie, no se puede hacer nada más.",
@@ -1521,40 +1554,44 @@ const scene4: Scene4Translation = {
         },
         {
           text: "Tus seguidores, para presionar a la persona",
-          description: "Movilizar una turba puede llevar a más daño y violaciones de las reglas",
+          description:
+            "Movilizar una turba puede llevar a más daño y violaciones de las reglas.",
         },
         {
           text: "El fabricante de su teléfono",
-          description: "No pueden ayudar con el contenido de la plataforma".,
+          description: "No pueden ayudar con el contenido de la plataforma.",
         },
         {
           text: "Padres, profesores o un servicio de asesoramiento",
-          description: "Correcto: Adultos o servicios de confianza pueden ayudarle a tomar medidas adicionales",
-          isCorrect: verdadero,
+          description:
+            "Correcto: Adultos o servicios de confianza pueden ayudarle a tomar medidas adicionales.",
+          isCorrect: true,
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-        "¿Por qué es una buena idea desactivar el etiquetado automático de ubicación-geoetiquetado- antes de publicar fotos en InstaVibe?",
+        "¿Por qué es una buena idea desactivar el etiquetado automático de ubicación -geoetiquetado- antes de publicar fotos en InstaVibe?",
       answers: [
         {
           text: "Porque mejora la calidad de la foto",
-          description: "La calidad de la imagen no se ve afectada por la ubicación etiquetada",
+          description: "La calidad de la imagen no se ve afectada por la ubicación etiquetada.",
         },
         {
           text: "Porque, de lo contrario, obtendrás menos me gusta",
           description: "Los 'Me gusta' no están relacionados con el geoetiquetado.",
         },
         {
-          text: "Porque los extraños podrían descubrir dónde estás generalmente ubicado,
-          description: "Correcto: Patrones de ubicación -casa, escuela- puede exponerle a riesgos.",
-          isCorrect: verdadero,
+          text: "Porque los extraños podrían descubrir dónde estás generalmente ubicado",
+          description:
+            "Correcto: Patrones de ubicación -casa, escuela- puede exponerle a riesgos.",
+          isCorrect: true,
         },
         {
           text: "Porque ahorra batería del teléfono",
-          description: "La duración de la batería no es la razón principal: la privacidad y la seguridad son.",
+          description:
+            "La duración de la batería no es la razón principal: la privacidad y la seguridad son.",
         },
       ],
       timeLimit: 30,
@@ -1562,10 +1599,10 @@ const scene4: Scene4Translation = {
   ],
 };
 
-const scene5: Scene5Translation = {
+const password: PasswordTranslation = {
   prologue: {
     classroom:
-      "<T>[Laboratorio de informática. Te sientas junto a tus compañeros, curioso por la lección de hoy. El Sr. Müller parece tener algo interesante planeado...]</T>",
+      "<T>[Laboratorio de informática. Te sientas junto a tus compañeros, curioso por la lección de hoy. El Sr. Müller parece tener algo interesante planeado...]</T>",
   },
   intro: {
     herrMueller1:
@@ -1573,104 +1610,105 @@ const scene5: Scene5Translation = {
     herrMueller2:
       "(Escribe en su teclado mientras el proyector muestra la página de inicio del sistema. Te inclinas hacia adelante, interesado.)",
     herrMueller3:
-      "<B>Mr. Müller:</B>\nVaya a mail.school-net.com e inicie sesión con Tu contraseña temporal. Primero, DEBES crear una contraseña segura. ¡Recuerda lo que
-aprendimos sobre seguridad en línea!",
+      "<B>Mr. Müller:</B>\nVaya a mail.school-net.com e inicie sesión con tu contraseña temporal. Primero, DEBES crear una contraseña segura. ¡Recuerda lo que aprendimos sobre seguridad en línea!",
     player1:
-      "<B>[Navegas a la URL y ves: 'Bienvenido a SchoolMail -Establecer nueva contraseña']</]</B>\nDespués de todo lo que he aprendido sobre
-seguridad en línea, necesito hacer que esta contraseña sea realmente segura...",
+      "<B>[Navegas a la URL y ves: 'Bienvenido a SchoolMail - Establecer nueva contraseña']</B>\nDespués de todo lo que he aprendido sobre seguridad en línea, necesito hacer que esta contraseña sea realmente segura...",
   },
   miniGame: {
     title: "Destructor de contraseñas",
-    description: "Descubre qué hace que una contraseña sea segura y cuáles son inseguras."
-    hint: "Pero recuerda: ¡Una contraseña segura por sí sola no garantiza tu seguridad!"
+    description: "Descubre qué hace que una contraseña sea segura y cuáles son inseguras.",
+    hint: "Pero recuerda: ¡Una contraseña segura por sí sola no garantiza tu seguridad!",
     endScreenScore: "Tu puntuación final: ",
     tutorial: [
       {
         title: "Controles",
-        message: "Dirige la hoja de sierra hacia las contraseñas con el mouse, el tacto o el teclado y córtalas (←/A izquierda, →/D derecha).",
+        message:
+          "Dirige la hoja de sierra hacia las contraseñas con el mouse, el tacto o el teclado y córtalas (←/A izquierda, →/D derecha).",
       },
       {
         title: "Contraseñas",
-        message: "Dirige la hoja de sierra hacia las contraseñas y córtalas - ¡pero sólo los débiles!,
+        message:
+          "Dirige la hoja de sierra hacia las contraseñas y córtalas - ¡pero sólo los débiles!",
       },
       {
         title: "Puntos",
-        message: ¡No cortes contraseñas seguras o perderás puntos!",
+        message: "¡No cortes contraseñas seguras o perderás puntos!",
       },
     ],
   },
   quiz: [
     {
       question:
-        "Sr. Müller le pidió que creara una contraseña nueva y segura paratTu correo electrónico escolar. ¿Qué hace que una contraseña sea realmente segura?",
+        "Sr. Müller le pidió que creara una contraseña nueva y segura para tu correo electrónico escolar. ¿Qué hace que una contraseña sea realmente segura?",
       answers: [
         {
           text: "Tu nombre y año de nacimiento",
           description:
-            "Una contraseña que consta de su nombre y año de El nacimiento es muy fácil de adivinar. ¡Evita la información personal!",
+            "Una contraseña que consta de su nombre y año de nacimiento es muy fácil de adivinar. ¡Evita la información personal!",
         },
         {
           text: "Al menos 8 caracteres, letras mayúsculas y minúsculas, números y caracteres especiales",
           description:
-            "Una contraseña segura debe tener al menos 8 caracteres y contienen una combinación de mayúsculas y minúsculas, números y caracteres especiales. Esto dificulta descifrar la contraseña.",
-          isCorrect: verdadero,
+            "Una contraseña segura debe tener al menos 8 caracteres y contener una combinación de mayúsculas y minúsculas, números y caracteres especiales. Esto dificulta descifrar la contraseña.",
+          isCorrect: true,
         },
         {
-          text: "‘123456’",
+          text: "'123456'",
           description:
-            "‘123456’ es uno de los más comunes y débiles, Se pueden hackear en segundos.",
+            "'123456' es uno de los más comunes y débiles, se puede hackear en segundos.",
         },
         {
           text: "El nombre de tu mascota",
           description:
-            "El nombre de tu mascota es fácil de adivinar, especialmente si alguien te conoce. Evita los nombres simples",
+            "El nombre de tu mascota es fácil de adivinar, especialmente si alguien te conoce. Evita los nombres simples.",
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-       "Ahora tienes una contraseña segura para tu correo electrónico escolar y para InstaVibe. ¿Con qué frecuencia deberías cambiar contraseñas tan importantes?",
+        "Ahora tienes una contraseña segura para tu correo electrónico escolar y para InstaVibe. ¿Con qué frecuencia deberías cambiar contraseñas tan importantes?",
       answers: [
         {
           text: "Nunca",
           description:
-            "Si nunca cambia sus contraseñas, su cuenta...se convierte en un blanco fácil en caso de robo.,
+            "Si nunca cambia sus contraseñas, su cuenta se convierte en un blanco fácil en caso de robo.",
         },
         {
           text: "Sólo cuando tengas un teléfono nuevo",
           description:
-           "Un teléfono nuevo no significa automáticamente que tengas que...Cambia tu contraseña: lo que importa es la protección si existe sospecha de robo de datos."",
+            "Un teléfono nuevo no significa automáticamente que tengas que cambiar tu contraseña: lo que importa es la protección si existe sospecha de robo de datos.",
         },
         {
           text: "Regularmente y si sospecha de un uso indebido",
           description:
-            "Cambiar regularmente sus contraseñas y cambiarlas inmediatamente si sospecha que han sido utilizadas incorrectamente protege sus cuentas de los atacantes",
-          isCorrect: verdadero,
+            "Cambiar regularmente sus contraseñas y cambiarlas inmediatamente si sospecha que han sido utilizadas incorrectamente protege sus cuentas de los atacantes.",
+          isCorrect: true,
         },
         {
           text: "Siempre que estés de mal humor",
-          description: "Tu estado de ánimo no tiene nada que ver con la seguridad de la contraseña",
+          description: "Tu estado de ánimo no tiene nada que ver con la seguridad de la contraseña.",
         },
       ],
       timeLimit: 30,
     },
     {
-      question: "¿Qué es un administrador de contraseñas?"
+      question: "¿Qué es un administrador de contraseñas?",
       answers: [
         {
           text: "Un programa que reproduce música",
-          description: "Los programas de música no tienen nada que ver con contraseñas.,
+          description: "Los programas de música no tienen nada que ver con contraseñas.",
         },
         {
           text: "Un juego para tu teléfono",
-          description: "Un administrador de contraseñas no es un juego, sino una herramienta para tu seguridad."
+          description:
+            "Un administrador de contraseñas no es un juego, sino una herramienta para tu seguridad.",
         },
         {
           text: "Un programa que almacena contraseñas de forma segura",
           description:
             "Un administrador de contraseñas te ayuda a almacenar de forma segura todas tus contraseñas y recordarlas: solo necesitas recordar una contraseña maestra.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Una carpeta en el escritorio",
@@ -1686,22 +1724,23 @@ seguridad en línea, necesito hacer que esta contraseña sea realmente segura...
         {
           text: "Football123",
           description:
-           "Contiene letras y números, pero es fácil de...Supongo que, sobre todo, si alguien sabe que te gusta el fútbol."",
+            "Contiene letras y números, pero es fácil de adivinar, sobre todo si alguien sabe que te gusta el fútbol.",
         },
         {
           text: "H@u$M@u$2025!",
           description:
-            "Esta contraseña es larga, creativa y contiene mayúsculas y minúsculas".
-          isCorrect: verdadero,
+            "Esta contraseña es larga, creativa y contiene mayúsculas y minúsculas, números y caracteres especiales.",
+          isCorrect: true,
         },
         {
           text: "987654321",
           description:
-            ""Esta es una secuencia simple de números y una de las contraseñas más comunes son muy inseguras.",
+            "Esta es una secuencia simple de números y una de las contraseñas más comunes; son muy inseguras.",
         },
         {
           text: "Hola",
-          description: "Una palabra sencilla sin números ni caracteres especiales es demasiado facil de adivinar",
+          description:
+            "Una palabra sencilla sin números ni caracteres especiales es demasiado fácil de adivinar.",
         },
       ],
       timeLimit: 30,
@@ -1710,44 +1749,45 @@ seguridad en línea, necesito hacer que esta contraseña sea realmente segura...
       question: "¿Cómo puedes recordar una contraseña segura?",
       answers: [
         {
-          text: ""No, en absoluto. Debes usar la misma contraseña para todo",
+          text: "No, en absoluto. Debes usar la misma contraseña para todo",
           description:
-          "" Usar la misma contraseña para todo es muy inseguro y puede conducir fácilmente al robo de datos",
+            "Usar la misma contraseña para todo es muy inseguro y puede conducir fácilmente al robo de datos.",
         },
         {
           text: "Formando una oración y tomando la primera letra de cada palabra",
           description:
-            "Una frase te ayuda a crear una contraseña única y segura que puedas recordar fácilmente, por ejemplo: "¡A mi perro le encantan los 3 huesos grandes!" → ¡MdL3gB!",
-          isCorrect: verdadero,
+            "Una frase te ayuda a crear una contraseña única y segura que puedas recordar fácilmente, por ejemplo: \"¡A mi perro le encantan los 3 huesos grandes!\" → ¡MdL3gB!",
+          isCorrect: true,
         },
         {
           text: "Escribiéndolo en una nota y pegándola en la pantalla",
-          description: "Una contraseña en una nota visible es fácil de robar",
+          description: "Una contraseña en una nota visible es fácil de robar.",
         },
         {
           text: "Usando sólo números",
-          description:Una contraseña segura debe contener números, letras y caracteres especiales, no solo números.,
+          description:
+            "Una contraseña segura debe contener números, letras y caracteres especiales, no solo números.",
         },
       ],
       timeLimit: 30,
     },
     {
-      question: "¿Por qué son importantes los caracteres especiales en una contraseña?"
+      question: "¿Por qué son importantes los caracteres especiales en una contraseña?",
       answers: [
         {
           text: "Hacen que sea más fácil recordarlo.",
           description:
-            "Special characters often make passwords a bit more complicated, but not necessarily easier to remember.",
+            "Los caracteres especiales a menudo hacen que las contraseñas sean un poco más complicadas, pero no necesariamente más fáciles de recordar.",
         },
         {
-          text: "They increase security because there are more possibilities.",
+          text: "Aumentan la seguridad porque hay más posibilidades.",
           description:
-            "Los caracteres especiales a menudo hacen que las contraseñas sean un poco más complicado, pero no necesariamente más fácil de recordar.",
-          isCorrect: verdadero,
+            "Los caracteres especiales aumentan el número de combinaciones posibles, haciendo que la contraseña sea mucho más difícil de descifrar.",
+          isCorrect: true,
         },
         {
           text: "Se ven bien.",
-          description: "La apariencia no importa: la seguridad es crucial",
+          description: "La apariencia no importa: la seguridad es crucial.",
         },
         {
           text: "Reducen la longitud de la contraseña.",
@@ -1758,7 +1798,7 @@ seguridad en línea, necesito hacer que esta contraseña sea realmente segura...
       timeLimit: 30,
     },
     {
-      question:"¿Cuál de las siguientes afirmaciones es correcta?",
+      question: "¿Cuál de las siguientes afirmaciones es correcta?",
       answers: [
         {
           text: "Una contraseña segura debe ser lo más corta posible.",
@@ -1767,31 +1807,32 @@ seguridad en línea, necesito hacer que esta contraseña sea realmente segura...
         },
         {
           text: "Las contraseñas deben compartirse con amigos.",
-          description: "Las contraseñas son privadas y nunca deben compartirse, ni siquiera con amigos.",
+          description:
+            "Las contraseñas son privadas y nunca deben compartirse, ni siquiera con amigos.",
         },
         {
           text: "Una contraseña debe ser lo más larga y compleja posible.",
           description:
-            ""Una contraseña larga y compleja con letras, números y caracteres especiales es mucho más segura.",
-          isCorrect: verdadero,
+            "Una contraseña larga y compleja con letras, números y caracteres especiales es mucho más segura.",
+          isCorrect: true,
         },
         {
           text: "Una contraseña no necesita letras mayúsculas.",
           description:
-           "Las letras mayúsculas aumentan la seguridad porque crean más posibilidades en la combinación de la contraseña.",
+            "Las letras mayúsculas aumentan la seguridad porque crean más posibilidades en la combinación de la contraseña.",
         },
       ],
       timeLimit: 30,
     },
     {
       question:
-       "Imagina que un compañero de clase mira por encima de tu hombro y ahora sabe La contraseña de tu correo electrónico escolar. ¿Qué podrían hacer con ella?",
+        "Imagina que un compañero de clase mira por encima de tu hombro y ahora sabe la contraseña de tu correo electrónico escolar. ¿Qué podrían hacer con ella?",
       answers: [
         {
           text: "Pueden hacerse pasar por ti y hacer mal uso de tus datos.",
           description:
             "Quien conozca tu contraseña puede hacerse con el control de tu cuenta, enviar mensajes, realizar compras o robar datos privados.",
-          isCorrect: verdadero,
+          isCorrect: true,
         },
         {
           text: "Pueden hornearte un pastel.",
@@ -1800,11 +1841,11 @@ seguridad en línea, necesito hacer que esta contraseña sea realmente segura...
         {
           text: "Pueden borrar tu contraseña.",
           description:
-            "Conocer la contraseña por sí sola no es suficiente para borrarla; el daño se produce al acceder a tu cuenta.",
+            "Conocer la contraseña por sí sola no es suficiente para borrarla; el daño se produce al acceder a tu cuenta.",
         },
         {
           text: "Pueden llamar a tu teléfono.",
-          description: "Su contraseña no tiene influencia en el teléfono o llamadas",
+          description: "Su contraseña no tiene influencia en el teléfono o llamadas.",
         },
       ],
       timeLimit: 30,
@@ -1815,21 +1856,23 @@ seguridad en línea, necesito hacer que esta contraseña sea realmente segura...
         {
           text: "Justo al lado de la computadora",
           description:
-            "Una contraseña dejada a la vista junto a la computadora pueden ser fácilmente encontrados y robados por otros.,
+            "Una contraseña dejada a la vista junto a la computadora puede ser fácilmente encontrada y robada por otros.",
         },
         {
           text: "En un chat público",
-          description: "En un chat público, muchas personas pueden leer al mismo tiempo; esto es muy peligroso."
+          description:
+            "En un chat público, muchas personas pueden leer al mismo tiempo; esto es muy peligroso.",
         },
         {
           text: "En un lugar seguro que sólo tú conoces",
           description:
-            "Si escribes tu contraseña, mantenla en secreto,un lugar seguro que sólo usted conoce, por ejemplo, en un cajón cerrado o en un documento cifrado.",",
-          isCorrect: verdadero,
+            "Si escribes tu contraseña, mantenla en un lugar secreto y seguro que sólo usted conoce, por ejemplo, en un cajón cerrado o en un documento cifrado.",
+          isCorrect: true,
         },
         {
           text: "Publícalo en las redes sociales",
-          description: "Las contraseñas nunca deben publicarse; eso sería una invitación a los piratas informáticos",
+          description:
+            "Las contraseñas nunca deben publicarse; eso sería una invitación a los piratas informáticos.",
         },
       ],
       timeLimit: 30,
@@ -1845,13 +1888,13 @@ seguridad en línea, necesito hacer que esta contraseña sea realmente segura...
         {
           text: "Hay una segunda capa de seguridad además de la contraseña.",
           description:
-            "Con l autenticación de dos factores, estas doblemente seguro y protegido, por ejemplo, mediante una contraseña y un código enviado a su telefono",
-          isCorrect: verdadero,
+            "Con la autenticación de dos factores, estas doblemente seguro y protegido, por ejemplo, mediante una contraseña y un código enviado a su teléfono.",
+          isCorrect: true,
         },
         {
           text: "Se extiende automáticamente la contraseña.",
           description:
-           "" La longitud de la contraseña permanece igual; simplemente se agrega un paso de verificación adicional.",
+            "La longitud de la contraseña permanece igual; simplemente se agrega un paso de verificación adicional.",
         },
         {
           text: "Recibes una nueva contraseña cada día.",
@@ -1864,10 +1907,4 @@ seguridad en línea, necesito hacer que esta contraseña sea realmente segura...
   ],
 };
 
-export const scenes = {
-  scene1,
-  scene2,
-  scene3,
-  scene4,
-  scene5,
-};
+export const scenes = { socialMedia, cookie, phishing, photos, password };

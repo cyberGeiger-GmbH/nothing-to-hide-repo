@@ -32,6 +32,10 @@ export const LANGUAGES = {
     name: "Čeština",
     svg: COUNTRIES_SVG.CZ
   },
-
+  ES: {
+    code: "ES",
+    name: "Español",
+    svg: COUNTRIES_SVG.ES
+  },
 
 };
