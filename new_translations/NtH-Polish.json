@@ -1,0 +1,1744 @@
+import {
+  Scene1Translation,
+  Scene2Translation,
+  Scene3Translation,
+  Scene4Translation,
+  Scene5Translation,
+} from "../../types/translations/Scenes";
+
+const scene1: Scene1Translation = {
+  prologue: {
+    bedroom:
+      "<T>[[Twoja sypialnia, skąpana w łagodnym wieczornym świetle. Twój telefon wibruje — Max ponownie pisze na grupie. Zastanawiasz się, co tym razem odkrył.
+...
+    ]</T>",
+    innerDialog: "<T>Max zawsze jako pierwszy znajduje najciekawsze rzeczy. Powinienem sprawdzić, czym teraz się ekscytuje.</T>",
+},
+  intro: {
+    chatGroupName: "Grupa szkolna",
+    chat1: {
+      characterName: "Max",
+      dialog: "Ludzie! Nowa platforma społecznościowa InstaVibe jest niesamowita! Musicie dołączyć, będzie o niej bardzo głośno! 🔥🔥🔥",
+    },
+    chat2: {
+      characterName: "Lea",
+      dialog: "Kolejna nowa platforma? Max, ledwo nadążam za HoloSnap 😅 Jesteś pewien, że warto?",
+    },
+    chat3: {
+      characterName: "Timo",
+      dialog: "Jeśli Max ją tak zachwala, to i tak stanie się popularna 😄 Masz link?",
+    },
+    chat4: {
+      characterName: "Max",
+      dialog: "Już mam! Zaufaj mi — InstaVibe ma zupełnie inną energię. Oto link!",
+    },
+    player1: {
+      dialog: "<B>[Zatrzymujesz się na chwilę, zamyślony...]</B>\nInstaVibe... Słyszałem o niej dobre opinie, ale powinienem zachować ostrożność. Rzucę tylko szybkie spojrzenie przed snem.",
+    },
+    player2: {
+      dialog: "<B>[Po pobraniu InstaVibe]</B>\nDobrze, zobaczmy, o co tyle szumu. Czas to sprawdzić, ale będę pamiętać o zasadach bezpiecznego korzystania z internetu.",
+    },
+},
+  miniGame: {
+    youHave: "Masz",
+    objectsFound: "znalezionych obiektów!",
+    all: "wszystkie",
+    miniGameIntroTitle: "Minigra: Ukryte obiekty",
+    miniGameIntroDescription: "Znajdź wszystkie obiekty, których nie powinieneś publikować na InstaVibe. Usuń je ze zdjęcia, zanim skończy się czas i fotografia zostanie opublikowana!",
+    miniGameGiveUp: "Poddaj się",
+    tutorial: [
+        {
+        title: "Znajdź obiekty",
+        message: "Kliknij lub dotknij znaleziony obiekt. Jeśli wybór jest poprawny, obiekt zniknie i usłyszysz dźwięk.",
+        },
+        {
+        title: "Wynik",
+        message: "W prawym górnym rogu zobaczysz, ile obiektów już znalazłeś.",
+        },
+        {
+        title: "Limit czasu",
+        message:
+          'Obserwuj licznik czasu. Jeśli nie możesz znaleźć kolejnych obiektów, możesz nacisnąć przycisk "Poddaj się".',
+        },
+    ],
+},
+  quiz: [
+    {
+      question: "Po zainstalowaniu InstaVibe – co właściwie oznacza, że Twój profil jest „publiczny”?",
+      answers: [
+            {
+          text: "Tylko Ty możesz widzieć swoje posty.",
+          description: "Jeśli Twój profil jest publiczny, nie tylko Ty, ale każdy może zobaczyć Twoje posty — nawet nieznajomi.",
+            },
+            {
+          text: "Każdy w internecie może zobaczyć Twoje posty.",
+          description: "Profil publiczny oznacza, że każdy, nawet osoby, których nie znasz, może zobaczyć wszystko, co publikujesz — zdjęcia, filmy i teksty.",
+          isCorrect: true,
+            },
+            {
+          text: "Tylko Twoi znajomi mogą widzieć Twoje posty.",
+          description: "Jeśli chcesz, aby tylko znajomi widzieli Twoje posty, musisz ustawić profil jako „prywatny”.",
+            },
+            {
+          text: "Tylko Twoja rodzina może widzieć Twoje posty.",
+          description: "Przy publicznym profilu nie tylko rodzina, ale każdy użytkownik internetu może zobaczyć Twoje treści.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Chcesz napisać ciekawy opis profilu na InstaVibe – dlaczego nie powinieneś podawać w nim danych osobowych?",
+      answers: [
+            {
+          text: "Bo to jest nudne dla innych.",
+          description: "To, czy coś jest interesujące, nie ma znaczenia — chodzi o bezpieczeństwo, a nie o rozrywkę.",
+            },
+            {
+          text: "Nieznajomi mogliby wykorzystać te informacje.",
+          description: "Jeśli w opisie podasz np. swój wiek, szkołę lub miejsce zamieszkania, nieznajomi mogą wykorzystać te informacje przeciwko Tobie — np. do manipulacji lub wysyłania niebezpiecznych wiadomości.",
+          isCorrect: true,
+            },
+            {
+          text: "Nikt nie czyta opisu profilu.",
+          description: "Wiele osób czyta opisy, zwłaszcza gdy zdobywasz nowych obserwujących. Nieznajomi często zaczynają właśnie od tego.",
+            },
+            {
+          text: "Nie można używać emoji.",
+          description: "Można używać emoji w opisie — to nie jest problem. Zagrożeniem jest podawanie zbyt wielu danych osobowych.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Po opublikowaniu pierwszego posta na InstaVibe – jak możesz chronić swoje zdjęcia przed niepowołanymi osobami?",
+      answers: [
+            {
+          text: "Wyłączyć ustawienia lokalizacji",
+          description: "Wyłączenie lokalizacji to rozsądne rozwiązanie, ale nie chroni bezpośrednio zdjęć przed nieautoryzowanym dostępem.",
+            },
+            {
+          text: "Dostosować ustawienia prywatności",
+          description:
+            'Jeśli odpowiednio ustawisz prywatność (np. ustawisz profil jako „prywatny” lub wybierzesz, kto może widzieć Twoje posty), tylko wybrane osoby będą miały dostęp do zdjęć.',
+          isCorrect: true,
+            },
+            {
+          text: "Dodać jak najwięcej znajomych",
+          description: "Im więcej osób dodasz, tym większe ryzyko, że ktoś niewłaściwie wykorzysta lub udostępni Twoje zdjęcia.",
+            },
+            {
+          text: "Polubić każdy post",
+          description: "Polubienia w żaden sposób nie chronią Twoich zdjęć.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Max zwrócił Ci uwagę na podejrzany profil – jak możesz rozpoznać, że jest fałszywy?",
+      answers: [
+            {
+          text: "Ma zweryfikowany znaczek.",
+          description: "Zweryfikowany znaczek zazwyczaj oznacza, że profil jest prawdziwy — fałszywe profile prawie nigdy go nie mają.",
+            },
+            {
+          text: "Ma wiele zdjęć i prawdziwych znajomych.",
+          description: "Wielu prawdziwych znajomych i dużo postów to raczej oznaka autentycznego profilu.",
+            },
+            {
+          text: "Ma bardzo mało informacji, nieznane zdjęcia i prawie żadnych postów",
+          description: "Fałszywe profile często wyglądają na puste, używają zdjęć z banków zdjęć lub cudzych fotografii i nie mają prawdziwych treści.",
+          isCorrect: true,
+            },
+            {
+          text: "Ma zabawną nazwę.",
+          description: "Sama zabawna nazwa nie świadczy o tym, czy profil jest prawdziwy, czy fałszywy.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Podczas przeglądania InstaVibe – jak możesz zadbać o to, aby Twoja prywatność była chroniona?",
+      answers: [
+            {
+          text: "Publikować wszystko publicznie",
+          description: "Jeśli wszystko jest publiczne, nieznajomi również mają dostęp do Twoich treści — to nie jest bezpieczne.",
+            },
+            {
+          text: "Ustawić widoczność postów tylko dla znajomych",
+          description: "Jeśli ustawisz widoczność postów tylko dla znajomych, chronisz swoje dane i nie udostępniasz ich nieznajomym.",
+          isCorrect: true,
+            },
+            {
+          text: "Polubić każdy post",
+          description: "Polubienia nie mają żadnego związku z ochroną Twoich danych.",
+            },
+            {
+          text: "Wysyłać swój adres nieznajomym",
+          description: "Nigdy nie podawaj danych osobowych, takich jak adres, nieznajomym — to bardzo niebezpieczne.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Zastanawiasz się nad opublikowaniem wiadomości Maxa – dlaczego to zły pomysł bez jego zgody?",
+      answers: [
+            {
+          text: "Bo nikogo to nie interesuje",
+          description: "Nie chodzi o to, czy ktoś jest zainteresowany, lecz o prywatność i szacunek.",
+            },
+            {
+          text: "Bo spowalnia telefon",
+          description: "Zrzut ekranu nie spowalnia telefonu — to nie jest problem.",
+            },
+            {
+          text: "Bo to nieuczciwe i często zabronione",
+          description: "Prywatne wiadomości są poufne — publikowanie ich bez zgody jest nieuczciwe i może mieć konsekwencje prawne.",
+          isCorrect: true,
+            },
+            {
+          text: "Bo będzie mniej polubień",
+          description: "Liczba polubień nie ma nic wspólnego z prawem do prywatności.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Które stwierdzenie dotyczące publikowania zdjęć innych osób na InstaVibe jest prawdziwe?",
+      answers: [
+            {
+          text: "Możesz bez problemu publikować zdjęcia wszystkich osób.",
+          description: "Każdy ma prawo do swojego wizerunku — nie można po prostu publikować czyichś zdjęć bez zgody.",
+            },
+            {
+          text: "Potrzebujesz zgody osób znajdujących się na zdjęciu.",
+          description: "Przed opublikowaniem zdjęcia musisz uzyskać zgodę wszystkich widocznych na nim osób — to zarówno uczciwe, jak i często wymagane prawnie.",
+          isCorrect: true,
+            },
+            {
+          text: "Zawsze możesz publikować zdjęcia znajomych.",
+          description: "Twoi znajomi również mają prawo do prywatności i decydują, czy ich zdjęcie może zostać opublikowane.",
+            },
+            {
+          text: "Jeśli nikogo nie oznaczysz, wszystko jest dozwolone.",
+          description: "Brak oznaczenia nie zmienia faktu, że należy najpierw uzyskać zgodę.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Otrzymujesz dziwną wiadomość od nieznajomego – jak powinieneś zareagować?",
+      answers: [
+            {
+          text: "Zignorować ją i nic nie robić",
+          description: "Ignorowanie często nie rozwiązuje problemu — sytuacja może się pogorszyć.",
+            },
+            {
+          text: "Udostępnić ją dalej",
+          description: "Przekazywanie dalej może rozpowszechniać szkodliwe treści.",
+            },
+            {
+          text: "Zablokować nadawcę i zgłosić wiadomość",
+          description: "Najlepiej natychmiast zablokować użytkownika i zgłosić wiadomość do dostawcy usługi — to skuteczny sposób reagowania.",
+          isCorrect: true,
+            },
+            {
+          text: "Odpisać obraźliwie",
+          description: "Odpowiadanie w ten sposób może pogorszyć sytuację i przysporzyć problemów.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Nieznajomy wysyła Ci zaproszenie do znajomych na InstaVibe – dlaczego powinieneś zachować ostrożność?",
+      answers: [
+            {
+          text: "Bo inaczej będziesz mieć zbyt wielu znajomych",
+          description: "Nie chodzi o liczbę znajomych, lecz o bezpieczeństwo.",
+            },
+            {
+          text: "Bo nieznajomi mogą śledzić Twoje informacje",
+          description: "Jeśli dasz nieznajomym dostęp do swojego profilu, mogą zobaczyć Twoje dane osobowe i potencjalnie je wykorzystać.",
+          isCorrect: true,
+            },
+            {
+          text: "Bo bateria telefonu szybciej się rozładuje",
+          description: "Liczba znajomych nie wpływa na baterię telefonu — chodzi o bezpieczeństwo.",
+            },
+            {
+          text: "Bo to krępujące",
+          description: "Odrzucenie zaproszenia nie jest krępujące — chodzi o Twoją prywatność i ochronę.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Zastanawiasz się nad udostępnieniem swojej lokalizacji w profilu – co może się stać?",
+      answers: [
+            {
+          text: "Bateria będzie ładować się szybciej.",
+          description: "Lokalizacja nie ma wpływu na szybkość ładowania baterii.",
+            },
+            {
+          text: "Nieznajomi mogą Cię odnaleźć lub śledzić.",
+          description: "Udostępniając swoją rzeczywistą lokalizację, umożliwiasz nieznajomym ustalenie, gdzie przebywasz, co może być niebezpieczne.",
+          isCorrect: true,
+            },
+            {
+          text: "Otrzymasz prezent.",
+          description: "Udostępnienie lokalizacji nie przynosi prezentów — może natomiast stanowić zagrożenie.",
+            },
+            {
+          text: "Twój profil zostanie usunięty.",
+          description: "Profil nie zostanie usunięty, ale udostępnienie lokalizacji może narazić Cię na niebezpieczeństwo.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Po założeniu profilu na InstaVibe – dlaczego nie powinieneś publikować swojego numeru telefonu?",
+      answers: [
+            {
+          text: "Bo nikogo to nie interesuje",
+          description: "Nie chodzi o zainteresowanie innych, lecz o prywatność i bezpieczeństwo.",
+            },
+            {
+          text: "Bo nieznajomi mogą Cię nękać lub oszukać",
+          description: "Jeśli publicznie podasz swój numer telefonu, nieznajomi mogą do Ciebie dzwonić, nękać Cię lub próbować Cię oszukać.",
+          isCorrect: true,
+            },
+            {
+          text: "Bo dostaniesz mniej polubień",
+          description: "Liczba polubień nie ma związku z numerem telefonu.",
+            },
+            {
+          text: "Bo numer zostanie automatycznie usunięty",
+          description: "Numer telefonu nie zostanie automatycznie usunięty, ale może zostać niewłaściwie wykorzystany.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Chcesz uatrakcyjnić swój profil – których informacji raczej NIE powinieneś udostępniać?",
+      answers: [
+            {
+          text: "Ulubione jedzenie",
+          description: "Ulubione jedzenie nie jest poufną informacją i nie stanowi zagrożenia.",
+            },
+            {
+          text: "Swój adres zamieszkania",
+          description: "Nigdy nie powinieneś udostępniać swojego adresu w mediach społecznościowych, ponieważ nieznajomi mogą go zobaczyć i może to zagrozić Twojemu bezpieczeństwu.",
+          isCorrect: true,
+            },
+            {
+          text: "Zdjęcie swojego psa",
+          description: "Zdjęcie psa jest bezpieczne, o ile nie ujawnia prywatnych informacji.",
+            },
+            {
+          text: "Zdjęcie zachodu słońca",
+          description: "Zdjęcie zachodu słońca jest neutralne i nie wpływa na Twoją prywatność.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Planujesz nowy post – które zdjęcie możesz opublikować bez obaw?",
+      answers: [
+            {
+          text: "Ulubione jedzenie",
+          description: "Ulubione jedzenie nie jest poufną informacją i nie stanowi zagrożenia.",
+            },
+            {
+          text: "Swój adres zamieszkania",
+          description: "Nie należy publikować swojego adresu w mediach społecznościowych — może to zagrozić Twojemu bezpieczeństwu.",
+            },
+            {
+          text: "Zdjęcie swojego psa",
+          description: "Zdjęcie psa jest bezpieczne, o ile nie ujawnia prywatnych informacji.",
+            },
+            {
+          text: "Zdjęcie zachodu słońca",
+          description: "Zdjęcie zachodu słońca jest neutralne i nie wpływa na Twoją prywatność.",
+          isCorrect: true,
+            },
+        ],
+      timeLimit: 30,
+    },
+],
+};
+
+const scene2: Scene2Translation = {
+  intro: {
+    buttonTextAcceptCookies: "Akceptuj wszystkie pliki cookie",
+    buttonTextManageCookies: "Zarządzaj plikami cookie",
+    cookieInfo1: "My oraz wybrane podmioty trzecie używamy plików cookie lub podobnych technologii, zgodnie z Polityką plików cookie. Możesz wyrazić zgodę na ich użycie, klikając przycisk „Akceptuj”.",
+    player1: {
+      dialog: "Hmm… dlaczego mam akceptować te pliki cookie? Wolałbym nimi zarządzać i sprawdzić, które nie są konieczne.",
+    },
+    hint: {
+      dialog: "Nie mogę jeszcze kontynuować. Trzeba aktywować coś, czego wymaga strona.",
+    },
+    cookies: {
+      title: "Masz ochotę na ciasteczko?",
+      essentialTitle: "Niezbędne:",
+      nonEssentialTitle: "Nieniezbędne:",
+      essential: {
+        login: "Logowanie",
+        security: "Bezpieczeństwo",
+        language: "Język",
+        system: "System",
+        },
+      nonEssential: {
+        tracking: "Śledzenie",
+        advertising: "Reklama",
+        marketing: "Marketing",
+        thirdParty: "Podmioty trzecie",
+        social: "Media społecznościowe",
+        remarketing: "Remarketing",
+        analytics: "Analityka",
+        },
+      cookieInfo2: "Tutaj możesz zarządzać plikami cookie. Niektóre są niezbędne i nie można ich wyłączyć.",
+      cookieInfo3: "Nie mogę jeszcze kontynuować. Jeden lub więcej plików cookie nadal musi zostać wyłączony.",
+      buttonTextContinue: "Kontynuuj",
+    },
+},
+  miniGame: {
+    title: "Wycinarka ciasteczek",
+    description: "Zniszcz wszystkie złe ciasteczka!",
+    goodCookieTexts: [
+        "Sesja",
+        "Koszyk",
+        "Bezpieczeństwo",
+        "Język",
+        "System"
+    ],
+    badCookieTexts: [
+        "Śledzenie",
+        "Reklama",
+        "Marketing",
+        "Podmioty trzecie",
+        "Media społecznościowe",
+        "Remarketing",
+        "Analityka",
+    ],
+    tutorial: [
+        {
+        title: "Wycinarka ciasteczek",
+        message: "Przesuń palcem po ekranie, aby zniszczyć złe ciasteczka.",
+        },
+        {
+        title: "Czas ucieka!",
+        message: "Zwracaj uwagę na licznik czasu.",
+        },
+        {
+        title: "Wynik",
+        message: "Możesz zobaczyć, ile dobrych ciasteczek zniszczyłeś, sprawdzając swój wynik. Jeśli zniszczysz dobre ciasteczko, otrzymasz punkty ujemne.",
+        },
+    ],
+},
+  quiz: [
+    {
+      question: "Do czego służą pliki cookie w internecie?",
+      answers: [
+            {
+          text: "Aby strony internetowe mogły zapamiętać informacje (np. logowanie, koszyk)",
+          description: "Pliki cookie przechowują informacje, dzięki czemu strony mogą Cię rozpoznać — np. utrzymać zalogowanie lub zapamiętać produkty w koszyku.",
+          isCorrect: true,
+            },
+            {
+          text: "Aby komputer działał szybciej",
+          description: "Pliki cookie nie poprawiają wydajności sprzętu.",
+            },
+            {
+          text: "Aby zdobywać więcej punktów w grach",
+          description: "Pliki cookie nie wpływają na wyniki w grach.",
+            },
+            {
+          text: "Aby automatycznie otrzymywać aktualizacje",
+          description: "Aktualizacje nie są kontrolowane przez pliki cookie.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Czym są pliki cookie śledzące?",
+      answers: [
+            {
+          text: "Pliki cookie śledzące Twoją dokładną lokalizację",
+          description: "Pliki cookie śledzące zazwyczaj zapisują Twoje zachowanie podczas przeglądania stron, a nie dokładną lokalizację.",
+            },
+            {
+          text: "Pliki cookie śledzące odwiedzane strony w celu dopasowania reklam",
+          description: "Pliki cookie śledzące rejestrują Twoją aktywność w sieci, aby personalizować reklamy.",
+          isCorrect: true,
+            },
+            {
+          text: "Pliki cookie przechowujące hasło",
+          description: "Hasła nie są przechowywane w plikach cookie śledzących.",
+            },
+            {
+          text: "Pliki cookie chroniące przed wirusami",
+          description: "Pliki cookie nie chronią przed złośliwym oprogramowaniem.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Dlaczego InstaVibe prosi o akceptację plików cookie przy pierwszym uruchomieniu?",
+      answers: [
+            {
+          text: "Aby otrzymać więcej polubień",
+          description: "Polubienia nie mają związku ze zgodą na pliki cookie.",
+            },
+            {
+          text: "Ponieważ inaczej aplikacja nie wie, czy lubisz InstaVibe",
+          description: "Komunikaty o plikach cookie nie dotyczą Twoich preferencji wobec aplikacji.",
+            },
+            {
+          text: "Ponieważ w wielu krajach obowiązują przepisy chroniące użytkowników",
+          description: "Przepisy, takie jak RODO, wymagają uzyskania zgody, abyś miał kontrolę nad swoimi danymi.",
+          isCorrect: true,
+            },
+            {
+          text: "Aby telefon się nie zawiesił",
+          description: "Stabilność telefonu nie zależy od plików cookie.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co byłoby trudniejsze w InstaVibe bez plików cookie?",
+      answers: [
+            {
+          text: "Pozostawanie zalogowanym i bezpośrednie otwieranie profilu",
+          description: "Bez plików cookie musiałbyś częściej się logować, ponieważ Twoja sesja nie byłaby zapamiętywana.",
+          isCorrect: true,
+            },
+            {
+          text: "Edytowanie zdjęć za pomocą filtrów",
+          description: "Filtry nie zależą od plików cookie.",
+            },
+            {
+          text: "Przesyłanie filmów",
+          description: "Przesyłanie działa niezależnie od plików cookie.",
+            },
+            {
+          text: "Wysyłanie wiadomości",
+          description: "Wiadomości zazwyczaj nie wymagają plików cookie.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Które pliki cookie są pomocne?",
+      answers: [
+            {
+          text: "Logowanie, Śledzenie, Analityka, System",
+          description: "Nie wszystkie z nich są równie pomocne lub konieczne.",
+            },
+            {
+          text: "System, Logowanie, Reklama",
+          description: "Reklamy nie są wymagane do działania podstawowych funkcji.",
+            },
+            {
+          text: "Język, System, Bezpieczeństwo, Logowanie",
+          description: "Te kategorie pomagają w ustawieniach językowych, bezpieczeństwie i logowaniu — są przydatne.",
+          isCorrect: true,
+            },
+            {
+          text: "Żadna z odpowiedzi nie jest poprawna",
+          description: "Jedna z odpowiedzi jest poprawna.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Do czego InstaVibe potrzebuje systemowych plików cookie?",
+      answers: [
+            {
+          text: "Aby otrzymywać więcej polubień",
+          description: "Polubienia nie mają związku z systemowymi plikami cookie.",
+            },
+            {
+          text: "Aby wyświetlać reklamy butów",
+          description: "To rola plików marketingowych, nie systemowych.",
+            },
+            {
+          text: "Aby telefon działał szybciej",
+          description: "Pliki systemowe nie wpływają na wydajność urządzenia.",
+            },
+            {
+          text: "Aby aplikacja wiedziała, że jesteś zalogowany i mogła wczytać Twoje zdjęcia",
+          description: "Niezbędne/systemowe pliki cookie wspierają podstawowe funkcje, takie jak utrzymanie sesji i wczytywanie treści.",
+          isCorrect: true,
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co się stanie, jeśli wyłączysz systemowe pliki cookie InstaVibe?",
+      answers: [
+            {
+          text: "Aplikacja nie będzie działać prawidłowo.",
+          description: "Bez niezbędnych plików cookie podstawowe funkcje, takie jak logowanie czy wczytywanie stron, mogą przestać działać poprawnie.",
+          isCorrect: true,
+            },
+            {
+          text: "Zobaczysz mniej reklam.",
+          description: "Dotyczy to głównie plików marketingowych, nie systemowych.",
+            },
+            {
+          text: "Otrzymasz więcej polubień.",
+          description: "Pliki cookie nie wpływają na liczbę polubień.",
+            },
+            {
+          text: "Będziesz mógł publikować, ale bez filtrów",
+          description: "Filtry nie zależą od systemowych plików cookie.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Dlaczego pliki cookie analityczne są ważne dla InstaVibe?",
+      answers: [
+            {
+          text: "Aby znajomi mogli szybciej polubić post",
+          description: "Polubienia nie zależą od plików analitycznych.",
+            },
+            {
+          text: "Aby aplikacja wiedziała, które funkcje są popularne i mogła je ulepszać",
+          description: "Pliki analityczne pokazują, które obszary są używane, co pomaga zespołowi ulepszać aplikację.",
+          isCorrect: true,
+            },
+            {
+          text: "Aby telefon miał więcej miejsca",
+          description: "Pliki cookie nie zwiększają pamięci urządzenia.",
+            },
+            {
+          text: "Aby automatycznie zdobywać obserwujących",
+          description: "Analityka nie prowadzi do zdobywania obserwujących.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co robią pliki cookie marketingowe w InstaVibe?",
+      answers: [
+            {
+          text: "Sprawiają, że Twoje filmy są bardziej popularne.",
+          description: "Popularność nie jest kontrolowana przez pliki cookie.",
+            },
+            {
+          text: "Przechowują informacje o używanych filtrach.",
+          description: "To raczej kwestia ustawień funkcji, a nie marketingu.",
+            },
+            {
+          text: "Zapewniają prywatność Twojego profilu.",
+          description: "Ustawienia prywatności są niezależne od plików marketingowych.",
+            },
+            {
+          text: "Wyświetlają reklamy dopasowane do przeglądanych treści (np. odzież sportową, jeśli odwiedzasz strony sportowe)",
+          description: "Pliki marketingowe personalizują reklamy na podstawie Twojej aktywności w sieci.",
+          isCorrect: true,
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Który rodzaj plików cookie InstaVibe wykorzystuje, aby sprawdzić, które funkcje są najczęściej używane (np. Stories, Reels, wiadomości)?",
+      answers: [
+            {
+          text: "Czekoladowe ciasteczka",
+          description: "Smaczne, ale nie o takie chodzi.",
+            },
+            {
+          text: "Ciasteczka marketingowe",
+          description: "Ciasteczka marketingowe służą głównie do personalizacji reklam.",
+            },
+            {
+          text: "Ciasteczka analityczne",
+          description: "Ciasteczka analityczne mierzą sposób korzystania z aplikacji i pomagają zrozumieć, które funkcje są popularne.",
+          isCorrect: true,
+            },
+            {
+          text: "Ciasteczka systemowe",
+          description: "Ciasteczka systemowe odpowiadają za podstawowe funkcje, a nie analizę danych.",
+            },
+        ],
+      timeLimit: 30,
+    },
+],
+};
+
+const scene3: Scene3Translation = {
+  prologue: {
+    bedroom: "<T>[Następnego ranka: Przygotowujesz się do szkoły, gdy otrzymujesz powiadomienie z InstaVibe. Po wczorajszej rejestracji zastanawiasz się, kto może się z Tobą kontaktować...]</T>",
+},
+  intro: {
+    player1: {
+      dialog: "Ktoś już pisze do mnie na InstaVibe? To było bardzo szybko... Ciekawe, czy to ktoś z moich znajomych.",
+    },
+    chat1: {
+      characterName: "Jonas M. (10B)",
+      dialog: "Cześć! Widziałem, że dopiero dołączyłeś do InstaVibe — witaj! Organizuję szkolne wydarzenie i potrzebuję listy klasy z danymi kontaktowymi. Czy mógłbyś mi ją udostępnić? Bardzo by mi to pomogło!",
+    },
+    player2: {
+      dialog: "Jonas z 10B? Wydaje mi się, że nigdy się nie poznaliśmy... To trochę zbyt bezpośrednie jak na kogoś, kogo nie znam. Czy powinienem mu zaufać?",
+    },
+},
+  miniGame: {
+    title: "Uratuj rybkę – rozpoznaj phishing!",
+    description: `Nie wszystko w internecie jest prawdziwe – dotyczy to także podwodnego świata!
+                  Przynęty z wiadomościami wpadają do morza. Klikaj, aby kierować nurkiem do haczyków,
+                  czytaj wiadomości i zdecyduj: Czy to phishing, czy nie?`,
+    hint: "Każda błędna decyzja naraża Twoją rybkę na niebezpieczeństwo – zachowaj ostrożność!",
+    startButton: "Zaczynajmy!",
+    legit: "Prawdziwe",
+    phishing: "Phishing",
+    gameOver: "Koniec gry",
+    success: "Świetna robota! Pomogłeś rybce uniknąć niebezpiecznych przynęt i pozostać bezpieczną. Tak samo w prawdziwym życiu chronisz się przed phishingiem, zachowując czujność.",
+    failure: "O nie! Rybka połknęła zbyt wiele niebezpiecznych wiadomości i nie przetrwała. Tak jak w internecie — jedno błędne kliknięcie może spowodować poważne konsekwencje.",
+    phishingMessages: [
+        {
+        type: "email",
+        sender: "support@instavibe.com",
+        text: "Twoje konto zostało zawieszone z powodu podejrzanej aktywności. Zaloguj się tutaj, aby je odblokować.",
+        isPhishing: true,
+        },
+        {
+        type: "email",
+        sender: "prize@streamfest.io",
+        text: "Gratulacje! Wygrałeś 3 miesiące darmowego streamingu. Odbierz nagrodę teraz.",
+        isPhishing: true,
+        },
+        {
+        type: "email",
+        sender: "update@gameworld.io",
+        text: "Wymagana jest nowa aktualizacja. Pobierz ją tutaj, aby kontynuować grę.",
+        isPhishing: true,
+        },
+        {
+        type: "email",
+        sender: "verification@instavibe-support.com",
+        text: "Zweryfikuj swoje konto InstaVibe teraz, w przeciwnym razie zostanie dezaktywowane.",
+        isPhishing: true,
+        },
+        {
+        type: "sms",
+        sender: "+49 1521 4455667",
+        text: "Hej, tu ktoś ze szkoły. Możesz podać mi dane logowania do InstaVibe? Muszę coś sprawdzić.",
+        isPhishing: true,
+        },
+        {
+        type: "sms",
+        sender: "+43 660 9876543",
+        text: "Twoja paczka nie mogła zostać dostarczona. Potwierdź swój adres tutaj.",
+        isPhishing: true,
+        },
+        {
+        type: "sms",
+        sender: "+41 76 123 4567",
+        text: "Wygrałeś nagrodę w konkursie! Odbierz ją teraz.",
+        isPhishing: true,
+        },
+        {
+        type: "sms",
+        sender: "+31 612345678",
+        text: "Wykryto nieautoryzowany dostęp do Twojego konta. Zabezpiecz je teraz.",
+        isPhishing: true,
+        },
+        {
+        type: "sms",
+        sender: "+33 612 345 678",
+        text: "Faktura nie została opłacona. Dokonaj płatności przez ten link.",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@instavibe_giveaway",
+        text: "Jesteś jednym z naszych największych fanów! Wygraj ekskluzywne gadżety InstaVibe. Wypełnij ten formularz.",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@teachersgroup_official",
+        text: "Możesz wysłać mi jeszcze raz odpowiedzi do testu? Zgubiłem je. Oto link.",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@free_gamecoins",
+        text: "Darmowe monety do Twojej ulubionej gry — tylko dla użytkowników InstaVibe!",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@instavibe_support_admin",
+        text: "Wprowadź dane logowania, aby uniknąć utraty dostępu do konta.",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@event_official",
+        text: "Darmowe bilety na koncert! Tylko dla pierwszych 100 osób — pospiesz się!",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@instavibe_warning",
+        text: "Twoje konto zostało zgłoszone. Sprawdź skargę tutaj.",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@brand_support_fake",
+        text: "Aby potwierdzić ostatni post: wpisz tutaj swoje hasło.",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@randomuser324",
+        text: "Hej, ktoś używa Twoich zdjęć na InstaVibe. Sprawdź to!",
+        isPhishing: true,
+        },
+        {
+        type: "chat",
+        sender: "@instavibe.alert",
+        text: "Z powodu dużego zainteresowania musisz zalogować się ponownie. Kliknij tutaj.",
+        isPhishing: true,
+        },
+        {
+        type: "email",
+        sender: "support@instavibe.com",
+        text: "Twoja rejestracja przebiegła pomyślnie. Witamy w InstaVibe!",
+        isPhishing: false,
+        },
+        {
+        type: "email",
+        sender: "info@instavibe.com",
+        text: "Wysłaliśmy do Ciebie e-mail z potwierdzeniem. Potwierdź swoją rejestrację.",
+        isPhishing: false,
+        },
+        {
+        type: "sms",
+        sender: "+49 1521 4455667",
+        text: "Twoje hasło zostało pomyślnie zmienione. Możesz się teraz zalogować.",
+        isPhishing: false,
+        },
+        {
+        type: "sms",
+        sender: "+43 660 9876543",
+        text: "Wysłaliśmy nowy newsletter. Sprawdź go!",
+        isPhishing: false,
+        },
+        {
+        type: "chat",
+        sender: "@instavibe_support",
+        text: "Jak możemy Ci pomóc? Jeśli masz pytania, skontaktuj się z nami.",
+        isPhishing: false,
+        },
+        {
+        type: "chat",
+        sender: "@instavibe_team",
+        text: "Najnowsze aktualizacje InstaVibe. Sprawdź nowe funkcje!",
+        isPhishing: false,
+        },
+    ],
+    tutorial: [
+        {
+        title: "Pływanie",
+        message: "Kieruj i przytrzymaj strzałkę, aby dopłynąć do wybranego miejsca, lub użyj klawiszy strzałek.",
+        },
+        {
+        title: "Koperty phishingowe",
+        message: "Dopłyń w pobliże koperty, aby ją otworzyć.",
+        },
+        {
+        title: "Przeczytaj wiadomość",
+        message: "Zdecyduj, czy to przynęta, czy nie.",
+        },
+        {
+        title: "Zły wybór",
+        message: "Błędne decyzje zaszkodzą rybce.",
+        },
+        {
+        title: "Dobry wybór",
+        message: "Prawidłowe decyzje wyleczą rybkę.",
+        },
+        {
+        title: "Zdrowie rybki",
+        message: "Celem jest utrzymanie rybki przy życiu.",
+        },
+    ],
+},
+  quiz: [
+    {
+      question: "Podczas sprawdzania poczty pojawia się podejrzana wiadomość – czy może to być próba phishingu? Ale czym właściwie jest phishing?",
+      answers: [
+            {
+          text: "Gra internetowa",
+          description: "Phishing to nie gra, lecz metoda oszustwa.",
+            },
+            {
+          text: "Próba wyłudzenia danych osobowych",
+          description: "W phishingu oszuści próbują zdobyć poufne dane, takie jak hasła, dane kont czy dane dostępowe, za pomocą fałszywych e-maili, stron internetowych lub wiadomości.",
+          isCorrect: true,
+            },
+            {
+          text: "Gatunek muzyczny",
+          description: "Phishing nie ma nic wspólnego z muzyką.",
+            },
+            {
+          text: "Program antywirusowy",
+          description: "Program antywirusowy chroni przed wirusami i czasem wykrywa próby phishingu. Jednak sam phishing jest formą oszustwa.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Max nie był pewien co do wiadomości e-mail – po czym mógł rozpoznać, że to phishing?",
+      answers: [
+            {
+          text: "Pochodzi z oficjalnego adresu e-mail.",
+          description: "To nie jest oznaka phishingu — oficjalnie wyglądające adresy wydają się wiarygodne.",
+            },
+            {
+          text: "Pochodzi z nietypowego lub niepoprawnego adresu nadawcy.",
+          description: "Nietypowy lub błędny adres nadawcy jest silnym sygnałem ostrzegawczym phishingu.",
+          isCorrect: true,
+            },
+            {
+          text: "Temat zawiera kolorowe emotikony.",
+          description: "Same emotikony nie świadczą o phishingu.",
+            },
+            {
+          text: "Zawiera przyjazne powitanie.",
+          description: "Przyjazne powitania występują również w prawdziwych wiadomościach e-mail.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Wiadomość wydaje się pilna – co oszuści phishingowi często piszą, aby wywrzeć presję i skłonić Cię do reakcji?",
+      answers: [
+            {
+          text: "Pochwałę za bezpieczne zachowanie",
+          description: "Pochwały rzadko są używane do wywierania presji.",
+            },
+            {
+          text: "Groźbę zawieszenia konta",
+          description: "Groźby, takie jak zawieszenie konta, wywołują stres i zachęcają do kliknięcia.",
+          isCorrect: true,
+            },
+            {
+          text: "Kod rabatowy",
+          description: "Kody rabatowe mają zachęcić do działania, ale zazwyczaj nie wywierają silnej presji.",
+            },
+            {
+          text: "Zabawne zdjęcie kota",
+          description: "Zabawne zdjęcia są nieszkodliwe i nie są typowym narzędziem phishingu.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Która z poniższych cech NIE wskazuje na wiadomość phishingową?",
+      answers: [
+            {
+          text: "Nieoczekiwana wiadomość e-mail z linkami",
+          description: "Nieoczekiwane wiadomości z linkami są typowe dla phishingu.",
+            },
+            {
+          text: "Prośba o podanie hasła",
+          description: "Wiadomości phishingowe często proszą o hasła.",
+            },
+            {
+          text: "Błędy ortograficzne i dziwne sformułowania",
+          description: "Słaba jakość języka i błędy to częsta cecha phishingu.",
+            },
+            {
+          text: "Wiadomość od Twojego najlepszego przyjaciela",
+          description: "Wiadomości od prawdziwych znajomych nie są typowym sygnałem phishingu.",
+          isCorrect: true,
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Wiadomość phishingowa prosi o podanie informacji – jakich danych najczęściej szukają oszuści?",
+      answers: [
+            {
+          text: "Twojej ulubionej piosenki",
+          description: "Twoje preferencje muzyczne nie interesują oszustów.",
+            },
+            {
+          text: "Danych bankowych i haseł",
+          description: "Dane bankowe i hasła są głównym celem phishingu.",
+          isCorrect: true,
+            },
+            {
+          text: "Twojego ulubionego jedzenia",
+          description: "Ulubione jedzenie nie ma żadnej wartości dla oszustów.",
+            },
+            {
+          text: "Twoich ocen z wychowania fizycznego",
+          description: "Oceny z WF-u nie interesują oszustów.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Otrzymujesz e-mail, który wydaje się podejrzany – jak najlepiej zareagować?",
+      answers: [
+            {
+          text: "Kliknąć link i sprawdzić",
+          description: "Kliknięcie linku może być niebezpieczne.",
+            },
+            {
+          text: "Usunąć lub zgłosić wiadomość",
+          description: "Najlepiej od razu ją usunąć lub zgłosić.",
+          isCorrect: true,
+            },
+            {
+          text: "Szybko odpowiedzieć",
+          description: "Odpowiedź daje oszustom sygnał, że wiadomość dotarła.",
+            },
+            {
+          text: "Zignorować wiadomość",
+          description: "Ignorowanie nie pomaga — lepiej ją zgłosić lub usunąć.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "W e-mailu pojawia się nazwa „InstaVibe” – dlaczego oszuści często używają znanych nazw?",
+      answers: [
+            {
+          text: "Bo brzmi to zabawniej",
+          description: "Nie zależy im na tym, czy uznasz to za zabawne.",
+            },
+            {
+          text: "Aby bardziej zaufać wiadomości",
+          description: "Znane nazwy wydają się wiarygodne i tworzą fałszywe poczucie bezpieczeństwa.",
+          isCorrect: true,
+            },
+            {
+          text: "Aby się reklamować",
+          description: "Reklama nie jest celem phishingu.",
+            },
+            {
+          text: "Ponieważ w ten sposób mają większy zasięg",
+          description: "Zasięg nie odgrywa tu istotnej roli.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Które z poniższych stwierdzeń jest poprawne?",
+      answers: [
+            {
+          text: "Nigdy nie należy wysyłać danych osobowych e-mailem.",
+          description: "Dane osobowe nie powinny być przekazywane w wiadomościach e-mail.",
+          isCorrect: true,
+            },
+            {
+          text: "Hasła można udostępniać.",
+          description: "Hasła nigdy nie powinny być udostępniane.",
+            },
+            {
+          text: "Każdy link w internecie jest bezpieczny.",
+          description: "Nie każdy link jest bezpieczny — wiele z nich może być niebezpiecznych.",
+            },
+            {
+          text: "Zawsze należy klikać „Zarejestruj się teraz”.",
+          description: "Przyciski „Zarejestruj się teraz” w e-mailach mogą być pułapką phishingową.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co może się stać, jeśli klikniesz w link phishingowy?",
+      answers: [
+            {
+          text: "Zostanie odtworzona Twoja ulubiona piosenka.",
+          description: "Nie, Twoja ulubiona piosenka raczej się nie uruchomi.",
+            },
+            {
+          text: "Twoje dane zostaną skradzione.",
+          description: "Tak, Twoje dane mogą zostać bezpośrednio wykradzione.",
+          isCorrect: true,
+            },
+            {
+          text: "Wygrasz smartfon.",
+          description: "Obietnice nagród to zazwyczaj oszustwo.",
+            },
+            {
+          text: "Nic się nie stanie — moje dane są bezpieczne.",
+          description: "Linki phishingowe są niemal zawsze niebezpieczne.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Która wiadomość wydaje się podejrzana?",
+      answers: [
+            {
+          text: "Cześć, co u Ciebie?",
+          description: "Wygląda normalnie i nieszkodliwie.",
+            },
+            {
+          text: "Wygrałeś 1000 euro — kliknij tutaj!",
+          description: "Obietnice nagród z linkiem to często oszustwo.",
+          isCorrect: true,
+            },
+            {
+          text: "Spotykamy się o 15:00.",
+          description: "To zwykła informacja o spotkaniu.",
+            },
+            {
+          text: "Powodzenia na sprawdzianie.",
+          description: "To przyjazna wiadomość, nie wygląda podejrzanie.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "W grze widziałeś wiele wiadomości phishingowych – czy naprawdę pojawiają się one tylko w e-mailach?",
+      answers: [
+            {
+          text: "Tak",
+          description: "Phishing występuje również poprzez SMS-y, media społecznościowe i inne platformy.",
+            },
+            {
+          text: "Nie",
+          description: "Phishing może pojawić się za pośrednictwem wielu różnych kanałów.",
+          isCorrect: true,
+            },
+            {
+          text: "Tylko na telefonach komórkowych",
+          description: "Phishing może występować zarówno na telefonach, jak i na komputerach.",
+            },
+            {
+          text: "Tylko w nocy",
+          description: "Pora dnia nie ma znaczenia.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Jeśli nie masz pewności, czy wiadomość jest autentyczna, powinieneś...",
+      answers: [
+            {
+          text: "Podać swoje dane, aby się upewnić.",
+          description: "Nigdy nie udostępniaj danych osobowych.",
+            },
+            {
+          text: "Zapytać kogoś lub odwiedzić oficjalną stronę internetową.",
+          description: "Zawsze najpierw zweryfikuj informację, pytając zaufaną osobę lub samodzielnie odwiedzając oficjalną stronę.",
+          isCorrect: true,
+            },
+            {
+          text: "Przekazać wiadomość dalej.",
+          description: "Przekazywanie dalej tylko zwiększa ryzyko.",
+            },
+            {
+          text: "Polubić wiadomość.",
+          description: "Polubienie nie chroni przed phishingiem.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Co często dzieje się po kliknięciu w link phishingowy?",
+      answers: [
+            {
+          text: "Zostajesz przekierowany na fałszywą stronę internetową.",
+          description: "Możesz zostać przeniesiony na fałszywą stronę, która wykrada dane.",
+          isCorrect: true,
+            },
+            {
+          text: "Otrzymujesz prezent.",
+          description: "Oferty phishingowe nigdy nie są prawdziwymi prezentami.",
+            },
+            {
+          text: "Zostajesz odłączony od internetu.",
+          description: "Nie zostajesz odłączony od internetu, ale Twoje dane mogą zostać skradzione.",
+            },
+            {
+          text: "Wygrywasz wycieczkę.",
+          description: "Fałszywe nagrody, takie jak wycieczki, to częsty trik phishingowy.",
+            },
+        ],
+      timeLimit: 30,
+    },
+],
+};
+
+const scene4: Scene4Translation = {
+  prologue: {},
+  intro: {
+    initialMessage: "Cześć, pewnie też widziałeś to kompromitujące zdjęcie ze mną... czy możesz mi jakoś pomóc?",
+    notificationTitle: "Wiadomość od Maxa",
+    overlayTitle: "Max potrzebuje Twojej pomocy!",
+    overlayPrompt: "Wybierz działanie:",
+    header: {
+      avatarLabel: "S4",
+      profileName: "CyberCareers",
+      subtitle: "Sponsorowane • Scena 4",
+    },
+    minigameIntro: {
+      title: "Opublikować czy nie? 🤔",
+      description: [
+            "Kolejne zdjęcia będą pojawiać się jedno po drugim.",
+            "Dla każdego zdjęcia zdecyduj, czy należy je opublikować na InstaVibe, czy zachować jako prywatne.",
+            "Upewnij się, że nie publikujesz żadnych kompromitujących ani szkodliwych zdjęć.",
+        ],
+    },
+    feedActions: {
+      like: "Polub",
+      chat: "Czat",
+      share: "Udostępnij",
+    },
+    commentsLabel: "Komentarze",
+    actions: [
+        {
+        id: "ignore",
+        label: "Nic nie rób i zignoruj to",
+        response: "Ignorowanie tego nie sprawi, że problem zniknie. Czuję się z tym sam.",
+        isCorrect: false,
+        },
+        {
+        id: "confront_publicly",
+        label: "Publicznie skomentuj i poproś o usunięcie zdjęcia",
+        response: "To może tylko zwrócić na to większą uwagę i pogorszyć sytuację. Nie chcę, żeby było jeszcze gorzej.",
+        isCorrect: false,
+        },
+        {
+        id: "report_alone",
+        label: "Zgłoś zdjęcie dostawcy aplikacji bez informowania Maxa",
+        response: "Zgłoszenie to dobry pomysł, ale wolałbym, żebyś najpierw ze mną porozmawiał. Ważne jest, abyś mnie wspierał.",
+        isCorrect: false,
+        },
+        {
+        id: "support_and_act",
+        label: "Zapytaj Maxa, jak się czuje, i zaproponuj pomoc w zgłoszeniu",
+        response: "Dziękuję, że najpierw mnie zapytałeś. To dla mnie bardzo ważne. Zgłośmy to razem.",
+        isCorrect: true,
+        },
+    ],
+},
+  miniGame: {
+    miniGameTitle: "Opublikować czy nie?",
+    tutorial: "Widziałeś już, że nie każde zdjęcie powinno trafić do internetu. W tej grze decydujesz: naciśnij prawy przycisk, aby opublikować, lub lewy, aby nie publikować.",
+    allCorrect: "Świetna robota! Wszystko zrobiłeś poprawnie!",
+    minimumReached: "Bardzo dobrze! Większość odpowiedzi była poprawna!",
+    insufficient: "Nieźle, ale wciąż jest miejsce na poprawę!",
+    post: "Opublikuj",
+    notPost: "Nie publikuj",
+    couldPost: "Możesz opublikować to zdjęcie.",
+    shouldNotPost: "Nie powinieneś publikować tego zdjęcia.",
+},
+  quiz: [
+    {
+      question: "Co powinieneś zrobić jako pierwsze, jeśli Twój znajomy Max opublikuje na InstaVibe zdjęcie, które Ci się nie podoba?",
+      answers: [
+            {
+          text: "Natychmiast zgłosić zdjęcie do InstaVibe",
+          description: "Zgłoszenie może pomóc – ale najpierw spróbuj rozwiązać sprawę bezpośrednio z osobą, która je opublikowała.",
+            },
+            {
+          text: "Obrazić Maxa w komentarzach",
+          description: "Obrażanie tylko zaostrzy sytuację i nie sprawi, że zdjęcie zostanie szybciej usunięte.",
+            },
+            {
+          text: "Uprzejmie poprosić Maxa w prywatnej wiadomości o usunięcie zdjęcia",
+          description: "Poprawnie: spokojna, uprzejma wiadomość prywatna jest zazwyczaj najszybszym i najbardziej szanującym rozwiązaniem.",
+          isCorrect: true,
+            },
+            {
+          text: "Nic nie robić – to przecież Twój znajomy",
+          description: "Jeśli czujesz się niekomfortowo, masz prawo o tym powiedzieć – przyjaźń opiera się na wzajemnym szacunku.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Zrobiłeś zabawne zdjęcie, na którym Timo się potyka. Czy możesz opublikować je na InstaVibe bez jego zgody?",
+      answers: [
+            {
+          text: "Tak, to zabawne – to się liczy!",
+          description: "To, że coś jest zabawne, nie znosi prawa do własnego wizerunku.",
+            },
+            {
+          text: "Tylko jeśli go nie oznaczysz",
+          description: "Nawet bez oznaczenia to nadal jego wizerunek – musi wyrazić zgodę.",
+            },
+            {
+          text: "Nie, każdy ma prawo do swojego wizerunku.",
+          description: "Poprawnie: potrzebujesz zgody przed opublikowaniem zdjęcia osoby, którą można rozpoznać.",
+          isCorrect: true,
+            },
+            {
+          text: "Tak, ale tylko w gronie bliskich znajomych",
+          description: "Prawo do prywatności obowiązuje również wśród znajomych – zawsze zapytaj najpierw.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Poprosiłeś Maxa o usunięcie zdjęcia, ale nie odpowiada. Jaki jest kolejny, najbardziej rozsądny krok?",
+      answers: [
+            {
+          text: "Włamać się na jego konto i usunąć je samodzielnie",
+          description: "Włamanie jest nielegalne i tylko pogorszy sytuację.",
+            },
+            {
+          text: "Opublikować kompromitujące zdjęcie jego osoby w odwecie",
+          description: "Zemsta tworzy kolejne problemy i narusza jego prawa.",
+            },
+            {
+          text: "Zgłosić zdjęcie do InstaVibe, ponieważ zostało opublikowane bez Twojej zgody",
+          description: "Poprawnie: jeśli bezpośredni kontakt nie przynosi efektu, skorzystaj z narzędzi zgłaszania dostępnych na platformie.",
+          isCorrect: true,
+            },
+            {
+          text: "Usunąć swoje konto",
+          description: "Usunięcie konta nie rozwiązuje problemu – najpierw skorzystaj z dostępnych narzędzi.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Które z poniższych zdjęć można opublikować na InstaVibe bez konieczności uzyskania czyjejkolwiek zgody?",
+      answers: [
+            {
+          text: "Zdjęcie grupowe całej klasy",
+          description: "Zdjęcia grupowe obejmują wiele osób – potrzebujesz ich zgody.",
+            },
+            {
+          text: "Nieznajomy w ciekawej koszulce",
+          description: "Nieznajomi również mają prawo do prywatności i wizerunku.",
+            },
+            {
+          text: "Zachód słońca nad jeziorem",
+          description: "Poprawnie: zdjęcia przyrody lub krajobrazu bez rozpoznawalnych osób można publikować bez obaw.",
+          isCorrect: true,
+            },
+            {
+          text: "Twój młodszy brat podczas zabawy",
+          description: "Zdjęcia dzieci wymagają szczególnej ostrożności i zgody rodziców.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Ktoś umieścił Twoje zdjęcie na fałszywym profilu i pisze o Tobie nieprzyjemne rzeczy. Co powinieneś zrobić?",
+      answers: [
+            {
+          text: "Odpisać i obrazić tę osobę",
+          description: "Odpowiadanie w ten sposób może zaostrzyć sytuację i zostać wykorzystane przeciwko Tobie.",
+            },
+            {
+          text: "Natychmiast zgłosić profil i porozmawiać z rodzicem lub nauczycielem",
+          description: "Poprawnie: poproś o wsparcie zaufanych dorosłych i skorzystaj z narzędzi zgłaszania.",
+          isCorrect: true,
+            },
+            {
+          text: "Nic nie robić – samo minie",
+          description: "Takie sytuacje często się pogarszają, jeśli się je ignoruje.",
+            },
+            {
+          text: "Poprosić znajomych, aby również obrażali tę osobę",
+          description: "Zorganizowane ataki mogą pogorszyć sytuację i naruszają zasady platformy.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Chcesz opublikować zdjęcie swojego świadectwa, ponieważ jesteś z niego dumny. Dlaczego może to być zły pomysł?",
+      answers: [
+            {
+          text: "Inni mogą pozazdrościć Ci ocen.",
+          description: "Zazdrość nie jest głównym problemem – najważniejsze jest ujawnianie danych osobowych.",
+            },
+            {
+          text: "Świadectwa są nudne i pewnie nie zdobędą polubień.",
+          description: "Polubienia nie są najważniejsze – liczy się Twoja prywatność.",
+            },
+            {
+          text: "Zawiera prywatne dane, takie jak Twoje imię i nazwisko, data urodzenia oraz nazwa szkoły.",
+          description: "Poprawnie: takie informacje mogą zostać niewłaściwie wykorzystane, jeśli zostaną publicznie udostępnione.",
+          isCorrect: true,
+            },
+            {
+          text: "Szkoła surowo tego zabrania.",
+          description: "Takie zasady mogą istnieć, ale kluczowym powodem jest ochrona danych osobowych.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "„Prawo do własnego wizerunku” oznacza, że…",
+      answers: [
+            {
+          text: "… możesz publikować wyłącznie profesjonalne zdjęcia siebie.",
+          description: "Nie – chodzi o zgodę, a nie o jakość zdjęcia.",
+            },
+            {
+          text: "… co do zasady każdy ma prawo decydować, czy jego wizerunek może zostać opublikowany.",
+          description: "Poprawnie: publikowanie rozpoznawalnych zdjęć wymaga zgody.",
+          isCorrect: true,
+            },
+            {
+          text: "… możesz pobierać opłaty za każde zrobione zdjęcie.",
+          description: "Nie ma to związku z tym prawem.",
+            },
+            {
+          text: "… masz prawo narysować dowolny obraz.",
+          description: "Rysowanie to inna kwestia – prawo dotyczy publikowania zdjęć osób.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Na imprezie u Lei zrobiono zdjęcie, na którym w tle ktoś znajduje się w kompromitującej sytuacji. Czy powinieneś je opublikować?",
+      answers: [
+            {
+          text: "Tak, to zabawne i wszyscy będą się śmiać.",
+          description: "To, co dla Ciebie jest zabawne, dla kogoś może być krzywdzące – najważniejszy jest szacunek.",
+            },
+            {
+          text: "Nie, może to zawstydzić i zranić osobę w tle.",
+          description: "Poprawnie: nie wystawiaj czyjejś niezręcznej sytuacji na widok publiczny.",
+          isCorrect: true,
+            },
+            {
+          text: "Tak, ale tylko jeśli osoba nie jest wyraźnie widoczna",
+          description: "Nawet jeśli zdjęcie jest rozmyte, osoba może być rozpoznawalna lub czuć się narażona.",
+            },
+            {
+          text: "Może, ale dodaj zabawny filtr",
+          description: "Filtr nie rozwiązuje problemu prywatności.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Zgłosiłeś zdjęcie na InstaVibe, ale nic się nie dzieje. Do kogo możesz zwrócić się poza aplikacją?",
+      answers: [
+            {
+          text: "Do nikogo – nic więcej nie da się zrobić.",
+          description: "Zawsze są osoby, do których możesz zwrócić się o pomoc.",
+            },
+            {
+          text: "Do swoich obserwujących, aby wywrzeć presję na tę osobę",
+          description: "Mobilizowanie innych może pogorszyć sytuację i naruszać zasady.",
+            },
+            {
+          text: "Do producenta telefonu",
+          description: "Producent telefonu nie zajmuje się treściami publikowanymi na platformach.",
+            },
+            {
+          text: "Do rodziców, nauczycieli lub poradni",
+          description: "Poprawnie: zaufani dorośli lub odpowiednie instytucje mogą pomóc w podjęciu dalszych działań.",
+          isCorrect: true,
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Dlaczego warto wyłączyć automatyczne oznaczanie lokalizacji (geotagowanie) przed publikacją zdjęć na InstaVibe?",
+      answers: [
+            {
+          text: "Ponieważ poprawia jakość zdjęcia",
+          description: "Oznaczenia lokalizacji nie mają wpływu na jakość obrazu.",
+            },
+            {
+          text: "Ponieważ inaczej otrzymasz mniej polubień",
+          description: "Polubienia nie są związane z geotagowaniem.",
+            },
+            {
+          text: "Ponieważ nieznajomi mogą ustalić, gdzie zwykle przebywasz",
+          description: "Poprawnie: powtarzające się lokalizacje (np. dom, szkoła) mogą narazić Cię na zagrożenie.",
+          isCorrect: true,
+            },
+            {
+          text: "Ponieważ oszczędza to baterię telefonu",
+          description: "Czas pracy baterii nie jest tu najważniejszy – kluczowe są prywatność i bezpieczeństwo.",
+            },
+        ],
+      timeLimit: 30,
+    },
+],
+};
+
+const scene5: Scene5Translation = {
+  prologue: {
+    classroom: "<T>[Pracownia komputerowa. Zajmujesz miejsce obok swoich kolegów z klasy, ciekawy dzisiejszej lekcji. Pan Müller wygląda na to, że przygotował coś interesującego...]</T>",
+},
+  intro: {
+    herrMueller1: "<B>Pan Müller:</B>\nDobrze, wszyscy, dziś zrobimy coś innego! Szkoła wprowadza nowy system poczty elektronicznej. Każdy z was otrzyma własny szkolny adres e-mail.",
+    herrMueller2: "(Pisze na klawiaturze, a projektor wyświetla stronę główną systemu. Pochylasz się do przodu z zainteresowaniem.)",
+    herrMueller3: "<B>Pan Müller:</B>\nWejdźcie na mail.school-net.com i zalogujcie się przy użyciu tymczasowego hasła. Najpierw — MUSICIE utworzyć silne, bezpieczne hasło. Pamiętajcie, czego nauczyliśmy się o bezpieczeństwie w internecie!",
+    player1: "<B>[Przechodzisz pod wskazany adres i widzisz: „Witamy w SchoolMail – Ustaw nowe hasło”]</B>\nPo wszystkim, czego nauczyłem się o bezpieczeństwie w sieci, muszę stworzyć naprawdę silne hasło...",
+},
+  miniGame: {
+    title: "Niszczarka haseł",
+    description: "Sprawdź, co sprawia, że hasło jest silne, a które z nich są niebezpieczne.",
+    hint: "Pamiętaj jednak: samo silne hasło nie gwarantuje pełnego bezpieczeństwa!",
+    endScreenScore: "Twój końcowy wynik: ",
+    tutorial: [
+        {
+        title: "Sterowanie",
+        message: "Kieruj ostrzem piły w stronę haseł za pomocą myszy, dotyku lub klawiatury i przecinaj je (←/A w lewo, →/D w prawo).",
+        },
+        {
+        title: "Hasła",
+        message: "Kieruj ostrze piły na hasła i przecinaj je — ale tylko te słabe!",
+        },
+        {
+        title: "Punkty",
+        message: "Nie przecinaj silnych haseł, bo stracisz punkty!",
+        },
+    ],
+},
+  quiz: [
+    {
+      question: "Pan Müller poprosił Cię o utworzenie nowego, bezpiecznego hasła do szkolnej poczty e-mail. Co naprawdę sprawia, że hasło jest bezpieczne?",
+      answers: [
+            {
+          text: "Twoje imię i rok urodzenia",
+          description: "Hasło składające się z imienia i roku urodzenia jest bardzo łatwe do odgadnięcia. Unikaj danych osobowych!",
+            },
+            {
+          text: "Co najmniej 8 znaków, wielkie i małe litery, cyfry oraz znaki specjalne",
+          description: "Bezpieczne hasło powinno mieć co najmniej 8 znaków i zawierać kombinację wielkich i małych liter, cyfr oraz znaków specjalnych. Dzięki temu trudniej je złamać.",
+          isCorrect: true,
+            },
+            {
+          text: "„123456”",
+          description: "„123456” to jedno z najczęstszych i najsłabszych haseł. Można je złamać w kilka sekund.",
+            },
+            {
+          text: "Imię Twojego zwierzęcia",
+          description: "Imię zwierzęcia jest łatwe do odgadnięcia, zwłaszcza jeśli ktoś Cię zna. Unikaj prostych nazw.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Masz już bezpieczne hasło do szkolnej poczty i do InstaVibe. Jak często powinieneś zmieniać tak ważne hasła?",
+      answers: [
+            {
+          text: "Nigdy",
+          description: "Jeśli nigdy nie zmieniasz haseł, Twoje konto staje się łatwym celem w przypadku ich wycieku.",
+            },
+            {
+          text: "Tylko wtedy, gdy masz nowy telefon",
+          description: "Nowy telefon nie oznacza automatycznie konieczności zmiany hasła – ważniejsze jest działanie w przypadku podejrzenia wycieku danych.",
+            },
+            {
+          text: "Regularnie oraz zawsze przy podejrzeniu nadużycia",
+          description: "Regularna zmiana haseł oraz ich natychmiastowa zmiana w razie podejrzenia nadużycia chroni Twoje konta przed atakami.",
+          isCorrect: true,
+            },
+            {
+          text: "Za każdym razem, gdy jesteś w złym humorze",
+          description: "Twój nastrój nie ma związku z bezpieczeństwem haseł.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Czym jest menedżer haseł?",
+      answers: [
+            {
+          text: "Programem do odtwarzania muzyki",
+          description: "Programy muzyczne nie mają nic wspólnego z hasłami.",
+            },
+            {
+          text: "Grą na telefon",
+          description: "Menedżer haseł nie jest grą, lecz narzędziem zwiększającym Twoje bezpieczeństwo.",
+            },
+            {
+          text: "Programem, który bezpiecznie przechowuje hasła",
+          description: "Menedżer haseł pomaga bezpiecznie przechowywać wszystkie hasła i je zapamiętywać — musisz pamiętać tylko jedno hasło główne.",
+          isCorrect: true,
+            },
+            {
+          text: "Folderem na biurku",
+          description: "Folder na biurku byłby niebezpieczny i nie zapewnia funkcji ochronnych prawdziwego menedżera haseł.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Które z poniższych haseł jest najbezpieczniejsze?",
+      answers: [
+            {
+          text: "Football123",
+          description: "Zawiera litery i cyfry, ale łatwo je odgadnąć, zwłaszcza jeśli ktoś wie, że interesujesz się piłką nożną.",
+            },
+            {
+          text: "H@u$M@u$2025!",
+          description: "To hasło jest długie, kreatywne i zawiera wielkie i małe litery, cyfry oraz znaki specjalne — dokładnie to, co utrudnia jego złamanie.",
+          isCorrect: true,
+            },
+            {
+          text: "987654321",
+          description: "To prosty ciąg cyfr i jedno z najczęściej używanych haseł — bardzo niebezpieczne.",
+            },
+            {
+          text: "Hejka",
+          description: "Proste słowo bez cyfr i znaków specjalnych jest zbyt łatwe do odgadnięcia.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Jak można zapamiętać bezpieczne hasło?",
+      answers: [
+            {
+          text: "Wcale – należy używać tego samego hasła do wszystkiego",
+          description: "Używanie tego samego hasła do wszystkiego jest bardzo niebezpieczne i może łatwo doprowadzić do kradzieży danych.",
+            },
+            {
+          text: "Tworząc zdanie i biorąc pierwszą literę każdego wyrazu",
+          description: "Zdanie pomaga stworzyć unikalne i bezpieczne hasło, które łatwo zapamiętać, np. „Mój pies kocha 3 duże kości!” → MpK3dK!",
+          isCorrect: true,
+            },
+            {
+          text: "Zapisując je na kartce i przyklejając do monitora",
+          description: "Hasło zapisane w widocznym miejscu można łatwo ukraść.",
+            },
+            {
+          text: "Używając wyłącznie cyfr",
+          description: "Bezpieczne hasło powinno zawierać cyfry, litery i znaki specjalne, a nie tylko same cyfry.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Dlaczego znaki specjalne są ważne w haśle?",
+      answers: [
+            {
+          text: "Ułatwiają jego zapamiętanie.",
+          description: "Znaki specjalne często sprawiają, że hasło jest bardziej skomplikowane, ale niekoniecznie łatwiejsze do zapamiętania.",
+            },
+            {
+          text: "Zwiększają bezpieczeństwo, ponieważ tworzą więcej możliwych kombinacji.",
+          description: "Znaki specjalne zwiększają liczbę możliwych kombinacji – dzięki temu hasło jest znacznie trudniejsze do złamania.",
+          isCorrect: true,
+            },
+            {
+          text: "Ładnie wyglądają.",
+          description: "Wygląd nie ma znaczenia – kluczowe jest bezpieczeństwo.",
+            },
+            {
+          text: "Skracają długość hasła.",
+          description: "Znaki specjalne nie skracają hasła, lecz sprawiają, że jest ono silniejsze.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Które z poniższych stwierdzeń jest poprawne?",
+      answers: [
+            {
+          text: "Bezpieczne hasło powinno być jak najkrótsze.",
+          description: "Krótkie hasła są znacznie łatwiejsze do odgadnięcia lub złamania – im dłuższe, tym lepiej!",
+            },
+            {
+          text: "Hasła należy udostępniać znajomym.",
+          description: "Hasła są prywatne i nigdy nie powinny być udostępniane, nawet znajomym.",
+            },
+            {
+          text: "Hasło powinno być jak najdłuższe i jak najbardziej złożone.",
+          description: "Długie i złożone hasło zawierające litery, cyfry i znaki specjalne jest znacznie bezpieczniejsze.",
+          isCorrect: true,
+            },
+            {
+          text: "Hasło nie musi zawierać wielkich liter.",
+          description: "Wielkie litery zwiększają bezpieczeństwo, ponieważ tworzą więcej możliwych kombinacji.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Wyobraź sobie, że kolega z klasy zajrzał Ci przez ramię i poznał hasło do Twojej szkolnej poczty. Co może z nim zrobić?",
+      answers: [
+            {
+          text: "Może podszyć się pod Ciebie i niewłaściwie wykorzystać Twoje dane.",
+          description: "Każdy, kto zna Twoje hasło, może przejąć Twoje konto, wysyłać wiadomości, dokonywać zakupów lub kraść prywatne dane.",
+          isCorrect: true,
+            },
+            {
+          text: "Może upiec Ci ciasto.",
+          description: "Twoje hasło nie ma nic wspólnego z pieczeniem ciasta.",
+            },
+            {
+          text: "Może usunąć Twoje hasło.",
+          description: "Sama znajomość hasła nie oznacza jego usunięcia — zagrożenie polega na uzyskaniu dostępu do Twojego konta.",
+            },
+            {
+          text: "Może zadzwonić na Twój telefon.",
+          description: "Hasło nie ma wpływu na wykonywanie połączeń telefonicznych.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Jeśli zapiszesz hasło, gdzie powinieneś je przechowywać?",
+      answers: [
+            {
+          text: "Tuż obok komputera",
+          description: "Hasło pozostawione w widocznym miejscu obok komputera może zostać łatwo znalezione i wykorzystane przez inne osoby.",
+            },
+            {
+          text: "Na publicznym czacie",
+          description: "Na publicznym czacie wiele osób może je przeczytać — to bardzo niebezpieczne.",
+            },
+            {
+          text: "W bezpiecznym miejscu, które znasz tylko Ty",
+          description: "Jeśli zapisujesz hasło, przechowuj je w tajnym i bezpiecznym miejscu, które znasz tylko Ty, np. w zamykanej szufladzie lub zaszyfrowanym pliku.",
+          isCorrect: true,
+            },
+            {
+          text: "Opublikować je w mediach społecznościowych",
+          description: "Hasła nigdy nie powinny być publikowane — to zaproszenie dla hakerów.",
+            },
+        ],
+      timeLimit: 30,
+    },
+    {
+      question: "Zarówno Twoja nowa szkolna poczta, jak i InstaVibe oferują uwierzytelnianie dwuskładnikowe (2FA). Jaka jest jego największa zaleta?",
+      answers: [
+            {
+          text: "Nie potrzebujesz już hasła.",
+          description: "Hasło nadal jest potrzebne, ale wymagane jest dodatkowe potwierdzenie.",
+            },
+            {
+          text: "Zapewnia dodatkową warstwę zabezpieczeń oprócz hasła.",
+          description: "Dzięki uwierzytelnianiu dwuskładnikowemu jesteś podwójnie chroniony, np. przez hasło oraz kod wysyłany na telefon.",
+          isCorrect: true,
+            },
+            {
+          text: "Automatycznie wydłuża hasło.",
+          description: "Długość hasła pozostaje taka sama — dodawany jest jedynie dodatkowy etap weryfikacji.",
+            },
+            {
+          text: "Codziennie otrzymujesz nowe hasło.",
+          description: "Hasło pozostaje takie samo, ale kod potwierdzający zmienia się przy każdym logowaniu.",
+            },
+        ],
+      timeLimit: 30,
+    },
+],
+};
+
+export const scenes = {
+  scene1,
+  scene2,
+  scene3,
+  scene4,
+  scene5,
+};

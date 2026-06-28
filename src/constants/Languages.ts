@@ -37,5 +37,10 @@ export const LANGUAGES = {
     name: "Español",
     svg: COUNTRIES_SVG.ES
   },
+  PL: {
+    code: "PL",
+    name: "Polski",
+    svg: COUNTRIES_SVG.PL
+  },
 
 };

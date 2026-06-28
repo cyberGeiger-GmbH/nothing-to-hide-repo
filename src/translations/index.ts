@@ -3,7 +3,8 @@ import { DE } from "./de/DE";
 import { EN } from "./en/EN";
 import { ES } from "./es/ES";
 import { IT } from "./it/IT";
+import { PL } from "./pl/PL";
 
-export const translations = { CS, DE, EN, ES, IT };
+export const translations = { CS, DE, EN, ES, IT, PL };
 
 export type Language = keyof typeof translations;
